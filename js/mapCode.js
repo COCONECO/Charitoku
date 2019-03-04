@@ -6,7 +6,6 @@
     google.maps.OverlayViewにて、キャラクターアイコンを表示
     Chart.jsにて、標高データをグラフ表示
  */
-
  
 // マップオブジェクト作成
 var mapObj = new google.maps.Map(document.getElementById("map"), {
