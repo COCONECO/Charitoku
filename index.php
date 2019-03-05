@@ -172,7 +172,7 @@ try {
 }
 echo '<ul id="itemList">';
 foreach ($data as $row) {
-
+    
     echo '<li class="itemBox grid5Pc grid10">';
     echo '<a href="#">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
