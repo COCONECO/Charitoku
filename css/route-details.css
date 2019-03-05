@@ -59,20 +59,20 @@ main
 	max-width: 960px;
 }
 
-.courseContents h2{
+.courseContents .courseName{
 	padding: 20px 0px;
 	line-height: 2.0;
 	word-wrap: break-word;
 	text-align: center;
 }
 
-.courseContents p{
+.courseContents .courseText{
 	position: relative;
 	padding: 0 16px;
 	line-height: 1.5;
 	word-wrap: break-word;
 }
-.courseContents p::after{
+.courseContents .courseText::after{
 	-webkit-filter: blur(6px);
   -moz-filter: blur(6px);
   -o-filter: blur(6px);
@@ -89,7 +89,7 @@ main
 	padding: 8px;
 	z-index: -9999;
 }
-.courseContents p::before{
+.courseContents .courseText::before{
 	-webkit-filter: blur(60px);
   -moz-filter: blur(60px);
   -o-filter: blur(60px);
@@ -107,7 +107,17 @@ main
 	padding: 8px;
 	z-index: -999;
 }
-.dateTable{
+.courseContents table{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.courseContents .dateTable{
 	display: block;
 	text-align: center;
 	padding: 20px 0px;
@@ -250,7 +260,7 @@ main
 	position: absolute;
 	width: 0;
 	height: 0;
-	left: calc(50% - 0px - 10px);
+	left: calc(50% - 9px);
 	background-color: transparent;
 	top: -19px;
 	border: solid transparent;
@@ -283,18 +293,18 @@ main
 		padding: 0 20px 100px;
 	}
 
-	.courseContents h2{
+	.courseContents .courseName{
 		padding: 0 0 40px;
 		line-height: 2.0;
 		word-wrap: break-word;
 		text-align: left;
 	}
 
-	.courseContents p{
+	.courseContents .courseText{
 		padding: 0;
 	}
 	
-	.dateTable{
+	.courseContents .dateTable{
 		position: static;
 		padding: 40px 20px;
 		margin: 0 auto;
@@ -329,7 +339,7 @@ main
 		position: absolute;
 		width: 0;
 		height: 0;
-		left: calc(50% - 0px - 10px);
+		left: calc(50% - 9px);
 		background-color: transparent;
 		top: 100%;
 		border: solid transparent;

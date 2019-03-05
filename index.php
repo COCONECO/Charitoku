@@ -30,19 +30,19 @@
         </div>
         <nav id="gnav">
             <ul>
-                <li><a href="route-list.html">
+                <li><a href="route-list.php?level=all">
                         <p class="navTitle">Route</p>
                         <p class="navSubTitle">ルート一覧</p>
                     </a></li>
-                <li><a href="introduction.html">
+                <li><a href="introduction.php">
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="blog-list.html">
+                <li><a href="blog-list.php">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
-                <li><a href="link.html">
+                <li><a href="link.php">
                         <p class="navTitle">Link</p>
                         <p class="navSubTitle">リンク</p>
                     </a></li>
@@ -130,7 +130,7 @@
                     <li>「サイクルトレイン阿波池田」開催のお知らせ（2018年9月19日）</li>
                 </ul>
             </div>
-            <div style="text-align: right"><a href="#" class="more">→more</a></div>
+            <!-- <div style="text-align: right"><a href="#" class="more">→more</a></div> -->
         </div>
     </div>
 
@@ -146,111 +146,90 @@
         </div>
     </div>
 
-    <div class=topCourse>
-        <ul id="itemList">
-            <li class="itemBox grid5Pc grid10 beginnerShadow">
-                <a href="#">
-                    <img class="mainImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <div class="left">
-                        <h3 class="routeTitle">初級ルート１</h3>
-                        <p class="description">説明文</p>
-                        <p class="description">説明文</p>
-                        <dl>
-                            <dt>走行距離</dt>
-                            <dd>10km</dd>
-                            <dt>走行時間</dt>
-                            <dd>約1時間</dd>
-                            <dt>消費カロリー</dt>
-                            <dd>1000kcal</dd>
-                        </dl>
-                    </div>
-                    <div class="right">
-                        <div class="level beginner">初級</div>
-                        <p class="detail">詳細へ</p>
-                    </div>
-                </a>
-            </li>
-            <li class="itemBox grid5Pc grid10 beginnerShadow">
-                <a href="#">
-                    <img class="mainImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <div class="left">
-                        <h3 class="routeTitle">初級ルート１</h3>
-                        <p class="description">説明文</p>
-                        <p class="description">説明文</p>
-                        <dl>
-                            <dt>走行距離</dt>
-                            <dd>10km</dd>
-                            <dt>走行時間</dt>
-                            <dd>約1時間</dd>
-                            <dt>消費カロリー</dt>
-                            <dd>1000kcal</dd>
-                        </dl>
-                    </div>
-                    <div class="right">
-                        <div class="level beginner">初級</div>
-                        <p class="detail">詳細へ</p>
-                    </div>
-                </a>
-            </li>
-            <li class="itemBox grid5Pc grid10 beginnerShadow">
-                <a href="#">
-                    <img class="mainImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <div class="left">
-                        <h3 class="routeTitle">初級ルート１</h3>
-                        <p class="description">説明文</p>
-                        <p class="description">説明文</p>
-                        <dl>
-                            <dt>走行距離</dt>
-                            <dd>10km</dd>
-                            <dt>走行時間</dt>
-                            <dd>約1時間</dd>
-                            <dt>消費カロリー</dt>
-                            <dd>1000kcal</dd>
-                        </dl>
-                    </div>
-                    <div class="right">
-                        <div class="level beginner">初級</div>
-                        <p class="detail">詳細へ</p>
-                    </div>
-                </a>
-            </li>
-            <li class="itemBox grid5Pc grid10 beginnerShadow">
-                <a href="#">
-                    <img class="mainImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <img class="subImg">
-                    <div class="left">
-                        <h3 class="routeTitle">初級ルート１</h3>
-                        <p class="description">説明文</p>
-                        <p class="description">説明文</p>
-                        <dl>
-                            <dt>走行距離</dt>
-                            <dd>10km</dd>
-                            <dt>走行時間</dt>
-                            <dd>約1時間</dd>
-                            <dt>消費カロリー</dt>
-                            <dd>1000kcal</dd>
-                        </dl>
-                    </div>
-                    <div class="right">
-                        <div class="level beginner">初級</div>
-                        <p class="detail">詳細へ</p>
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div><a href="#" class="more routemore">→more</a></div>
+    <div class="topCourse">
+    <?php
+
+//DB接続
+$dsn = 'mysql:host=localhost;dbname=charitoku;charset=utf8';
+$user = 'root';
+$password = '';
+
+try {
+    $db = new PDO($dsn, $user, $password);
+    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $stmt = $db->prepare("select * from course where del_flag=0 order by popularity desc limit 4; ");
+    // $stmt->bindParam(':level', $level, PDO::PARAM_STR);
+    $stmt->execute();
+    $data = array();
+    $count = $stmt->rowCount();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $data[] = $row;
+    }
+    // echo 'hello';
+} catch (PDOException $e) {
+    // echo 'bad';
+    die('エラー:' . $e->getMesssage());
+}
+echo '<ul id="itemList">';
+foreach ($data as $row) {
+    
+    echo '<li class="itemBox grid5Pc grid10">';
+    echo '<a href="#">';
+    echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
+    $id = intval($row['id']);
+    try {
+        $db = new PDO($dsn, $user, $password);
+        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $stmt = $db->prepare("select * from course_route where course_id  = $id  limit 3");
+        // $stmt->bindParam(':level', $level, PDO::PARAM_STR);
+        $stmt->execute();
+        $data3 = array();
+        $count = $stmt->rowCount();
+        while ($row3 = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $data3[] = $row3;
+        }
+        // echo 'hello';
+    } catch (PDOException $e) {
+        // echo 'bad';
+        die('エラー:' . $e->getMesssage());
+    }
+    foreach ($data3 as $row3) {
+
+        echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
+    }
+    // echo '<img class="subImg">';
+    // echo '<img class="subImg">';
+    echo '<div class="left">';
+    echo '<h3 class="routeTitle">' . $row['title'] . '</h3>';
+    echo '<p class="description">' . $row['sub_description'] . '</p>';
+    echo '<dl>';
+    echo '<dt>走行距離</dt>';
+    echo '<dd>' . $row['length'] . 'km</dd>';
+    echo '<dt>走行時間</dt>';
+    echo '<dd>約' . $row['time'] . '時間</dd>';
+    echo '<dt>消費カロリー</dt>';
+    echo '<dd>' . $row['calorie'] . 'kcal</dd>';
+    echo '</dl>';
+    echo '</div>';
+    echo '<div class="right">';
+    if ($row['level'] == 'beginner') {
+        echo '<div class="level beginner">初級</div>';
+    } elseif ($row['level'] == 'standard') {
+        echo '<div class="level standard">中級</div>';
+    } elseif ($row['level'] == 'advanced') {
+        echo '<div class="level advanced">上級</div>';
+    }
+    echo '<p class="detail"><a href="routedetail.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+    echo '</div>';
+    echo '</a>';
+    echo '</li>';
+}
+echo '</ul>';
+
+?>
+
+
+    <div><a href="http://localhost/charitoku/route-list.php?level=all" class="more routemore">→more</a></div>
 
     <footer>
         <div class="back">

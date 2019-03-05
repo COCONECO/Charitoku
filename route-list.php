@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/route-list.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet"></head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/route-list.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.inview.js"></script>
 </head>
 <body>
 
@@ -13,8 +15,7 @@
         </div>
         <nav id="gnav">
                 <ul>
-
-                <li><a href="route-list.php"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
+                <li><a href="route-list.php?level=all"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
                 <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
                 <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
                 <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
@@ -65,10 +66,10 @@ if ($level !== 'all') {
         // echo 'bad';
         die('エラー:' . $e->getMesssage());
     }
+    echo '<ul id="itemList">';
     foreach ($data as $row) {
 
-        echo '<ul id="itemList">';
-        echo '<li class="itemBox grid5Pc grid10">';
+        echo '<li class="itemBox grid5Pc grid10 fadein">';
         echo '<a href="#">';
         echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
         $id = intval($row['id']);
@@ -91,7 +92,7 @@ if ($level !== 'all') {
 
         foreach ($data3 as $row3) {
 
-        echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
+            echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
         }
         // echo '<img class="subImg">';
         // echo '<img class="subImg">';
@@ -119,8 +120,8 @@ if ($level !== 'all') {
         echo '</div>';
         echo '</a>';
         echo '</li>';
-        echo '</ul>';
     }
+    echo '</ul>';
 
 } else {
     try {
@@ -139,10 +140,9 @@ if ($level !== 'all') {
         // echo 'bad';
         die('エラー:' . $e->getMesssage());
     }
-
+    echo '<ul id="itemList">';
     foreach ($data as $row) {
-        echo '<ul id="itemList">';
-        echo '<li class="itemBox grid5Pc grid10">';
+        echo '<li class="itemBox grid5Pc grid10 fadein">';
         echo '<a href="#">';
         echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
         $id = intval($row['id']);
@@ -165,7 +165,7 @@ if ($level !== 'all') {
 
         foreach ($data3 as $row3) {
 
-        echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
+            echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
         }
         // echo '<img class="subImg">';
         // echo '<img class="subImg">';
@@ -189,12 +189,13 @@ if ($level !== 'all') {
         } elseif ($row['level'] == 'advanced') {
             echo '<div class="level advanced">上級</div>';
         }
-        echo '<p class="detail"><a href="routedetail.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+        echo '<p class="detail"><a  class="detail" href="routedetail.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
         echo '</div>';
         echo '</a>';
         echo '</li>';
-        echo '</ul>';
     }
+    echo '</ul>';
+
 }
 
 ?>
