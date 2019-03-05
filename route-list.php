@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/route-list.css">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.inview.js"></script>
 </head>
 <body>
 
@@ -67,7 +69,7 @@ if ($level !== 'all') {
     echo '<ul id="itemList">';
     foreach ($data as $row) {
 
-        echo '<li class="itemBox grid5Pc grid10">';
+        echo '<li class="itemBox grid5Pc grid10 fadein">';
         echo '<a href="#">';
         echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
         $id = intval($row['id']);
@@ -140,7 +142,7 @@ if ($level !== 'all') {
     }
     echo '<ul id="itemList">';
     foreach ($data as $row) {
-        echo '<li class="itemBox grid5Pc grid10">';
+        echo '<li class="itemBox grid5Pc grid10 fadein">';
         echo '<a href="#">';
         echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
         $id = intval($row['id']);
