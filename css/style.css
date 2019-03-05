@@ -17,9 +17,9 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+ caption, tbody, tfoot, thead,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -48,10 +48,7 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 *{
     color: #000000;
@@ -149,6 +146,7 @@ p ,a ,li{font-size: 16px;}
 }
 
 #gnav p{
+    font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -171,6 +169,11 @@ p ,a ,li{font-size: 16px;}
     
     #gnav{
         width:70%;
+    }
+
+    #gnav li{
+        width:20%;
+        margin-left: 5px;
     }
 
     .navTitle{
@@ -307,13 +310,16 @@ main{
         float:left;
 }
 
+.sideBar{
+    float: left;
+}
+
 
 /*サイドバー*/
 @media screen and (min-width: 768px){
     .sideBar{
         width: 16%;
         margin: 80px 4% 0 4%;
-        float:left;
         border: 1px solid #000000;
         text-align: center;
     }
@@ -427,3 +433,4 @@ footer p{
     .banner li{
         margin: 40px 8.3% 0 8.3%;
     }
+}
