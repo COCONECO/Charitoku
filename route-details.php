@@ -78,38 +78,26 @@ try {
             </a>
         </div>
         <nav id="gnav">
-            <ul>
-                <li><a href="route-list.html">
-                        <p class="navTitle">Route</p>
-                        <p class="navSubTitle">ルート一覧</p>
-                    </a></li>
-                <li><a href="introduction.html">
-                        <p class="navTitle">Info</p>
-                        <p class="navSubTitle">自転車の心得</p>
-                    </a></li>
-                <li><a href="blog-list.html">
-                        <p class="navTitle">Blog</p>
-                        <p class="navSubTitle">ブログ</p>
-                    </a></li>
-                <li><a href="link.html">
-                        <p class="navTitle">Link</p>
-                        <p class="navSubTitle">リンク</p>
-                    </a></li>
+                <ul>
+                <li><a href="route-list.php"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
+                <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
+                <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
+                <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
             </ul>
         </nav>
     </header>
     <div id="imagesCover">
         <section class="imagesCover">
-            <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"></img>
+            <img class= "headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"  >
         </section>
-    </div>
+    </div><!-- /#imagesCover -->
     <section id="main" class="container">
         <section class="courseContents">
             <!-- <h2>眉山クライミング<br class="sp">（庄町→八万）（仮）</h2> -->
 
             <?php
                 foreach ($data2 as $row) {
-                echo '<h2>'.$row['title'].'</h2>';
+                echo '<h2 class="courseName">'.$row['title'].'</h2>';
                 }
             ?>
 
@@ -124,8 +112,7 @@ try {
                     山を自転車で登るのが初めての方にお勧めです。<br>
                     眉山公園から一望できる徳島全体を見渡せる景色は眉山を登り切ったという達成感を味わえます。<br>
                     春や秋になると途中にある西部公園やコース沿いに桜や紅葉といった景色を楽しみながら走ることができます。<br>
-                </p> -->
-                
+                </p><!-- /.courseText -->
                 <table class="dateTable">
                     <tr>
                         <th>走行距離</th>
@@ -212,7 +199,7 @@ try {
         </div> -->
 
         <div class="tweet">
-            <a href="./route-list.html">ルート一覧に戻る</a>
+            <a href="./route-list.php">ルート一覧に戻る</a>
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"
                 data-text="このコースを走りました！">
                 Tweet</a>
@@ -220,12 +207,13 @@ try {
         </div><!-- /.tweet -->
     </section><!-- /#main -->
     <footer>
-        <div class="back">
+        <div class="footerBack">
             <ul class="banner">
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
             </ul>
+            <p>©道プロジェクト</p>
         </div>
     </footer>
 
