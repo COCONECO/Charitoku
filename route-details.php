@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ページ詳細サンプル</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="./css/route-details.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/route-details.css">
 </head>
 <body>
     <header id="commonHeader">
@@ -104,12 +104,13 @@
         </div><!-- /.tweet -->
     </section><!-- /#main -->
     <footer>
-        <div class="back">
+        <div class="footerBack">
             <ul class="banner">
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
             </ul>
+            <p>©道プロジェクト</p>
         </div>
     </footer>
 </body>
