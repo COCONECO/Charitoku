@@ -2,31 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<<<<<<< HEAD
-<link rel="stylesheet" href="css/style.css">
-=======
 <link rel="stylesheet" type="text/css" href="css/style.css">
->>>>>>> c1e8dcfb08470b0b07be63105834b544982c873f
 <link rel="stylesheet" type="text/css" href="css/link.css">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet"></head>
 </head>
 <body>
-<<<<<<< HEAD
-<header id="commonHeader">
-    <div id= "gnavLogo">
-      <a href="#"><h1>logo<img src=""></h1></a>
-    </div>
-    <nav id="gnav">
-      <ul>
-        <li><a href="route-list.php"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
-        <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
-        <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
-        <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
-      </ul>
-    </nav>
-  </header>
-    <img src="bizan.jpg" width="100%" height="170px">
-=======
     <header id="commonHeader">
         <div id= "gnavLogo">
             <a href="#"><h1>logo<img src="#"></h1></a>
@@ -41,7 +21,6 @@
         </nav>
     </header>
     <img src="images/bizan.jpg" width="100%" height="170px">
->>>>>>> c1e8dcfb08470b0b07be63105834b544982c873f
 
 
     <h2>リンク</h2>

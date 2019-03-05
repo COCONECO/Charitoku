@@ -9,7 +9,6 @@ h2{
     margin-top: 160px;
 
 }
-
 span{
     border-bottom: 1px solid blue;
 
@@ -21,18 +20,27 @@ span{
     margin-left:15%;
     float: left;
 }
-.detail{
-    width: 80%;
+.midashi{
+    padding: 200 0 10 0;
+}
+.shosai{
     display: flex;
     align-items: flex-start;
-    margin-top:40px;
+    margin-bottom: 10px;
 }
-/* img{
+img{
     clear: left;
-} */
-
-.mainText{
-    width: 70%;
+    margin: 20 0 20 0;
+}
+.blogKiji{
+    line-height: 1.7;
+    padding: 10px;
+}
+@media screen and (max-width: 768px) {
+    img{
+        width: 100%;
+        height: 50%;
+    }
 }
 .back{
     float: right;
