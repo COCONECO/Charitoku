@@ -12,7 +12,7 @@ h2{
 }
 p{
   font-family: 'Sawarabi Mincho', sans-serif;
-  
+
 }
 span{
     border-bottom: 1px solid blue;
@@ -30,12 +30,27 @@ span{
     height: auto;
     margin-left: 80px;
 }
-.detail{
+.midashi{
+    padding: 200 0 10 0;
+}
+.shosai{
     display: flex;
     align-items: flex-start;
+    margin-bottom: 10px;
 }
 img{
-    /* clear: left; */
+    clear: left;
+    margin: 20 0 20 0;
+}
+.blogKiji{
+    line-height: 1.7;
+    padding: 10px;
+}
+@media screen and (max-width: 768px) {
+    img{
+        width: 100%;
+        height: 50%;
+    }
 }
 .back{
     float: right;

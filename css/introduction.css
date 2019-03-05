@@ -11,15 +11,16 @@ h2{
     text-align: center;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
-    
+
 }
 h3{
     font-size: 24px;
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
 }
- .titleRight{
+ span.titleRight{
     float: right;
+    color: white;
 }
 .title{
     background-color: #2e85fc;
@@ -53,15 +54,20 @@ h3{
 }
 }
 
-p{
+.para{
     font-size: 18px;
     padding: 20px;
-
+    line-height: 1.7;
 }
 .about{
     width: 60%;
     margin: 50px auto 0;
+
 }
+.about h3{
+    padding: 50 0 50 0;
+}
+
 
 .kasen{
     border-bottom: gray 1px solid;
