@@ -1,56 +1,7 @@
 @charset utf8;
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-body{
-    width: 100%;
-    height: auto;
-}
-
-li{
-    list-style: none;
-}
-
-
-header{
-    width: 100%;
-    position: fixed;
-}
-
-#gnav{
-    float: right;
-    width: 50%;
-}
-
-#gnav li{
-    font-family: 'Noto Sans JP', sans-serif;
-    display: inline-block;
-    width: 24%;
-    height: 80px;
-    text-align: center;
-}
-
-#logo{
-    float: left;
-    width: 160px;
-    height: 80px;
-}
-
-.navTitle{
-    font-size: 24px;
-    color: #3887FF;
-}
-
-.navSubTitle{
-    font-size: 12px;
-    color:#929297;
-}
 body{
   font-family: 'Noto Sans JP', sans-serif;
-    
+
 }
 h2{
     text-align: center;
@@ -73,9 +24,11 @@ table{
     max-width: 960px;
     width: 100%;
     margin:0 auto;
+    background-color: gray;
 }
 td{
     padding: 5px;
+    background-color: white;
 }
 .three{
     width: 30%
