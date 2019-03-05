@@ -148,7 +148,7 @@
 
     <div class=topCourse>
         <ul id="itemList">
-            <li class="itemBox grid5Pc grid10">
+            <li class="itemBox grid5Pc grid10 beginnerShadow">
                 <a href="#">
                     <img class="mainImg">
                     <img class="subImg">
@@ -173,7 +173,7 @@
                     </div>
                 </a>
             </li>
-            <li class="itemBox grid5Pc grid10">
+            <li class="itemBox grid5Pc grid10 beginnerShadow">
                 <a href="#">
                     <img class="mainImg">
                     <img class="subImg">
@@ -198,7 +198,7 @@
                     </div>
                 </a>
             </li>
-            <li class="itemBox grid5Pc grid10">
+            <li class="itemBox grid5Pc grid10 beginnerShadow">
                 <a href="#">
                     <img class="mainImg">
                     <img class="subImg">
@@ -223,7 +223,7 @@
                     </div>
                 </a>
             </li>
-            <li class="itemBox grid5Pc grid10">
+            <li class="itemBox grid5Pc grid10 beginnerShadow">
                 <a href="#">
                     <img class="mainImg">
                     <img class="subImg">
