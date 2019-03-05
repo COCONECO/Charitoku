@@ -1,0 +1,53 @@
+/*
+-----------------------------
+|      ルート一覧見出し      |
+-----------------------------
+*/
+h2{
+    text-align: center;
+    margin-top: 160px;
+}
+
+/*
+-------------------------
+|      ソートボタン      |
+-------------------------
+*/
+
+#routeSort{
+    width: 80%;
+    display: flex;
+    margin: 80px auto 40px auto;
+    text-align: center;
+}
+
+#routeSort li{
+    margin: 0 4%;
+    width: 20%;
+    height: 80px;
+    line-height: 80px;
+    border-radius:20px;
+    /* display: inline-block;
+    text-align: center;
+    
+    height: 80px;
+    margin: 80px 6% 0 6%;
+    
+    */
+} 
+
+#routeSort a{
+    display: block;
+    color:#ffffff;
+}
+
+
+/*
+-------------------------
+|      ボタンカラー      |
+-------------------------
+*/
+#all{background-color: #868686;}
+#beginner{background-color: #a1fa93;}
+#standard{background-color: #5464f2;}
+#advanced{background-color: #f31255;}

@@ -1,0 +1,28 @@
+@charset utf8;
+
+
+.wrap{
+    width: 1100px;
+    margin: 0 auto;
+}
+.text{
+    font-size: 18px;
+    width: 60%;
+    height: 165px;
+    margin-left: 50px;
+    float: right;
+}
+
+button{
+    font-size: 22px;
+}
+.tweet{
+    margin: 50px;
+}
+a, button{
+    float: right;
+    margin: 0 20px;
+}
+i{
+    color: skyblue;
+}

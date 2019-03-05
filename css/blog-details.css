@@ -1,0 +1,42 @@
+@charset utf8;
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+h2{
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+p{
+  font-family: 'Sawarabi Mincho', sans-serif;
+  
+}
+span{
+    border-bottom: 1px solid blue;
+
+}
+.date, .category{
+    margin-top: 0;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+
+.tutumi{
+    width: 60%;
+    height: auto;
+    margin-left: 80px;
+}
+.detail{
+    display: flex;
+    align-items: flex-start;
+}
+img{
+    /* clear: left; */
+}
+.back{
+    float: right;
+}

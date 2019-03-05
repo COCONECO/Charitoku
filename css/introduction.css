@@ -1,0 +1,155 @@
+@charset utf8;
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+p{
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+h2{
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    
+}
+h3{
+    font-size: 24px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+}
+ .titleRight{
+    float: right;
+}
+.title{
+    background-color: #2e85fc;
+    margin: 0;
+    font-size: 24px;
+    padding: 0 5px;
+    color: white;
+}
+@media screen and (min-width: 768px) and (max-width: 1040px ) {
+    .title{
+        font-size: 16px;
+    }
+}
+.intro{
+    box-sizing: border-box;
+    width: 40%;
+    height: 430px;
+    border: gray 2px solid;
+    float: left;
+    margin: 5%;
+    line-height: 1.7;
+    position: relative;
+}
+
+@media screen and (max-width: 768px ) {
+.intro{
+    float: none;
+    width: 100%;
+    height: 500px;
+    margin: 5% 0;
+}
+}
+
+p{
+    font-size: 18px;
+    padding: 20px;
+
+}
+.about{
+    width: 60%;
+    margin: 50px auto 0;
+}
+
+.kasen{
+    border-bottom: gray 1px solid;
+}
+
+.mask{
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+}
+.center{
+    font-size: 22px;
+    min-width: 250px;
+    width: 80%;
+    min-height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+
+
+/* ここから画像の指定 */
+.plan{
+    background-image: url(../images/info/memo.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+.distance{
+    background-image: url(../images/info/route.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.route{
+    background-image: url(../images/info/map.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.buy{
+    background-image: url(../images/info/omise.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.select{
+    background-image: url(../images/info/cycling.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.check{
+    background-image: url(../images/info/sharin.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.deal{
+    background-image: url(../images/info/racer.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.bag{
+    background-image: url(../images/info/drink.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.road{
+    background-image: url(../images/info/road.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+
+}
+.light{
+    background-image: url(../images/info/light.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}

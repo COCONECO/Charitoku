@@ -1,0 +1,433 @@
+@charset "utf-8";
+
+/**************************************************
+style.css
+**************************************************/
+
+td,th,p{
+	font-size: 18px;
+	font-family: 'Sawarabi Mincho','Noto Sans JP';
+	font-weight: normal;
+}
+
+/**************************************************
+imagesCover
+**************************************************/
+
+#imagesCover{
+	position: relative; 
+	display: block;
+	width: 100%;
+	height: calc(185px + 60px);
+}
+.imagesCover{
+	position: relative; 
+	top: 60px;
+	height: 185px;
+	overflow: hidden;
+}
+.imagesCover img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: auto;
+	max-width: inherit;
+	z-index: -999;
+}
+@media screen and (min-width : 768px){
+	#imagesCover{
+		position: relative; 
+		display: block;
+		width: 100%;
+		height: calc(185px + 80px);
+	}
+	.imagesCover{ 
+		top: 80px;
+	}
+}
+/**************************************************
+main
+**************************************************/
+#main{
+	position: relative; 
+	margin: 0 auto 0;
+	padding: 0 20px;
+	max-width: 960px;
+}
+.courseContents{
+	max-width: 960px;
+}
+
+.courseContents h2{
+	padding: 20px 0px;
+	line-height: 2.0;
+	word-wrap: break-word;
+	text-align: center;
+}
+
+.courseContents p{
+	position: relative;
+	padding: 0 16px;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+.courseContents p::after{
+	-webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+	position: absolute;
+	content: '';
+	top: -8px;
+	left: -8px;
+	width: 100%;
+	height: 100%;
+	background-color: #F1FFFF;
+	opacity: 1;
+	padding: 8px;
+	z-index: -9999;
+}
+.courseContents p::before{
+	-webkit-filter: blur(60px);
+  -moz-filter: blur(60px);
+  -o-filter: blur(60px);
+  -ms-filter: blur(60px);
+  filter: blur(60px);
+	position: absolute;
+	content: '';
+	top: -8px;
+	left: -8px;
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+	opacity: 1;
+	border-radius: 50%;
+	padding: 8px;
+	z-index: -999;
+}
+.dateTable{
+	display: block;
+	text-align: center;
+	padding: 20px 0px;
+	width: auto;
+	height: auto;
+	width: 280px;
+	position: relative;
+	left: calc(50% - 140px);
+}
+.courseContents th{
+	text-align: left;
+	padding: 0 10px;
+	width: 120px;/*中央寄せ*/
+	line-height: 2.0;
+}
+.courseContents td{
+	text-align: right;
+	padding: 0 10px;
+	width: 120px;/*中央寄せ*/
+	line-height: 2.0;
+}
+.map{
+	border: #3887ff  1px solid;
+	position: relative;
+	padding-bottom: 80%;
+	margin-bottom: 20px;
+}
+.map iframe{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+.slope{
+	border: #3887ff  1px solid;
+	position: relative;
+	padding-bottom: 40%;
+	margin-bottom: 20px;
+}
+.slope iframe{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+.slope .dateTable{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top:100%;
+	padding: 0;
+
+}
+.courseContents .slope tbody{
+	display: block;
+	width: 100%;
+}
+.courseContents .slope tr{
+	display: block;
+	width: 100%;
+	max-width: 960px;
+}
+.courseContents .slope th{
+	float: left;
+	text-align: left;
+	padding: 0;
+	width: 50%;
+	line-height: 2.0;
+}
+.courseContents .slope td{
+	float: right;
+	text-align: right;
+	padding: 0;
+	width: 50%;
+	line-height: 2.0;
+}
+.arrivalBar{
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
+
+.arrivalBar .arrivalRate{
+	width: 100%;
+	padding: 0;
+
+}
+.arrivalBar .bar{
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #3887ff ;
+	height: 2px;
+	width: 100%;
+	border-radius: 6px;
+}
+
+.arrivalBar .bar:focus,
+.arrivalBar .bar:active {
+	  outline: none;
+}
+.arrivalBar:hover + .arrivalBar .barDescription{
+	display: block;
+}
+.arrivalBar .bar::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  cursor: pointer;
+	  position: relative;
+	  width: 20px;
+	  height: 20px;
+	  display: block;
+	  border: 2px solid #3887ff ;
+	  background-color: #fff;
+	  border-radius: 50%;
+	  -webkit-border-radius: 50%;
+}
+.arrivalBar .bar:active::-webkit-slider-thumb {
+	box-shadow: 0 0 0 4px rgba(105, 105, 255, .6);
+	transition: .4s;
+}
+.barDescription {
+	display: block;
+	width: calc(100% - 40px);
+	position: absolute;
+	top: 36px;
+	left: calc(0% + 16px);
+	padding: 4px;
+	margin: 0 auto;
+	border-radius: 5px;
+	background-color: #2e85fc ;
+	color: #fff;
+	font-weight: bold;
+	opacity: 0.0;
+	text-align: center;
+	animation: fadeout80  1.5s ease forwards;
+  }
+.barDescription:after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: calc(50% - 0px - 10px);
+	background-color: transparent;
+	top: -19px;
+	border: solid transparent;
+	border-color: rgba(51, 204, 153, 0);
+	border-bottom-color: #2e85fc ;
+	border-width: 10px;
+	pointer-events: none;
+	content: " ";
+}
+.bar:hover + .barDescription {
+	animation: fadein80  1.5s ease forwards;
+	display: block;
+}
+@keyframes fadein80{
+	from{opacity:0;}
+	to{opacity: 0.8;}
+}
+@keyframes fadeout80{
+	from{opacity:0.8;}
+	to{opacity: 0;}
+}
+
+@media screen and (min-width : 768px){
+	br[class="sp"]{
+		display: none;
+	}
+
+	#main{
+		margin: 100px auto 0;
+		padding: 0 20px 100px;
+	}
+
+	.courseContents h2{
+		padding: 0 0 40px;
+		line-height: 2.0;
+		word-wrap: break-word;
+		text-align: left;
+	}
+
+	.courseContents p{
+		padding: 0;
+	}
+	
+	.dateTable{
+		position: static;
+		padding: 40px 20px;
+		margin: 0 auto;
+		width: auto;
+		left: 0;
+	}
+	.map{
+		padding-bottom: 36%;
+		margin-bottom: 40px;
+	}
+	.slope{
+		padding-bottom: 16%;
+		margin-bottom: 40px;
+	}
+	.barDescription {
+		display: block;
+		width: calc(100% - 160px);
+		position: absolute;
+		top: -50px;
+		left: calc(50% - 50% + 80px - 4px);
+		padding: 4px;
+		margin: 0 auto;
+		border-radius: 5px;
+		background-color: #2e85fc ;
+		color: #fff;
+		font-weight: bold;
+		opacity: 0.0;
+		text-align: center;
+		animation: fadeout80  1.5s ease forwards;
+	  }
+	.barDescription:after {
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: calc(50% - 0px - 10px);
+		background-color: transparent;
+		top: 100%;
+		border: solid transparent;
+		border-color: rgba(51, 204, 153, 0);
+		border-top-color: #2e85fc ;
+		border-width: 10px;
+		pointer-events: none;
+		content: " ";
+	}
+}
+/**************************************************
+wrap
+**************************************************/
+.wrap{
+    /* width: 1100px; */
+    max-width: 960px;/*追加*/
+	margin: 0 auto;
+	padding: 20px;/*追加*/
+}
+.wrap img{
+	width: 90%;
+	height: auto;
+	padding: 0 5%;
+}
+
+.wrap h3{
+	margin-left: 5%;
+	font-size: 24px;
+}
+
+.wrap .text{
+		font-size: 18px;
+		margin: 20px 5%;
+    width: 90%;
+    height: auto;
+}
+@media screen and (min-width : 768px){
+	.wrap{
+		height: auto;
+		padding: 30px 40px 30px;/*追加*/
+	}
+	.wrapFlex{
+		display: flex;
+		width: 100%;
+		height:100%;
+	}
+	.wrap h3{
+		margin-left: 0;
+	}
+	.wrap img{
+		width: 60%;
+		height: calc(100% * 0.4);
+		margin: 0 auto 0 0;
+		padding: 0;
+	}
+	.wrap .text{
+		font-size: 18px;
+		width: 38%;
+		min-height: 165px;
+		height: auto;
+		margin: 20px 0 2% 0;
+		overflow: hidden;
+	}
+}
+/**************************************************
+tweet
+**************************************************/
+.tweet{
+	margin: 0px;
+
+}
+.tweet a{
+	height: 20px;
+	float: right;
+	margin: 1px 20px 0 0;
+	font-style: normal;
+	text-decoration: underline;
+	color: #3887ff ;
+}
+.tweet .twitter-share-button{
+	float: right;
+	margin-right:20px;
+}
+
+@media screen and (min-width : 768px){
+	.tweet{
+		margin: 50px;
+	
+	}
+	.tweet a{
+		height: 20px;
+		float: right;
+		margin: 0 20px;
+		font-style: normal;
+		text-decoration: underline;
+		color: #3887ff ;
+	}
+	.tweet .twitter-share-button{
+		float: right;
+	}
+}

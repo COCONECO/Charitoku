@@ -1,0 +1,61 @@
+/*
+--------------------
+|      見出し      |
+--------------------
+*/
+
+h2{
+    text-align: center;
+    margin: 160px 0 80px 0;
+}
+
+/*
+-----------------------
+|      ブログ一覧      |
+-----------------------
+*/
+
+#blogList{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.blogBox{
+    height: 420px;
+    margin: 40px auto 20px auto;
+    border: 1px #000000 solid;
+}
+
+.blogImg{
+    width: 80%;
+    height: 60%;
+    padding: 20px 10%;
+}
+
+.blogTitle{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.blogDay{
+    float: left;
+    margin: 10% 0 0 20px;
+}
+
+.blogCategory{
+    float: right;
+    margin: 10% 20px 0 0;
+}
+
+@media screen and (max-width: 768px){
+    main{
+        width: 100%;
+    }
+}
+
+.blogTitle a{
+    font-size: 24px;
+    text-decoration: underline;
+}
+
