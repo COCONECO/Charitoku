@@ -6,8 +6,8 @@
         <title>ページ詳細サンプル</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-        <link rel="stylesheet" href="./css/route-details.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/route-details.css">
 </head>
 <body>
     <header id="commonHeader">
@@ -16,16 +16,16 @@
         </div>
         <nav id="gnav">
                 <ul>
-                <li><a href="route-list.html"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
-                <li><a href="introduction.html"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
-                <li><a href="blog-list.html"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
-                <li><a href="link.html"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
+                <li><a href="route-list.php"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
+                <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
+                <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
+                <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
             </ul>
         </nav>
     </header>
     <div id="imagesCover">
         <section class="imagesCover">
-            <img class= "headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"  ></img>
+            <img class= "headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"  >
         </section>
     </div>
     <section id="main" class="container">
@@ -105,12 +105,13 @@
         </div><!-- /.tweet -->
     </section><!-- /#main -->
     <footer>
-        <div class="back">
+        <div class="footerBack">
             <ul class="banner">
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
             </ul>
+            <p>©道プロジェクト</p>
         </div>
     </footer>
 </body>
