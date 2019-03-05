@@ -104,7 +104,7 @@ try {
             <section class="courseDescription">
             <?php
                 foreach ($data2 as $row) {
-                echo '<p>'.$row['description'].'</p>';
+                echo '<p class="courseText">'.$row['description'].'</p>';
                 }
             ?>
                 <!-- <p>眉山の庄町側から登っていくコースです。<br>
@@ -172,6 +172,16 @@ try {
                 </div><!-- /.arrivalBar -->
             </section><!-- /.courseDescription -->
         </section><!-- /.courseContents -->
+
+        <script>
+            var slider = document.querySelector("[type=range]");
+    
+            slider.addEventListener("change", function() {
+                // マウスアップした際のイベント
+                console.log('bbbbbb');
+
+            }, false);
+        </script>
 
         <?php
         $idx = 1;
