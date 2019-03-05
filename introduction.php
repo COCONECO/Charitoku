@@ -3,10 +3,24 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/introduction.css">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet"></head>
 
 <body>
+<header id="commonHeader">
+        <div id= "gnavLogo">
+            <a href="#"><h1>logo<img src="#"></h1></a>
+        </div>
+        <nav id="gnav">
+                <ul>
+                    <<li><a href="route-list.php"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
+                    <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
+                    <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
+                    <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
+            </ul>
+        </nav>
+    </header>
     <h2><span class="kasen">自転車の心得</span></h2>
     <div class="intro plan">
         <h3 class="title">心得1<span class="titleRight">余裕のある計画を立てましょう</span></h3>
@@ -133,7 +147,16 @@
 
 
     </div>
-
+    <footer>
+        <div class="footerBack">
+            <ul class="banner">
+                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li>
+            </ul>
+            <p>©道プロジェクト</p>
+        </div>
+    </footer>
 
 </body>
 
