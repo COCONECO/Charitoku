@@ -64,9 +64,9 @@ if ($level !== 'all') {
         // echo 'bad';
         die('エラー:' . $e->getMesssage());
     }
+    echo '<ul id="itemList">';
     foreach ($data as $row) {
 
-        echo '<ul id="itemList">';
         echo '<li class="itemBox grid5Pc grid10">';
         echo '<a href="#">';
         echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
@@ -90,7 +90,7 @@ if ($level !== 'all') {
 
         foreach ($data3 as $row3) {
 
-        echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
+            echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
         }
         // echo '<img class="subImg">';
         // echo '<img class="subImg">';
@@ -118,8 +118,8 @@ if ($level !== 'all') {
         echo '</div>';
         echo '</a>';
         echo '</li>';
-        echo '</ul>';
     }
+    echo '</ul>';
 
 } else {
     try {
@@ -138,9 +138,8 @@ if ($level !== 'all') {
         // echo 'bad';
         die('エラー:' . $e->getMesssage());
     }
-
+    echo '<ul id="itemList">';
     foreach ($data as $row) {
-        echo '<ul id="itemList">';
         echo '<li class="itemBox grid5Pc grid10">';
         echo '<a href="#">';
         echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
@@ -164,7 +163,7 @@ if ($level !== 'all') {
 
         foreach ($data3 as $row3) {
 
-        echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
+            echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
         }
         // echo '<img class="subImg">';
         // echo '<img class="subImg">';
@@ -192,8 +191,9 @@ if ($level !== 'all') {
         echo '</div>';
         echo '</a>';
         echo '</li>';
-        echo '</ul>';
     }
+    echo '</ul>';
+
 }
 
 ?>
