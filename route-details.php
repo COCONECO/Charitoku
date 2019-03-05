@@ -164,24 +164,17 @@ try {
                         </tr>
                     </table>
                 </div><!-- /.slope -->
-                <div id="myslider1" class="arrivalBar">
+                <div class="arrivalBar">
                     <table class="arrivalRate">
-                        <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
+                        <div id="myslider2">
+                            <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
+                        </div>
                         <p class="barDescription">バーを動かして、<br class="sp">位置の確認ができます</p>
                     </table>
                 </div><!-- /.arrivalBar -->
             </section><!-- /.courseDescription -->
         </section><!-- /.courseContents -->
 
-        <script>
-            var slider = document.querySelector("[type=range]");
-    
-            slider.addEventListener("change", function() {
-                // マウスアップした際のイベント
-                console.log('bbbbbb');
-
-            }, false);
-        </script>
 
         <?php
         $idx = 1;
