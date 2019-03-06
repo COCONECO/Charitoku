@@ -75,40 +75,68 @@
 
             <div class="topBlog">
                 <div id="blogList">
+                <?php
+echo '<div>';
+?>
+<?php
+//何ページから表示
+if (isset($_GET['page']) && $_GET['page'] > 0) {
+    $page = intval($_GET['page']) - 1;
+} else {
+    $page = 0;
+}
+// echo $page;
+//何ページまで表示
+$count = 2;
+$num = $page + $count;
+echo kiji($page, $num, $count);
+function kiji($page, $num, $count)
+{
+    $rss = simplexml_load_file('http://localhost/charitoku/blog/wordpress/feed/');
+    $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
+    $i = 0;
+    foreach ($rss->channel->item as $item) {
+        $title[$i] = $item->title;
+        $date[$i] = date("Y年 n月 j日", strtotime($item->pubDate));
+        $link[$i] = $item->link;
+        $description[$i] = mb_strimwidth(strip_tags($item->description), 0, 110, "…Read More", "utf-8");
+        $media[$i] = $item->media;
+        $i++;
+    }
+    $maxpage = $i;
+    $cnt = $count;
+    // echo $maxpage;
+    if ($i > $num) {
+        $i = $num;
+    }
+    $t = $page;
+    for ($t; $t < $i; $t++) {
+        ?>
+    <div class="profile_card">
+        <div class="card_photo">
+            <?php echo '<div class="card_photo_img"><img src="' . $media[$t] . '"  class="boxbox"></div>'; ?>
+        </div>
+        <div class="profile_bio">
+        <?php echo '<h3>' . $date[$t] . '</h3>'; ?>
+        <br>
+        <p>
+        <a href="<?php echo $link[$t]; ?>" target="_blank">
+            <?php echo $title[$t]; ?><br>
+        </a>
+        </p>
+        </div>
+    </div>
 
-
-                    <div class="profile_card">
-                        <div class="card_photo">
-                            <div class="card_photo_img"> <img src="images/top/20170704230336.jpg" class="boxbox">
-                            </div>
-                        </div>
-                        <div class="profile_bio">
-                            <h3>2019年3月4日</h3>
-                            <br>
-                            <p><a href="#">記事タイトル</a></p>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="profile_card">
-
-                        <div class="card_photo">
-                            <div class="card_photo_img"> <img src="images/top/20170704230336.jpg" class="boxbox">
-                            </div>
-                        </div>
-                        <div class="profile_bio">
-                            <h3>2019年3月4日</h3>
-                            <br>
-                            <p class="title-archive"><a href="#">記事タイトル</a></p>
-                        </div>
-                    </div>
+<?php
+}
+}
+echo '</div> '
+?>
 
 
                 </div>
             </div>
-            <div style="text-align: right"><a href="#" class="more">→more</a></div>
+            <div style="text-align: right"><a href="http://localhost/charitoku/blog/wordpress/" class="more">→more</a></div>
         </div>
 
 
@@ -172,7 +200,7 @@ try {
 }
 echo '<ul id="itemList">';
 foreach ($data as $row) {
-    
+
     echo '<li class="itemBox grid5Pc grid10">';
     echo '<a href="#">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
@@ -219,7 +247,7 @@ foreach ($data as $row) {
     } elseif ($row['level'] == 'advanced') {
         echo '<div class="level advanced">上級</div>';
     }
-    echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+    echo '<p class="detail"><a href="routedetail.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
     echo '</div>';
     echo '</a>';
     echo '</li>';
