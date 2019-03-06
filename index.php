@@ -23,8 +23,8 @@
 
     <header id="commonHeader">
         <div id="gnavLogo">
-            <a href="index.php">
-                <h1>logo<img src="#"></h1>
+        <a href="index.php">
+                <h1>logo<div class="logoImages"><div></h1>
             </a>
         </div>
         <nav id="gnav">
@@ -58,8 +58,10 @@
     </header>
 
     <div class="topIMG">
-        <img src="images/top/IMG_7466.JPG" class="topImg imgChange">
+        <img src="./images/top/testtop-1.jpg" class="topImg imgChange"
+            style="width: 1536px; height: auto; left: calc(50vw - 768px);">
     </div>
+    <div class="tLogo"></div><!-- topロゴ -->
 
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
