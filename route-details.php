@@ -99,7 +99,13 @@ try {
     </header>
     <div id="imagesCover">
         <section class="imagesCover">
-            <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像">
+            <!-- <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"> -->
+            
+            <?php
+            foreach ($data2 as $row) {
+                echo '<img class="headerImages" src="./images/route/' . $row['picture_filename'] .'" alt="' . $row['picture_title'] . '">';
+            }
+            ?>
         </section>
     </div><!-- /#imagesCover -->
     <section id="main" class="container">
