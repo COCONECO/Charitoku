@@ -23,7 +23,7 @@
 
     <header id="commonHeader">
         <div id="gnavLogo">
-            <a href="#">
+            <a href="index.php">
                 <h1>logo<img src="#"></h1>
             </a>
         </div>
