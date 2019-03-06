@@ -11,7 +11,7 @@ get_header();
 <body>
 <header id="commonHeader">
         <div id= "gnavLogo">
-            <a href="#"><h1>logo<img src=""></h1></a>
+            <a href="http://localhost/charitoku/"><h1>logo<img src=""></h1></a>
         </div>
         <nav id="gnav">
             <ul>
@@ -40,17 +40,17 @@ $args = array(
 $the_query = new WP_Query($args);
 if ($the_query->have_posts()): while ($the_query->have_posts()): $the_query->the_post();
         ?>
-																								        <li class="blogBox grid5Pc grid10">
+																												        <li class="blogBox grid5Pc grid10">
 
-																										            <!-- <?php the_content();?> -->
-																										            <div class="blogImg"><?php the_post_thumbnail();?></div>
-														                                                            <a href="<?php the_permalink();?>"><h3 class="blogTitle"><?php the_title();?></h3></a>
-												                                                                    <p class="blogDay"><?php echo get_the_date(); ?></p>
-												                                                                    <p class="blogCategory"><?php the_category();?></p>
-																						                            <!-- <?php the_excerpt();?> -->
-																								        </li>
+																														            <!-- <?php the_content();?> -->
+																														            <div class="blogImg"><?php the_post_thumbnail();?></div>
+																		                                                            <a href="<?php the_permalink();?>"><h3 class="blogTitle"><?php the_title();?></h3></a>
+																                                                                    <p class="blogDay"><?php echo get_the_date(); ?></p>
+																                                                                    <p class="blogCategory"><?php the_category();?></p>
+																										                            <!-- <?php the_excerpt();?> -->
+																												        </li>
 
-																										        <?php endwhile;
+																														        <?php endwhile;
 endif;?>
 														                </ul>
 
