@@ -21,6 +21,7 @@ var wayPoints = [];
 jQuery.each(latlang, function () {
     if (this.route_flag == 1) {
         wayPoints.push = new google.maps.LatLng(this.lat, this.lang);
+        // console.log('aaaa',this.lat, this.lang);
     }
 });
 
@@ -34,11 +35,13 @@ let vals = 0;
 
 
 new google.maps.DirectionsService().route({
-    origin: origin,
-    destination: destination,
+    origin: origin, //スタート地点 
+    destination: destination, //ゴール地点
 
-    // travelMode: google.maps.DirectionsTravelMode.WALKING
+    // travelMode: google.maps.DirectionsTravelMode.WALKING,
     travelMode: google.maps.DirectionsTravelMode.DRIVING,
+    optimizeWaypoints: false, // 最適化を無効
+    avoidHighways: true, // 高速は利用しない
     waypoints: wayPoints
 }, function (result, status) {
     if (status == google.maps.DirectionsStatus.OK) {
@@ -59,8 +62,8 @@ new google.maps.DirectionsService().route({
                     if (results[i].elevation) {
                         var elevation = results[i].elevation;
 
-                        // console.log(results[i].location.lat());    
-                        // console.log(results[i].location.lng());    
+                        // console.log(results[i].location.lat());
+                        // console.log(results[i].location.lng());
 
                         routeLat.push(results[i].location.lat());
                         routeLng.push(results[i].location.lng());
@@ -97,10 +100,10 @@ new google.maps.DirectionsService().route({
                         if (val < max) {
                             let lat = routeLat.slice(val, val + 1);
                             let lng = routeLng.slice(val, val + 1);
-                        };
 
-                        // マーカーの移動
-                        markerMoveByLatlng(moveMarkerObj, lat, lng);
+                            // マーカーの移動
+                            markerMoveByLatlng(moveMarkerObj, lat, lng);
+                        };
                     }
                 });
 
@@ -116,12 +119,13 @@ new google.maps.DirectionsService().route({
 
                     // 緯度、経度データの再セット
                     if (val < max) {
-                        let lat = routeLat.slice(val, val + 1);
-                        let lng = routeLng.slice(val, val + 1);
-                    }
+                        let lat = routeLat[val];
+                        let lng = routeLng[val];
 
-                    // マーカーの移動
-                    markerMoveByLatlng(moveMarkerObj, lat, lng);
+                        // マーカーの移動
+                        markerMoveByLatlng(moveMarkerObj, lat, lng);
+                        // console.log("aaaaaaaaaaaaaaaaaaaa",val,lat,lng);
+                    }
                 });
 
             } else {
@@ -248,7 +252,7 @@ moveMarker.prototype.draw = function () {
         this.div_ = document.createElement("div");
         this.div_.style.position = "absolute";
         this.div_.style.color = "#ff0000";
-        this.div_.innerHTML = '<img src="images/path1419.png" width= 60px</img>';
+        this.div_.innerHTML = '<img src="images/maker-michino.png" width= 60px</img>';
         var panes = this.getPanes();
         panes.overlayLayer.appendChild(this.div_);
     }
