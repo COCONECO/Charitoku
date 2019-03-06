@@ -66,6 +66,7 @@ try {
 
     <link rel="stylesheet" href="./css/route-details.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 
 </head>
 
