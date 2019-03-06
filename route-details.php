@@ -166,7 +166,7 @@ try {
                 </div><!-- /.slope -->
                 <div class="arrivalBar">
                     <table class="arrivalRate">
-                        <div id="myslider2">
+                        <div id="mySlider">
                             <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
                         </div>
                         <p class="barDescription">バーを動かして、<br class="sp">位置の確認ができます</p>
