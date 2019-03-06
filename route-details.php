@@ -177,9 +177,7 @@ try {
                 </div><!-- /.slope -->
                 <div class="arrivalBar">
                     <table class="arrivalRate">
-                        <div id="mySlider">
-                            <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
-                        </div>
+                        <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
                         <p class="barDescription">バーを動かして、<br class="sp">位置の確認ができます</p>
                     </table>
                 </div><!-- /.arrivalBar -->
@@ -239,7 +237,7 @@ try {
             foreach ($data as $row) {
                 $i++;
                 echo '{';
-                echo 'order_number:"' . $row['order_number'] . '",';
+                echo 'order_number:' . $row['order_number'] . ',';
                 echo 'description:"' . $row['detaildescription'] . '",';
                 echo 'sub_description:"' . $row['bsub_description'] . '",';
                 echo 'picture:"' . $row['picture_filename'] . '",';
