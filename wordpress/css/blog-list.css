@@ -4,7 +4,7 @@
 --------------------
 */
 
-h2{
+.blogListTitle{
     text-align: center;
     margin: 160px 0 80px 0;
 }
@@ -19,18 +19,14 @@ h2{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    width: 70%;
+    float: left;
 }
 
 .blogBox{
-    height: 420px;
+    height: 360px;
     margin: 40px auto 20px auto;
     border: 1px #000000 solid;
-}
-
-.blogImg{
-    width: 80%;
-    height: 60%;
-    padding: 20px 10%;
 }
 
 .blogTitle{
@@ -59,3 +55,13 @@ h2{
     text-decoration: underline;
 }
 
+.blogBox img{
+    width: 80%;
+    height: 60%;
+    padding: 20px 10%;
+}
+
+.blogBox li{
+    float: right;
+    margin: 10% 20px 0 0;
+}

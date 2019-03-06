@@ -50,7 +50,7 @@ endwhile; // End of the loop.
 <p class="back"><a href="http://localhost/charitoku/blog/wordpress/">→記事一覧に戻る</a></p>
   </div>
   </div>
-<div class="sideBar">
+<div class="sideBar detailSideBar">
     <?php get_sidebar();?>
 </div>
 

@@ -7,7 +7,6 @@ h2{
     margin-bottom: 0;
     font-size: 28px;
     margin-top: 160px;
-
 }
 span{
     border-bottom: 1px solid blue;
@@ -47,7 +46,7 @@ img{
     margin-right: 24px;
 }
 
-.tutumi p{
+.tutumi p ,.shosai a{
     padding:  20px 0 40px 0;
     clear:both;
 }
@@ -56,21 +55,26 @@ img{
     color: #4B6FFF;
 }
 
-.date, .category{
+.date, .category ,.shosai li{
     margin-top: 0;
     font-size: 18px;
     padding: 0 5px;
+}
+
+.shosai li{
+    margin-top: 18px;
 }
 
 .date{
     margin-right: 8%;
 }
 
-.category{
+.category {
     margin-left: 8%;
 }
 
-.sideBar{
+
+.detailSideBar{
     margin-top: 160px;
 }
 
