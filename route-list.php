@@ -11,30 +11,16 @@
 
 <body>
 
-    <header id="commonHeader">
-        <div id="gnavLogo">
-            <a href="#">
-                <h1>logo<img src="#"></h1>
-            </a>
+<header id="commonHeader">
+        <div id= "gnavLogo">
+            <a href="#"><h1>logo<img src="#"></h1></a>
         </div>
         <nav id="gnav">
-            <ul>
-                <li><a href="route-list.php?level=all">
-                        <p class="navTitle">Route</p>
-                        <p class="navSubTitle">ルート一覧</p>
-                    </a></li>
-                <li><a href="introduction.php">
-                        <p class="navTitle">Info</p>
-                        <p class="navSubTitle">自転車の心得</p>
-                    </a></li>
-                <li><a href="blog-list.php">
-                        <p class="navTitle">Blog</p>
-                        <p class="navSubTitle">ブログ</p>
-                    </a></li>
-                <li><a href="link.php">
-                        <p class="navTitle">Link</p>
-                        <p class="navSubTitle">リンク</p>
-                    </a></li>
+                <ul>
+                <li><a href="route-list.php?level=all"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
+                <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
+                <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
+                <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
             </ul>
         </nav>
     </header>
