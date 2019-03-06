@@ -16,62 +16,44 @@
 get_header();
 ?>
 <body>
-    <h1 class="title">
-        <?php the_title(); ?>
-    </h1>
+    <header id="commonHeader">
+        <div id= "gnavLogo">
+            <a href="http://localhost/charitoku/"><h1>logo<img src=""></h1></a>
+        </div>
+        <nav id="gnav">
+            <ul>
+            <li><a href="http://localhost/charitoku/route-list.php?level=all"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
+                <li><a href="http://localhost/charitoku/introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
+                <li><a href="http://localhost/charitoku/blog/wordpress/"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
+                <li><a href="http://localhost/charitoku/link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="contain">
-        <section id="primary" class="content-area">
-            <main id="main" class="site-main main">
-                <?php
-
-                /* Start the Loop */
-                while (have_posts()): the_post();
-                    the_content();
-
-                // get_template_part('template-parts/content/content', 'single');
-
-                // if (is_singular('attachment')) {
-                //     // Parent post navigation.
-                //     the_post_navigation(
-                //         array(
-                //             /* translators: %s: parent post link */
-                //             'prev_text' => sprintf(__('<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'twentynineteen'), '%title'),
-                //         )
-                //     );
-                // } elseif (is_singular('post')) {
-                //     // Previous/next post navigation.
-                //     the_post_navigation(
-                //         array(
-                //             'next_text' => '<span class="meta-nav" aria-hidden="true">' . __('Next Post', 'twentynineteen') . '</span> ' .
-                //                 '<span class="screen-reader-text">' . __('Next post:', 'twentynineteen') . '</span> <br/>' .
-                //                 '<span class="post-title">%title</span>',
-                //             'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __('Previous Post', 'twentynineteen') . '</span> ' .
-                //                 '<span class="screen-reader-text">' . __('Previous post:', 'twentynineteen') . '</span> <br/>' .
-                //                 '<span class="post-title">%title</span>',
-                //         )
-                //     );
-                // }
-
-                // If comments are open or we have at least one comment, load up the comment template.
-                // if (comments_open() || get_comments_number()) {
-                //     comments_template();
-                // }
-
-                endwhile; // End of the loop.
-                ?>
-
-            </main><!-- #main -->
-            <div class="side">
-                <?php get_sidebar(); ?>
-            </div>
-
-        </section><!-- #primary -->
+    <div class="tutumi">
+    <h2 class="midashi"><span>
+        <?php the_title();?>
+        </span>
+    </h2>
+    <div class="shosai">
+      <p class="date"><?php echo get_the_date(); ?></p>
+      <p class="category"><?php the_category();?></p>
     </div>
-    <footer id="footer">
-        <p>Copyright © 2018</p>
-    </footer>
 
+
+<?php
+/* Start the Loop */
+while (have_posts()): the_post();
+    the_content();
+endwhile; // End of the loop.
+?>
+<p class="back"><a href="http://localhost/charitoku/blog/wordpress/">→記事一覧に戻る</a></p>
+  </div>
+  </div>
+<div class="sideBar detailSideBar">
+    <?php get_sidebar();?>
+</div>
+
+    <?php get_footer();?>
 </body>
-
-</html> 
+</html>
