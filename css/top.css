@@ -9,6 +9,54 @@
     z-index: -9999;
 
 }
+/**************************************************
+ロゴのcss記述です。グローバルナビ同様960pxで表示切替(top.css)
+**************************************************/
+
+/***** トップロゴ *****/
+.tLogo{
+	position: absolute;
+    left: calc(50% - 120px);
+    top: calc(50% - 120px - 75px);
+    width:240px;
+    height: 240px;   
+}
+.tLogo::after{
+	position: absolute;
+    content: "";
+    display: block;
+    left: calc(50% - 120px);
+    top: calc(50% - 120px);
+    width:240px;
+    height: 240px;    
+    background-size: cover;
+    background-position: center; 
+	background-image: url(../images/top/charitoku-logo+.png);
+}
+@media screen and (min-width : 960px){
+	.tLogo{
+		position: absolute;
+		left: calc(50% - 200px);
+		top: calc(50% - 200px - 65px);
+		width:400px;
+		height: 400px;   
+	}
+	.tLogo::after{
+		position: absolute;
+		content: "";
+		display: block;
+		left: calc(50% - 200px);
+		top: calc(50% - 200px);
+		width:400px;
+		height: 400px;    
+		background-size: cover;
+		background-position: center; 
+		background-image: url(../images/top/charitoku-logo+.png);
+	}	
+}
+/**************************************************
+ロゴ記述終了
+**************************************************/
 #commonHeader{
     position: absolute;
     top: 78%;

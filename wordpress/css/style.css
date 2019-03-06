@@ -316,10 +316,10 @@ p ,a ,li{font-size: 16px;}
 
 
 /*メインとサイドバーを横並び*/
-main{
+/* main{
         width: 70%;
         float:left;
-}
+} */
 
 .sideBar{
     float: left;
