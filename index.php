@@ -12,8 +12,7 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css" media="all">
@@ -24,7 +23,7 @@
 
     <header id="commonHeader">
         <div id="gnavLogo">
-            <a href="#">
+            <a href="index.php">
                 <h1>logo<img src="#"></h1>
             </a>
         </div>
@@ -38,7 +37,7 @@
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="blog-list.php">
+                <li><a href="http://localhost/charitoku/blog/wordpress/">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -69,27 +68,70 @@
             <div class="block blog">
                 <h2 class="">新着<br>記事</h2>
             </div>
+
             <div class="blogInfo">
                 <div class="new">
-                    <img src="">
-                    <div class="blogText">
-                        <h3>2019/03/06</h3>
-                        <p><a href="#">記事タイトル</a></p>
-                    </div>
-                </div>
+                <?php
+echo '<div>';
+?>
+<?php
+//何ページから表示
+if (isset($_GET['page']) && $_GET['page'] > 0) {
+    $page = intval($_GET['page']) - 1;
+} else {
+    $page = 0;
+}
+// echo $page;
+//何ページまで表示
+$count = 2;
+$num = $page + $count;
+echo kiji($page, $num, $count);
+function kiji($page, $num, $count)
+{
+    $rss = simplexml_load_file('http://localhost/charitoku/blog/wordpress/feed/');
+    $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
+    $i = 0;
+    foreach ($rss->channel->item as $item) {
+        $title[$i] = $item->title;
+        $date[$i] = date("Y年 n月 j日", strtotime($item->pubDate));
+        $link[$i] = $item->link;
+        $description[$i] = mb_strimwidth(strip_tags($item->description), 0, 110, "…Read More", "utf-8");
+        $media[$i] = $item->media;
+        $i++;
+    }
+    $maxpage = $i;
+    $cnt = $count;
+    // echo $maxpage;
+    if ($i > $num) {
+        $i = $num;
+    }
+    $t = $page;
+    for ($t; $t < $i; $t++) {
+        ?>
+        <div class="new">
+            <?php echo '<div class="card_photo_img"><img src="' . $media[$t] . '"  class="boxbox"></div>'; ?>
+        </div>
+        <div class="blogText">
+        <?php echo '<h3>' . $date[$t] . '</h3>'; ?>
+        <br>
+        <p>
+        <a href="<?php echo $link[$t]; ?>" target="_blank">
+            <?php echo $title[$t]; ?><br>
+        </a>
+        </p>
+        </div>
 
-                <div class="new">
-                    <img src="">
-                    <div class="blogText">
-
-                        <h3>2019/03/06</h3>
-                        <p><a href="#">記事タイトル</a></p>
-                    </div>
+<?php
+}
+}
+echo '</div> '
+?>
 
                 </div>
 
                 <div style="text-align: right"><a href="#" class="more">→more</a></div>
             </div>
+            <div style="text-align: right"><a href="http://localhost/charitoku/blog/wordpress/" class="more">→more</a></div>
         </div>
 
         <div class="rssEvent">

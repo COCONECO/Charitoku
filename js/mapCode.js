@@ -6,7 +6,7 @@
     google.maps.OverlayViewにて、キャラクターアイコンを表示
     Chart.jsにて、標高データをグラフ表示
  */
- 
+
 // マップオブジェクト作成
 var mapObj = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
@@ -16,7 +16,7 @@ var mapObj = new google.maps.Map(document.getElementById("map"), {
     mapTypeId: google.maps.MapTypeId.ROADMAP
 });
 
-// 経由地点を設定
+// 経由地点を設定 route_flag==1のみ対象
 var wayPoints = [];
 jQuery.each(latlang, function () {
     if (this.route_flag == 1) {
@@ -75,7 +75,9 @@ new google.maps.DirectionsService().route({
                 let max = routeLat.length;
                 let vals = 0;
 
-                $("#myslider1").slider({
+                // スライダーの記述
+                // jQuery.ui版の記述
+                $("#myslider").slider({
                     max: max, //最大値
                     min: 0, //最小値
                     values: vals, //初期値
@@ -88,36 +90,39 @@ new google.maps.DirectionsService().route({
                     },
 
                     change: function (event, ui) {
-                        let val = $("#myslider1").slider("option", "value");
+                        let val = $("#myslider").slider("option", "value");
                         // console.log(val);
 
                         // 緯度、経度データの再セット
-                        let lat = routeLat.slice(val, val + 1);
-                        let lng = routeLng.slice(val, val + 1);
-                        console.log(lat, lng);
+                        if (val < max) {
+                            let lat = routeLat.slice(val, val + 1);
+                            let lng = routeLng.slice(val, val + 1);
+                        };
 
                         // マーカーの移動
                         markerMoveByLatlng(moveMarkerObj, lat, lng);
                     }
                 });
 
-                $("#mySlider").html('<input type="range" class="bar" value="0" min="0" max="300" data-unit="%" name="arrivalRate">');
+                // スライダーの記述
+                // inputタグ版の記述
+                $('input[type=range]').attr('value', 0);
+                $('input[type=range]').attr('max', max);
+                $('input[type=range]').attr('min', 0);
 
                 $('input[type=range]').change(function () {
                     var val = $(this).val();
-                    console.log(val);
+                    // console.log(val);
 
                     // 緯度、経度データの再セット
-                    let lat = routeLat.slice(val, val + 1);
-                    let lng = routeLng.slice(val, val + 1);
+                    if (val < max) {
+                        let lat = routeLat.slice(val, val + 1);
+                        let lng = routeLng.slice(val, val + 1);
+                    }
 
                     // マーカーの移動
                     markerMoveByLatlng(moveMarkerObj, lat, lng);
-                   
                 });
-
-
-
 
             } else {
                 alert(status);

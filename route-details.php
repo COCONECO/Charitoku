@@ -99,7 +99,13 @@ try {
     </header>
     <div id="imagesCover">
         <section class="imagesCover">
-            <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像">
+            <!-- <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"> -->
+            
+            <?php
+            foreach ($data2 as $row) {
+                echo '<img class="headerImages" src="./images/route/' . $row['picture_filename'] .'" alt="' . $row['picture_title'] . '">';
+            }
+            ?>
         </section>
     </div><!-- /#imagesCover -->
     <section id="main" class="container">
@@ -116,6 +122,7 @@ try {
                 <?php
                 foreach ($data2 as $row) {
                     echo '<p class="courseText">' . $row['description'] . '</p>';
+                    echo '<p class="courseText">' . $row['sub_description'] . '</p>';
                 }
                 ?>
                 <!-- <p>眉山の庄町側から登っていくコースです。<br>
@@ -177,9 +184,7 @@ try {
                 </div><!-- /.slope -->
                 <div class="arrivalBar">
                     <table class="arrivalRate">
-                        <div id="myslider2">
-                            <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
-                        </div>
+                        <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
                         <p class="barDescription">バーを動かして、<br class="sp">位置の確認ができます</p>
                     </table>
                 </div><!-- /.arrivalBar -->
@@ -239,7 +244,7 @@ try {
             foreach ($data as $row) {
                 $i++;
                 echo '{';
-                echo 'order_number:"' . $row['order_number'] . '",';
+                echo 'order_number:' . $row['order_number'] . ',';
                 echo 'description:"' . $row['detaildescription'] . '",';
                 echo 'sub_description:"' . $row['bsub_description'] . '",';
                 echo 'picture:"' . $row['picture_filename'] . '",';
