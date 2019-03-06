@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/blog-details.css">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 </head>
 
 </head>

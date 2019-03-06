@@ -12,8 +12,7 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css" media="all">
