@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog-list.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 </head>
 <body>
     <header id="commonHeader">

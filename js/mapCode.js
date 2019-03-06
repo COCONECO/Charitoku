@@ -16,7 +16,7 @@ var mapObj = new google.maps.Map(document.getElementById("map"), {
     mapTypeId: google.maps.MapTypeId.ROADMAP
 });
 
-// 経由地点を設定
+// 経由地点を設定 route_flag==1のみ対象
 var wayPoints = [];
 jQuery.each(latlang, function () {
     if (this.route_flag == 1) {
