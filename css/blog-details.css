@@ -7,8 +7,8 @@ h2{
     margin-bottom: 0;
     font-size: 28px;
     margin-top: 160px;
-
 }
+
 span{
     border-bottom: 1px solid blue;
 
@@ -20,9 +20,9 @@ span{
     margin-left:15%;
     float: left;
 }
-.midashi{
+/* .midashi{
     padding: 200 0 10 0;
-}
+} */
 .shosai{
     display: flex;
     align-items: flex-start;
@@ -35,6 +35,7 @@ img{
 .blogKiji{
     line-height: 1.7;
     padding: 10px;
+    width:90%;
 }
 @media screen and (max-width: 768px) {
     img{
@@ -56,7 +57,7 @@ img{
     color: #4B6FFF;
 }
 
-.date, .category{
+.date　,.category{
     margin-top: 0;
     font-size: 18px;
     padding: 0 5px;
@@ -71,12 +72,16 @@ img{
 }
 
 .sideBar{
-    margin-top: 160px;
+    margin-top: 200px;
 }
 
 @media screen and (max-width: 768px){
     .tutumi {
         width:80%;
+    }
+
+    .sideBar{
+        margin-top: 80px;
     }
 
 }

@@ -330,7 +330,6 @@ main{
 @media screen and (min-width: 768px){
     .sideBar{
         width: 16%;
-        margin: 80px 4% 0 4%;
         border: 1px solid #000000;
         text-align: center;
     }
@@ -495,4 +494,5 @@ footer p{
       opacity: 1;
     }
   }
+  
   
