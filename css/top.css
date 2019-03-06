@@ -98,7 +98,7 @@
 }
 
 .textBlog{
-	top:50px;
+	top: 60px;
 	position: relative;
 	margin: auto;
 	margin-bottom: 50px;
@@ -111,7 +111,11 @@
 	line-height: 1.5;
 	font-size: 13px;
 }
-
+@media screen and (max-width: 768px){
+	.textBlog {
+	width: 80%
+	}
+}
 .text{
 	top:50px;
 	position: relative;
@@ -136,8 +140,8 @@
 	display: flex;
 	padding:50px 10px 0px 70px;
 	margin: 0;
-	height:100px;
-        }
+	/* height:100px; */
+	}
 
 
 .profile_bio  {
@@ -148,7 +152,7 @@
 	width: 190px;
 	height: 130px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 768px) {
 	.profile_card{
 		padding: 30px 30px 30px 30px;
 	}
@@ -159,12 +163,35 @@
 	.profile_bio p  {
 		text-align: center;
 	}
-
+	.profile_card {
+		display: block;
+	}
+	.card_photo{
+		text-align: center;
+	}
+	.textBlog {
+	position: relative;
+	top: 55px;
+	width: 40%;
+	min-width: 200px;
+	min-height: 200px;
+	border: 4px #000 solid;
+	z-index: 7;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	font-size: 13px;
+	height: 300;
+	margin: 0 auto 50px auto;
+}
+div .profile_card{
+	/* position: static; */
+}
 }
 @media screen and (max-width: 768px) {
 	.profile_card{
 		display: block;
 		padding: 40px 60px 100px 60px;
+		text-align: center;
 	}
 	.profile_bio{
 		padding-left:0;
@@ -180,7 +207,8 @@
 @media screen and (max-width: 650px) {
 	.profile_card{
 		display: block;
-		padding: 60px 5px 150px 5px;
+		padding: 30px 30px 150px 30px;
+		text-align: center;
 	}
 	.profile_bio{
 		padding-left:0;
