@@ -101,6 +101,24 @@ new google.maps.DirectionsService().route({
                     }
                 });
 
+                $("#mySlider").html('<input type="range" class="bar" value="0" min="0" max="300" data-unit="%" name="arrivalRate">');
+
+                $('input[type=range]').change(function () {
+                    var val = $(this).val();
+                    console.log(val);
+
+                    // 緯度、経度データの再セット
+                    let lat = routeLat.slice(val, val + 1);
+                    let lng = routeLng.slice(val, val + 1);
+
+                    // マーカーの移動
+                    markerMoveByLatlng(moveMarkerObj, lat, lng);
+                   
+                });
+
+
+
+
             } else {
                 alert(status);
             }

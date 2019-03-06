@@ -50,14 +50,13 @@ try {
     <!-- <title>ページ詳細サンプル</title> -->
     <?php
     foreach ($data2 as $row) {
-        echo '<title>'.$row['title'].'</title>';
+        echo '<title>' . $row['title'] . '</title>';
     }
     ?>
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <script src="http://maps.google.com/maps/api/js?v=3&sensor=false&key=AIzaSyBr21j2fw7PjrfdQyGU_4WFLZNqWWACmMo"
-        type="text/javascript" charset="UTF-8"></script>
+    <script src="http://maps.google.com/maps/api/js?v=3&sensor=false&key=AIzaSyBr21j2fw7PjrfdQyGU_4WFLZNqWWACmMo" type="text/javascript" charset="UTF-8"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
@@ -78,17 +77,29 @@ try {
             </a>
         </div>
         <nav id="gnav">
-                <ul>
-                <li><a href="route-list.php"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
-                <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
-                <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
-                <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
+            <ul>
+                <li><a href="route-list.php?level=all">
+                        <p class="navTitle">Route</p>
+                        <p class="navSubTitle">ルート一覧</p>
+                    </a></li>
+                <li><a href="introduction.php">
+                        <p class="navTitle">Info</p>
+                        <p class="navSubTitle">自転車の心得</p>
+                    </a></li>
+                <li><a href="blog-list.php">
+                        <p class="navTitle">Blog</p>
+                        <p class="navSubTitle">ブログ</p>
+                    </a></li>
+                <li><a href="link.php">
+                        <p class="navTitle">Link</p>
+                        <p class="navSubTitle">リンク</p>
+                    </a></li>
             </ul>
         </nav>
     </header>
     <div id="imagesCover">
         <section class="imagesCover">
-            <img class= "headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"  >
+            <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像">
         </section>
     </div><!-- /#imagesCover -->
     <section id="main" class="container">
@@ -96,17 +107,17 @@ try {
             <!-- <h2>眉山クライミング<br class="sp">（庄町→八万）（仮）</h2> -->
 
             <?php
-                foreach ($data2 as $row) {
-                echo '<h2 class="courseName">'.$row['title'].'</h2>';
-                }
+            foreach ($data2 as $row) {
+                echo '<h2 class="courseName">' . $row['title'] . '</h2>';
+            }
             ?>
 
             <section class="courseDescription">
-            <?php
+                <?php
                 foreach ($data2 as $row) {
-                echo '<p>'.$row['description'].'</p>';
+                    echo '<p class="courseText">' . $row['description'] . '</p>';
                 }
-            ?>
+                ?>
                 <!-- <p>眉山の庄町側から登っていくコースです。<br>
                     庄町側からは八万側からに比べると登りの走行距離は長いですがその分坂道が緩やかになっているので<br>
                     山を自転車で登るのが初めての方にお勧めです。<br>
@@ -119,7 +130,7 @@ try {
                         <!-- <td>8km</td> -->
                         <?php
                         foreach ($data2 as $row) {
-                            echo '<td>'.$row['length'].'km</td>';
+                            echo '<td>' . $row['length'] . 'km</td>';
                         }
                         ?>
                     </tr>
@@ -128,7 +139,7 @@ try {
                         <!-- <td>約50分</td> -->
                         <?php
                         foreach ($data2 as $row) {
-                            echo '<td>約'.$row['time'].'分</td>';
+                            echo '<td>約' . $row['time'] . '分</td>';
                         }
                         ?>
                     </tr>
@@ -137,7 +148,7 @@ try {
                         <!-- <td>約1000kcal</td> -->
                         <?php
                         foreach ($data2 as $row) {
-                            echo '<td>約'.$row['calorie'].'kcal</td>';
+                            echo '<td>約' . $row['calorie'] . 'kcal</td>';
                         }
                         ?>
                     </tr>
@@ -156,32 +167,35 @@ try {
                             <th class="start">0km</th>
                             <!-- <td class="goal">--km</td> -->
                             <?php
-                                foreach ($data2 as $row) {
-                                echo '<td>'.$row['length'].'km</td>';
-                                }
+                            foreach ($data2 as $row) {
+                                echo '<td>' . $row['length'] . 'km</td>';
+                            }
                             ?>
 
                         </tr>
                     </table>
                 </div><!-- /.slope -->
-                <div id="myslider1" class="arrivalBar">
+                <div class="arrivalBar">
                     <table class="arrivalRate">
-                        <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
+                        <div id="myslider2">
+                            <input type="range" class="bar" value="50" min="0" max="100" data-unit="%" name="arrivalRate">
+                        </div>
                         <p class="barDescription">バーを動かして、<br class="sp">位置の確認ができます</p>
                     </table>
                 </div><!-- /.arrivalBar -->
             </section><!-- /.courseDescription -->
         </section><!-- /.courseContents -->
 
+
         <?php
         $idx = 1;
         foreach ($data as $row) {
 
             echo '<div class="wrap">';
-            echo '<h3>'.$idx.'</h3>';
+            echo '<h3>' . $idx . '</h3>';
             echo '<div class="wrapFlex">';
-            echo '<img src="./images/route/' .$row['picture_filename']. '" height="165" width="165" alt="' .$row['picture_title'].'">';
-            echo '<p class="text">' . $row['detaildescription'].'</p>';
+            echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
+            echo '<p class="text">' . $row['detaildescription'] . '</p>';
             echo '</div></div>';
             $idx++;
         }
@@ -199,9 +213,8 @@ try {
         </div> -->
 
         <div class="tweet">
-            <a href="./route-list.php">ルート一覧に戻る</a>
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"
-                data-text="このコースを走りました！">
+            <a href="./route-list.php?level=all">ルート一覧に戻る</a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="このコースを走りました！">
                 Tweet</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div><!-- /.tweet -->
@@ -220,42 +233,41 @@ try {
     <script>
         // 経由地点を設定
         var latlang = [
-        <?php
-        $count = count($data);
-        $i = 0;
-        foreach ($data as $row) {
-            $i++;
-            echo '{';
-            echo 'order_number:"' . $row['order_number'] . '",';
-            echo 'description:"' . $row['detaildescription'] . '",';
-            echo 'sub_description:"' . $row['bsub_description'] . '",';
-            echo 'picture:"' . $row['picture_filename'] . '",';
-            echo 'genre_id:"' . $row['genre_id'] . '",';
-            echo 'route_flag:"' . $row['route_flag'] . '",';
-            echo 'url:"' . $row['url'] . '",';
-            echo 'lat:"' . $row['wait_lat'] . '",';
-            echo 'lang:"' . $row['wait_long'] . '"';
-            if ($i == $count) {
-                echo '}';
-            } else {
-                echo '},';
+            <?php
+            $count = count($data);
+            $i = 0;
+            foreach ($data as $row) {
+                $i++;
+                echo '{';
+                echo 'order_number:"' . $row['order_number'] . '",';
+                echo 'description:"' . $row['detaildescription'] . '",';
+                echo 'sub_description:"' . $row['bsub_description'] . '",';
+                echo 'picture:"' . $row['picture_filename'] . '",';
+                echo 'genre_id:"' . $row['genre_id'] . '",';
+                echo 'route_flag:"' . $row['route_flag'] . '",';
+                echo 'url:"' . $row['url'] . '",';
+                echo 'lat:"' . $row['wait_lat'] . '",';
+                echo 'lang:"' . $row['wait_long'] . '"';
+                if ($i == $count) {
+                    echo '}';
+                } else {
+                    echo '},';
+                }
             }
-        }
-        ?>
+            ?>
         ];
 
         // スタート地点、ゴール地点を設定
         var origin = "<?php foreach ($data2 as $row2) {
-            echo $row2['start_lat'] . ',' . $row2['start_long'];
-        }?>";
-                var destination = "<?php foreach ($data2 as $row2) {
-            echo $row2['goal_lat'] . ',' . $row2['goal_long'];
-        }?>";
-
+                            echo $row2['start_lat'] . ',' . $row2['start_long'];
+                        } ?>";
+        var destination = "<?php foreach ($data2 as $row2) {
+                                echo $row2['goal_lat'] . ',' . $row2['goal_long'];
+                            } ?>";
     </script>
 
     <script src="js/mapCode.js"></script>
 
 </body>
 
-</html>
+</html> 

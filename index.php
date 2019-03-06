@@ -219,7 +219,7 @@ foreach ($data as $row) {
     } elseif ($row['level'] == 'advanced') {
         echo '<div class="level advanced">上級</div>';
     }
-    echo '<p class="detail"><a href="routedetail.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+    echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
     echo '</div>';
     echo '</a>';
     echo '</li>';
