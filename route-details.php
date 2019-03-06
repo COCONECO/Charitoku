@@ -249,7 +249,7 @@ try {
                 echo 'sub_description:"' . $row['bsub_description'] . '",';
                 echo 'picture:"' . $row['picture_filename'] . '",';
                 echo 'genre_id:"' . $row['genre_id'] . '",';
-                echo 'route_flag:"' . $row['route_flag'] . '",';
+                echo 'route_flag:' . $row['route_flag'] . ',';
                 echo 'url:"' . $row['url'] . '",';
                 echo 'lat:"' . $row['wait_lat'] . '",';
                 echo 'lang:"' . $row['wait_long'] . '"';
