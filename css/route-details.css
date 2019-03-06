@@ -155,7 +155,7 @@ main
 .slope{
 	border: #3887ff  1px solid;
 	position: relative;
-	padding-bottom: 40%;
+	/* padding-bottom: 40%; */
 	margin-bottom: 20px;
 }
 .slope iframe{
@@ -306,7 +306,7 @@ main
 	
 	.courseContents .dateTable{
 		position: static;
-		padding: 40px 20px;
+		/* padding: 40px 20px; */
 		margin: 0 auto;
 		width: auto;
 		left: 0;
@@ -316,8 +316,8 @@ main
 		margin-bottom: 40px;
 	}
 	.slope{
-		padding-bottom: 16%;
-		margin-bottom: 40px;
+		/* padding-bottom: 16%;
+		margin-bottom: 40px; */
 	}
 	.barDescription {
 		display: block;
