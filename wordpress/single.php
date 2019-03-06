@@ -1,3 +1,7 @@
+
+<!DOCTYPE html>
+<html>
+
 <?php
 /**
  * The template for displaying all single posts
@@ -9,19 +13,8 @@
  * @since 1.0.0
  */
 
-//get_header();
+get_header();
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>サイクリング</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/kijistyle.css" type="text/css" media="all">
-</head>
-
 <body>
     <h1 class="title">
         <?php the_title(); ?>
