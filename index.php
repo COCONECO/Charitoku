@@ -48,32 +48,29 @@
             </ul>
         </nav>
         <div class="scroll">
-            <a href="">
-                <div class="arrow1"></div>
+            <a href="#">
+                <div class="arrow1">
+                </div>
                 <P>scroll</P>
             </a>
         </div>
-        </nav>
+
     </header>
 
-    <div class="tIMG">
-        <img src="images/top/IMG_7466.JPG" class="topImg imgChange"
-            style="width: 1536px; height: auto; left: calc(50vw - 700px);">
+    <div class="topIMG">
+        <img src="images/top/IMG_7466.JPG" class="topImg imgChange">
     </div>
 
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
-
-
-
-    <div class="test">
-        <div class="textBlog">
-            <div class="block coutseInfo">
-                <h2>新着<br>記事</h2>
+    <div class="infoWrap">
+        <div class="blogBorder">
+            <div class="block blog">
+                <h2 class="">新着<br>記事</h2>
             </div>
 
-            <div class="topBlog">
-                <div id="blogList">
+            <div class="blogInfo">
+                <div class="new">
                 <?php
 echo '<div>';
 ?>
@@ -111,11 +108,10 @@ function kiji($page, $num, $count)
     $t = $page;
     for ($t; $t < $i; $t++) {
         ?>
-    <div class="profile_card">
-        <div class="card_photo">
+        <div class="new">
             <?php echo '<div class="card_photo_img"><img src="' . $media[$t] . '"  class="boxbox"></div>'; ?>
         </div>
-        <div class="profile_bio">
+        <div class="blogText">
         <?php echo '<h3>' . $date[$t] . '</h3>'; ?>
         <br>
         <p>
@@ -124,7 +120,6 @@ function kiji($page, $num, $count)
         </a>
         </p>
         </div>
-    </div>
 
 <?php
 }
@@ -132,15 +127,15 @@ function kiji($page, $num, $count)
 echo '</div> '
 ?>
 
-
                 </div>
+
+                <div style="text-align: right"><a href="#" class="more">→more</a></div>
             </div>
             <div style="text-align: right"><a href="http://localhost/charitoku/blog/wordpress/" class="more">→more</a></div>
         </div>
 
-
-        <div class="text">
-            <div class="block">
+        <div class="rssEvent">
+            <div class="block eventInfo">
                 <h2>イベント<br>情報</h2>
             </div>
             <div class="rss">
@@ -157,18 +152,25 @@ echo '</div> '
                     <li>「サイクルトレイン阿波池田」開催のお知らせ（2018年9月19日）</li>
                 </ul>
             </div>
-            <!-- <div style="text-align: right"><a href="#" class="more">→more</a></div> -->
+            <div style="text-align: right"><a href="#" class="more">→more</a></div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
     <!-- おすすめコース -->
 
 
-
-
-    <div>
-        <div class="topBox">
+    <div class="recommend">
+        <div class="topBox block">
             <h2 class="topH2">おすすめ<br>コース</h2>
         </div>
     </div>

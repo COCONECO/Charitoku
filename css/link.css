@@ -19,7 +19,7 @@ h2{
     font-size: 28px;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
-    margin: 80px 0;
+    margin: 80px  0 0 0;
 
 }
 h3 {
@@ -27,7 +27,7 @@ h3 {
     color: white;
     font-size: 24px;
     max-width: 960px;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
     font-weight: bold;
     font-family: 'Noto Sans JP', sans-serif;
 
