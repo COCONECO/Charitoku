@@ -1,61 +1,32 @@
-@charset "utf-8";
+@charset utf8;
 
-/*
-=========================================
-	Base Layout
-=========================================
-*/
+.topIMG{
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -9999;
 
-
-/* TOP画像 */
-
-.tIMG{
-	position: relative;
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	z-index: -9999;
 }
-
-
-
-
-/* グローバルメニュー */
-
-
 #commonHeader{
-	position: absolute;
-	top:83%;
-	left: 50%;
-	width:100%;
-	-ms-transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
+    position: absolute;
+    top: 78%;
 }
-
-
-
-/* スクロール */
 .scroll{
-	text-align: center;
-	height:90px;
+
+	height:100%;
+    width:100%;
 	background-color: rgba(46,133,252,0.5 );
 	position: absolute;
-	top: 158%;
-	left: 50%;
-	width:100%;
-	-ms-transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
+    top: 100%;
 }
 .scroll p{
 	color: white;
 	font-family: 'Noto Sans JP', sans-serif;
-}
+    text-align: center;
 
+}
 .arrow1{
 	margin: 10px auto;
 	padding: 0;
@@ -65,192 +36,74 @@
   border-color:  transparent transparent #fff #fff;
   transform: rotate(-45deg);
 }
-
-
-
-/* インフォメーション */
-
-.test{
+.infoWrap{
 	position: relative;
 	display: flex;
-	flex-direction: column;
-	padding-bottom:100px;
-  margin:100px.50px.100px.50px;
+	flex-direction: row;
+	/* padding-bottom:100px;*/
+  margin:100px 50px 100px 50px;
 }
 .block{
 	padding: 10px;
 	position: absolute;
-	top:-50px;
-	left:-50px;
+	top: -50px;
+    left: -50px;
 	display: table;/* 縦中央揃え */
 	width: 90px;
 	height: 80px;
 	background: #fff;
-	box-shadow: 0 0 0 3px #fff inset,0 0 0 5px #000 inset, 0 0 0 2px #000 ;
+	box-shadow: 0 0 0 3px #fff inset,0 0 0 4px #000 inset, 0 0 0 1px #000 ;
 	z-index: 8;
 }
-
 .block h2{
 	display: table-cell; /* 縦中央揃え */
 	vertical-align: middle;/* 縦中央揃え */
 	text-align: center;/* 横中央揃え */
 	font-size: 20px;
+    font-family: 'Sawarabi Mincho', serif;
+    font-weight: normal;
 }
 
-.textBlog{
-	top: 60px;
-	position: relative;
-	margin: auto;
-	margin-bottom: 50px;
-	width: 40%;
-	min-width: 200px;
-	min-height: 200px;
-	border: 4px #000 solid;
-	z-index: 7;
-	letter-spacing: 0.1em;
-	line-height: 1.5;
-	font-size: 13px;
+.blogBorder, .rssEvent{
+    width: 40%;
+    border: 1px solid black;
+    margin: 5%;
+    position: relative;
 }
-@media screen and (max-width: 768px){
-	.textBlog {
-	width: 80%
-	}
+.new{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
-.text{
-	top:50px;
-	position: relative;
-	margin: auto;
-	margin-bottom: 50px;
-	width: 80%;
-	min-width: 200px;
-	min-height: 200px;
-	border: 4px #000 solid;
-	z-index: 7;
-	letter-spacing: 0.1em;
-	line-height: 1.5;
-	font-size: 13px;
+.new img{
+    padding: 30px;
+    padding-top: 70px;
+    width: 200px;
+    height: 200px;
+    max-width: 500px;
+    max-height: 500px;
 }
-.text p{
-  width:100%;
-	word-wrap:break-word;
+.new .blogText h3{
+    font-family: 'Sawarabi Mincho', serif;
+
+}
+.blogText{
+    padding: 30px;
+    padding-top: 70px;
+}
+.topBox{
+    top: 50px;
+    left: 30px;
 }
 
-
-.profile_card{
-	display: flex;
-	padding:50px 10px 0px 70px;
-	margin: 0;
-	/* height:100px; */
-	}
-
-
-.profile_bio  {
-	padding-left: 30px;
-	font-size: 18px;
-}
-.boxbox{
-	width: 190px;
-	height: 130px;
-}
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-	.profile_card{
-		padding: 30px 30px 30px 30px;
-	}
-	.profile_bio h3 {
-		text-align: center;
-	}
-
-	.profile_bio p  {
-		text-align: center;
-	}
-	.profile_card {
-		display: block;
-	}
-	.card_photo{
-		text-align: center;
-	}
-	.textBlog {
-	position: relative;
-	top: 55px;
-	width: 40%;
-	min-width: 200px;
-	min-height: 200px;
-	border: 4px #000 solid;
-	z-index: 7;
-	letter-spacing: 0.1em;
-	line-height: 1.5;
-	font-size: 13px;
-	height: 300;
-	margin: 0 auto 50px auto;
-}
-div .profile_card{
-	/* position: static; */
-}
-}
-@media screen and (max-width: 768px) {
-	.profile_card{
-		display: block;
-		padding: 40px 60px 100px 60px;
-		text-align: center;
-	}
-	.profile_bio{
-		padding-left:0;
-	}
-	.profile_bio p  {
-		text-align: center;
-	}
-	.profile_bio h3 {
-		text-align: center;
-	}
-}
-
-@media screen and (max-width: 650px) {
-	.profile_card{
-		display: block;
-		padding: 30px 30px 150px 30px;
-		text-align: center;
-	}
-	.profile_bio{
-		padding-left:0;
-	}
-	.profile_bio p  {
-		text-align: center;
-	}
-	.profile_bio h3 {
-		text-align: center;
-	}
-}
-
-
-
-/* 新着情報 */
 
 .rss ul{
- padding: 60px 10px 10px 10px;
+    margin-top: 70px;
 }
-.rss li{
-	font-size: 14px;
-	letter-spacing: 0.05em;
-	line-height:1.5;
+.rss ul li{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: normal;
 }
-
-@media screen and (min-width : 768px){
-	.test{
-		flex-direction: row;
-
-	}
-	.text{
-		width: 40%;
-	}
-	.rss ul{
-	 padding-top: 40px 0 50px 30px;
-
-	}
-}
-
-
-/* moreの設定 */
-
 .more{
 	padding: 10px;
 	margin-bottom: 5px;
@@ -264,44 +117,51 @@ div .profile_card{
 	font-size: 12px;
 	line-height: 1em;
 }
-
-.routemore{
-	position: relative;
-	left: 85%;
-	margin-bottom:30px;
+.recommend{
+    position: relative;
+}
+.recommend .topBox{
+    position: static;
+    margin: 30px;
+}
+@media screen and (max-width: 1200px) and (min-width: 768px){
+    .new{
+        display: block;
+        text-align: center;
+    }
+    .blogText{
+        padding: 30px;
+    }
 }
 
+@media screen and (max-width: 768px) {
+    .infoWrap{
+        display: block;
+    }
+    .new{
+        display: block;
+    }
+    .blogBorder, .rssEvent{
+        width: 90%;
+        margin: 90px auto;
+    }
+    .new img{
+        width: 100px;
+        height: 100px;
+        /* text-align: center; */
+    }
+    .new{
+        text-align: center;
+    }
+    .blogText{
+        padding: 5%;
+    }
 
-/* おすすめコース */
-
-.topBox{
-	margin-left: 10%;
-	display: table;/* 縦中央揃え */
-	width: 100px;
-	height: 80px;
-	background: #fff;
-	box-shadow: 0 0 0 3px #fff inset,0 0 0 5px #000 inset, 0 0 0 2px #000 ;
-	z-index: 8;
-}
-.topH2{
-	display: table-cell; /* 縦中央揃え */
-	vertical-align: middle;/* 縦中央揃え */
-	text-align: center;/* 横中央揃え */
-	font-size: 20px;
-	margin:10px;
 }
 
-.topCourse{
-	margin-bottom:30px;
-}
-
-
-.beginnerShadow{
-	box-shadow: 20px 20px rgba(161, 250, 147, 1);
-}
-.standardShadow{
-	box-shadow: 20px 20px rgba(84, 100, 242, 1);
-}
-.advancedShadow{
-	box-shadow: 20px 20px rgba(243, 18, 85, 1);
+@media screen and (max-width: 768px) and ( min-width : 430px){
+    .new img{
+        width: 80%;
+        height: 200px;
+    }
 }

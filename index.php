@@ -49,71 +49,51 @@
             </ul>
         </nav>
         <div class="scroll">
-            <a href="">
-                <div class="arrow1"></div>
+            <a href="#">
+                <div class="arrow1">
+                </div>
                 <P>scroll</P>
             </a>
         </div>
-        </nav>
+
     </header>
 
-    <div class="tIMG">
-        <img src="images/top/IMG_7466.JPG" class="topImg imgChange"
-            style="width: 1536px; height: auto; left: calc(50vw - 700px);">
+    <div class="topIMG">
+        <img src="images/top/IMG_7466.JPG" class="topImg imgChange">
     </div>
 
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
-
-
-
-    <div class="test">
-        <div class="textBlog">
-            <div class="block coutseInfo">
-                <h2>新着<br>記事</h2>
+    <div class="infoWrap">
+        <div class="blogBorder">
+            <div class="block blog">
+                <h2 class="">新着<br>記事</h2>
             </div>
-
-            <div class="topBlog">
-                <div id="blogList">
-
-
-                    <div class="profile_card">
-                        <div class="card_photo">
-                            <div class="card_photo_img"> <img src="images/top/20170704230336.jpg" class="boxbox">
-                            </div>
-                        </div>
-                        <div class="profile_bio">
-                            <h3>2019年3月4日</h3>
-                            <br>
-                            <p><a href="#">記事タイトル</a></p>
-                        </div>
+            <div class="blogInfo">
+                <div class="new">
+                    <img src="">
+                    <div class="blogText">
+                        <h3>2019/03/06</h3>
+                        <p><a href="#">記事タイトル</a></p>
                     </div>
+                </div>
 
+                <div class="new">
+                    <img src="">
+                    <div class="blogText">
 
-
-
-                    <div class="profile_card">
-
-                        <div class="card_photo">
-                            <div class="card_photo_img"> <img src="images/top/20170704230336.jpg" class="boxbox">
-                            </div>
-                        </div>
-                        <div class="profile_bio">
-                            <h3>2019年3月4日</h3>
-                            <br>
-                            <p class="title-archive"><a href="#">記事タイトル</a></p>
-                        </div>
+                        <h3>2019/03/06</h3>
+                        <p><a href="#">記事タイトル</a></p>
                     </div>
-
 
                 </div>
+
+                <div style="text-align: right"><a href="#" class="more">→more</a></div>
             </div>
-            <div style="text-align: right"><a href="#" class="more">→more</a></div>
         </div>
 
-
-        <div class="text">
-            <div class="block">
+        <div class="rssEvent">
+            <div class="block eventInfo">
                 <h2>イベント<br>情報</h2>
             </div>
             <div class="rss">
@@ -130,18 +110,25 @@
                     <li>「サイクルトレイン阿波池田」開催のお知らせ（2018年9月19日）</li>
                 </ul>
             </div>
-            <!-- <div style="text-align: right"><a href="#" class="more">→more</a></div> -->
+            <div style="text-align: right"><a href="#" class="more">→more</a></div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
     <!-- おすすめコース -->
 
 
-
-
-    <div>
-        <div class="topBox">
+    <div class="recommend">
+        <div class="topBox block">
             <h2 class="topH2">おすすめ<br>コース</h2>
         </div>
     </div>
@@ -172,7 +159,7 @@ try {
 }
 echo '<ul id="itemList">';
 foreach ($data as $row) {
-    
+
     echo '<li class="itemBox grid5Pc grid10">';
     echo '<a href="#">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
