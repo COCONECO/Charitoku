@@ -116,6 +116,7 @@ try {
                 <?php
                 foreach ($data2 as $row) {
                     echo '<p class="courseText">' . $row['description'] . '</p>';
+                    echo '<p class="courseText">' . $row['sub_description'] . '</p>';
                 }
                 ?>
                 <!-- <p>眉山の庄町側から登っていくコースです。<br>

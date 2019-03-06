@@ -37,7 +37,7 @@
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="blog-list.php">
+                <li><a href="http://localhost/charitoku/blog/wordpress/">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -246,7 +246,7 @@ foreach ($data as $row) {
     } elseif ($row['level'] == 'advanced') {
         echo '<div class="level advanced">上級</div>';
     }
-    echo '<p class="detail"><a href="routedetail.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+    echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
     echo '</div>';
     echo '</a>';
     echo '</li>';
