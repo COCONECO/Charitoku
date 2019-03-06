@@ -14,7 +14,7 @@
     <header id="commonHeader">
         <div id="gnavLogo">
             <a href="index.php">
-                <h1>logo<img src="#"></h1>
+                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages"><div></h1>
             </a>
         </div>
         <nav id="gnav">
