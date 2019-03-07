@@ -10,8 +10,8 @@
 // マップオブジェクト作成
 var mapObj = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
-    // scrollwheel: false,
-    scrollwheel: true,
+    scrollwheel: false,
+    // scrollwheel: true,
     scaleControl: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 });
@@ -124,7 +124,7 @@ new google.maps.DirectionsService().route({
 
                         // マーカーの移動
                         markerMoveByLatlng(moveMarkerObj, lat, lng);
-                        // console.log("aaaaaaaaaaaaaaaaaaaa",val,lat,lng);
+                        // console.log(val,lat,lng);
                     }
                 });
 
@@ -153,7 +153,8 @@ google.maps.event.addDomListener(window, 'load', function () {
             position: latlng,
             map: mapObj,
             label: {
-                color: '#0044aa',
+                // color: '#0044aa',
+                color: '#ffffff',
                 fontFamily: 'sans-serif',
                 fontSize: '14px',
                 fontWeight: 'bold',
@@ -166,7 +167,10 @@ google.maps.event.addDomListener(window, 'load', function () {
 
             // Html文字列を作成
             html = "";
-            html += '<p><img src="images/route/' + picture + '" width= 200px alt=""></img>';
+            html += '<style type="text/css">';
+            html +='p {font-size: 14px; font-family: sans-serif}';
+            html += '</style>';
+            html += '<p><img src="images/route/' + picture + '" width= 100px alt=""></img>';
             html += '<br><a href="' + url + '">' + ' ' + description + '</a>';
             html += '<br>' + subDescription + '</p>';
 
