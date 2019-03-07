@@ -315,10 +315,11 @@ main
 		padding-bottom: 36%;
 		margin-bottom: 40px;
 	}
-	.slope{
-		/* padding-bottom: 16%;
-		margin-bottom: 40px; */
-	}
+	/* .slope{
+		padding-bottom: 16%;
+		margin-bottom: 40px;
+	} */
+
 	.barDescription {
 		display: block;
 		width: calc(100% - 160px);

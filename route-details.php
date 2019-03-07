@@ -166,8 +166,9 @@ try {
                         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3241.177172339873!2d139.72505595!3d35.672639249999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO95riv5Yy66Z2S5bGxMS0x!5e0!3m2!1sja!2sjp!4v1439816808418"
                         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
                 </div><!-- /.map -->
+                
                 <div class="slope">
-                    <canvas id="chart"></canvas>
+                    <canvas id="chart" height="70%"></canvas>
                     <!-- <iframe></iframe> -->
 
                     <table class="dateTable">
