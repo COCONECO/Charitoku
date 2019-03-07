@@ -1,22 +1,40 @@
 <!DOCTYPE>
 <html>
+
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/link.css">
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/link.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 </head>
+
 <body>
     <header id="commonHeader">
-        <div id= "gnavLogo">
-            <a href="index.php"><h1>知っとく走っとく徳島サイクリングロード<div class="logoImages"><div></h1></a>
+        <div id="gnavLogo">
+            <a href="index.php">
+                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages">
+                        <div>
+                </h1>
+            </a>
         </div>
         <nav id="gnav">
-                <ul>
-                <li><a href="route-list.php?level=all"><p class="navTitle">Route</p><p class="navSubTitle">ルート一覧</p></a></li>
-                <li><a href="introduction.php"><p class="navTitle">Info</p><p class="navSubTitle">自転車の心得</p></a></li>
-                <li><a href="blog-list.php"><p class="navTitle">Blog</p><p class="navSubTitle">ブログ</p></a></li>
-                <li><a href="link.php"><p class="navTitle">Link</p><p class="navSubTitle">リンク</p></a></li>
+            <ul>
+                <li><a href="route-list.php?level=all">
+                        <p class="navTitle">Route</p>
+                        <p class="navSubTitle">ルート一覧</p>
+                    </a></li>
+                <li><a href="introduction.php">
+                        <p class="navTitle">Info</p>
+                        <p class="navSubTitle">自転車の心得</p>
+                    </a></li>
+                <li><a href="http://localhost/charitoku/blog/wordpress/">
+                        <p class="navTitle">Blog</p>
+                        <p class="navSubTitle">ブログ</p>
+                    </a></li>
+                <li><a href="link.php">
+                        <p class="navTitle">Link</p>
+                        <p class="navSubTitle">リンク</p>
+                    </a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +43,7 @@
 
     <h2>リンク</h2>
     <h3>　協会・団体</h3>
-    <table >
+    <table>
         <tr>
             <td class="three">自転車王国とくしま</td>
             <td class="seven">http://www.dmydmy.com</td>
@@ -61,4 +79,5 @@
         </div>
     </footer>
 </body>
-</html>
+
+</html> 

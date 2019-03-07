@@ -71,7 +71,9 @@ try {
     <header id="commonHeader">
         <div id="gnavLogo">
             <a href="index.php">
-                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages"><div></h1>
+                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages">
+                        <div>
+                </h1>
             </a>
         </div>
         <nav id="gnav">
@@ -84,7 +86,7 @@ try {
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="blog-list.php">
+                <li><a href="http://localhost/charitoku/blog/wordpress/">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -98,10 +100,10 @@ try {
     <div id="imagesCover">
         <section class="imagesCover">
             <!-- <img class="headerImages" src="./images/route-details/testtop-2.jpg" alt="コース詳細サンプル画像"> -->
-            
+
             <?php
             foreach ($data2 as $row) {
-                echo '<img class="headerImages" src="./images/route/' . $row['picture_filename'] .'" alt="' . $row['picture_title'] . '">';
+                echo '<img class="headerImages" src="./images/route/' . $row['picture_filename'] . '" alt="' . $row['picture_title'] . '">';
             }
             ?>
         </section>
@@ -163,7 +165,7 @@ try {
                         src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3241.177172339873!2d139.72505595!3d35.672639249999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO95riv5Yy66Z2S5bGxMS0x!5e0!3m2!1sja!2sjp!4v1439816808418"
                         width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
                 </div><!-- /.map -->
-                
+
                 <div class="slope">
                     <canvas id="chart" height="70%"></canvas>
                     <!-- <iframe></iframe> -->
