@@ -24,10 +24,12 @@
 }
 
 .blogBox{
-    height: 360px;
+    /* height: 360px;     */
+    height: auto;
     margin: 40px auto 20px auto;
     border: 1px #000000 solid;
 }
+
 
 .blogTitle{
     text-align: center;
@@ -36,7 +38,7 @@
 
 .blogDay{
     float: left;
-    margin: 10% 0 0 20px;
+    margin: 10% 20px 0 0;
 }
 
 .blogCategory{
