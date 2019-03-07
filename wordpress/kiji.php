@@ -11,8 +11,10 @@ get_header();
 <body>
     <header id="commonHeader">
         <div id="gnavLogo">
-            <a href="http://localhost/charitoku/">
-                <h1>logo<img src=""></h1>
+            <a href="http://localhost/charitoku/index.php">
+                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages">
+                        <div>
+                </h1>
             </a>
         </div>
         <nav id="gnav">
@@ -88,12 +90,8 @@ get_header();
         <?php get_sidebar(); ?>
     </div>
     </div>
-    <?php
-    // if (function_exists('wp_pagenavi')) {
-    //     // echo 'test';
-    //     wp_pagenavi();
-    // }
-    ?>
+
+
 </body>
 <?php get_footer(); ?>
 
