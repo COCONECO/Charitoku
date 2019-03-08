@@ -198,7 +198,7 @@ try {
         foreach ($data as $row) {
 
             echo '<div class="wrap">';
-            echo '<h3>' . $idx . '</h3>';
+            echo '<h3>' . $idx . '. ' . $row['picture_title'] . '</h3>';
             echo '<div class="wrapFlex">';
             echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
             echo '<p class="text">' . $row['detaildescription'] . '</p>';

@@ -12,20 +12,62 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css" media="all">
     <link rel="stylesheet" href="css/top.css" media="all">
+
+    <!--javascript-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.inview.js"></script>
+
+    <script>
+    //nav fixed
+jQuery(function($) {
+  
+var nav    = $('.commonHeader'),
+    offset = nav.offset();
+  
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    nav.addClass('fixed');
+  } else {
+    nav.removeClass('fixed');
+  }
+});
+  
+});
+
+//top slideshow
+$(function(){
+    var $setElm = $('.slider'),
+    fadeSpeed = 1500,
+    switchDelay = 5000;
+ 
+    $setElm.each(function(){
+        var targetObj = $(this);
+        var findUl = targetObj.find('ul');
+        var findLi = targetObj.find('li');
+        var findLiFirst = targetObj.find('li:first');
+ 
+        findLi.css({display:'block',opacity:'0',zIndex:'99'});
+        findLiFirst.css({zIndex:'100'}).stop().animate({opacity:'1'},fadeSpeed);
+ 
+        setInterval(function(){
+            findUl.find('li:first-child').animate({opacity:'0'},fadeSpeed).next('li').css({zIndex:'100'}).animate({opacity:'1'},fadeSpeed).end().appendTo(findUl).css({zIndex:'99'});
+        },switchDelay);
+    });
+});
+</script>
 </head>
 
 <body>
 
-    <header id="commonHeader">
+    <header class="commonHeader">
         <div id="gnavLogo">
-            <a href="#">
-                <h1>logo<img src="#"></h1>
+            <a href="index.php">
+                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages"><div></h1>
             </a>
         </div>
         <nav id="gnav">
@@ -38,7 +80,7 @@
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="blog-list.php">
+                <li><a href="./blog/wordpress/">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -48,20 +90,26 @@
                     </a></li>
             </ul>
         </nav>
-        <div class="scroll">
-            <a href="#">
-                <div class="arrow1">
-                </div>
-                <P>scroll</P>
-            </a>
-        </div>
-
     </header>
-
-    <div class="topIMG">
-        <img src="images/top/IMG_7466.JPG" class="topImg imgChange">
+    <div class="scroll">
+        <a href="#">
+            <div class="arrow1">
+            </div>
+            <P>scroll</P>
+        </a>
     </div>
 
+<!--top画像スライド-->
+    <div class="slider topIMG">
+        <ul>
+            <li><img src="images/top/testtop-1.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/testtop-2.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/testtop-3.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/testtop-4.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+        </ul>
+    </div>
+
+    <div class="tLogo"></div><!-- topロゴ -->
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
     <div class="infoWrap">
@@ -126,7 +174,7 @@ function kiji($page, $num, $count)
 ?>
 
                 </div>
-            <div style="text-align: right"><a href="#" class="more blogMore">→more</a></div>
+            <div style="text-align: right"><a href="./blog/wordpress/" class="more blogMore">→more</a></div>
         </div>
 
         <div class="rssEvent">
@@ -189,7 +237,7 @@ echo '<ul id="itemList">';
 foreach ($data as $row) {
 
     echo '<li class="itemBox grid5Pc grid10">';
-    echo '<a href="#">';
+    echo '<a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
     $id = intval($row['id']);
     try {
