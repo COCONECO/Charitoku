@@ -189,7 +189,7 @@ echo '<ul id="itemList">';
 foreach ($data as $row) {
 
     echo '<li class="itemBox grid5Pc grid10">';
-    echo '<a href="#">';
+    echo '<a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
     $id = intval($row['id']);
     try {
