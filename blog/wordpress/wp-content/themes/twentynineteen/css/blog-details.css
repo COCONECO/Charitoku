@@ -27,7 +27,8 @@ span{
     align-items: flex-start;
     margin-bottom: 10px;
 }
-img{
+.tutumi img{
+    width: 80%;
     clear: left;
     margin: 20 0 20 0;
 }
