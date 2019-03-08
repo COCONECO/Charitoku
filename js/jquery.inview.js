@@ -152,3 +152,25 @@ $(function() {
 		}
 	});
 });
+
+$(function() {
+	$('.slideLeft').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if(isInView){
+			$(this).stop().addClass('slideLeftOn');
+		}
+		else{
+			$(this).stop().removeClass('slideLeftOn');
+		}
+	});
+});
+
+$(function() {
+	$('.slideRight').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+		if(isInView){
+			$(this).stop().addClass('slideRightOn');
+		}
+		else{
+			$(this).stop().removeClass('slideRightOn');
+		}
+	});
+});

@@ -113,7 +113,7 @@ $(function(){
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
     <div class="infoWrap">
-        <div class="blogBorder">
+        <div class="blogBorder slideLeft">
             <div class="block blog">
                 <h2 class="">新着<br>記事</h2>
             </div>
@@ -177,8 +177,8 @@ function kiji($page, $num, $count)
             <div style="text-align: right"><a href="./blog/wordpress/" class="more blogMore">→more</a></div>
         </div>
 
-        <div class="rssEvent">
-            <div class="block eventInfo">
+        <div class="rssEvent slideRight">
+            <div class="block eventInfo ">
                 <h2>イベント<br>情報</h2>
             </div>
             <div class="rss">
@@ -236,7 +236,7 @@ try {
 echo '<ul id="itemList">';
 foreach ($data as $row) {
 
-    echo '<li class="itemBox grid5Pc grid10">';
+    echo '<li class="itemBox grid5Pc grid10 fadein">';
     echo '<a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
     $id = intval($row['id']);
