@@ -12,7 +12,8 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="css/style.css" media="all">
@@ -23,10 +24,8 @@
 
     <header id="commonHeader">
         <div id="gnavLogo">
-            <a href="index.php">
-                <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages">
-                        <div>
-                </h1>
+            <a href="#">
+                <h1>logo<img src="#"></h1>
             </a>
         </div>
         <nav id="gnav">
@@ -39,7 +38,7 @@
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="http://localhost/charitoku/blog/wordpress/">
+                <li><a href="blog-list.php">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -60,9 +59,8 @@
     </header>
 
     <div class="topIMG">
-        <img src="./images/top/testtop-1.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);">
+        <img src="images/top/IMG_7466.JPG" class="topImg imgChange">
     </div>
-    <div class="tLogo"></div><!-- topロゴ -->
 
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
@@ -71,71 +69,64 @@
             <div class="block blog">
                 <h2 class="">新着<br>記事</h2>
             </div>
-
             <div class="blogInfo">
-                <div class="new">
                     <?php
-                    echo '<div>';
-                    ?>
-                    <?php
- //何ページから表示
-                    if (isset($_GET['page']) && $_GET['page'] > 0) {
-                        $page = intval($_GET['page']) - 1;
-                    } else {
-                        $page = 0;
-                    }
-                    // echo $page;
-                    //何ページまで表示
-                    $count = 2;
-                    $num = $page + $count;
-                    echo kiji($page, $num, $count);
-                    function kiji($page, $num, $count)
-                    {
-                        $rss = simplexml_load_file('http://localhost/charitoku/blog/wordpress/feed/');
-                        $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
-                        $i = 0;
-                        foreach ($rss->channel->item as $item) {
-                            $title[$i] = $item->title;
-                            $date[$i] = date("Y年 n月 j日", strtotime($item->pubDate));
-                            $link[$i] = $item->link;
-                            $description[$i] = mb_strimwidth(strip_tags($item->description), 0, 110, "…Read More", "utf-8");
-                            $media[$i] = $item->media;
-                            $i++;
-                        }
-                        $maxpage = $i;
-                        $cnt = $count;
-                        // echo $maxpage;
-                        if ($i > $num) {
-                            $i = $num;
-                        }
-                        $t = $page;
-                        for ($t; $t < $i; $t++) {
-                            ?>
+//何ページから表示
+if (isset($_GET['page']) && $_GET['page'] > 0) {
+    $page = intval($_GET['page']) - 1;
+} else {
+    $page = 0;
+}
+// echo $page;
+//何ページまで表示
+$count = 2;
+$num = $page + $count;
+echo kiji($page, $num, $count);
+function kiji($page, $num, $count)
+{
+    $rss = simplexml_load_file('http://localhost/charitoku/blog/wordpress/feed/');
+    $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
+    $i = 0;
+    foreach ($rss->channel->item as $item) {
+        $title[$i] = $item->title;
+        $date[$i] = date("Y年 n月 j日", strtotime($item->pubDate));
+        $link[$i] = $item->link;
+        $description[$i] = mb_strimwidth(strip_tags($item->description), 0, 110, "…Read More", "utf-8");
+        $media[$i] = $item->media;
+        $i++;
+    }
+    $maxpage = $i;
+    $cnt = $count;
+    // echo $maxpage;
+    if ($i > $num) {
+        $i = $num;
+    }
+    $t = $page;
+    for ($t; $t < $i; $t++) {
+        ?>
                     <div class="new">
-                        <?php echo '<div class="card_photo_img"><img src="' . $media[$t] . '"  class="boxbox"></div>'; ?>
-                    </div>
-                    <div class="blogText">
+                        <?php echo '<img src="' . $media[$t] . '"  >'; ?>
+                        <div class="blogText">
+
+
                         <?php echo '<h3>' . $date[$t] . '</h3>'; ?>
-                        <br>
+
                         <p>
-                            <a href="<?php echo $link[$t]; ?>" target="_blank">
+                            <a href="<?php echo $link[$t]; ?>" >
                                 <?php echo $title[$t]; ?><br>
                             </a>
                         </p>
+                        </div>
                     </div>
 
                     <?php
 
-                }
-            }
-            echo '</div> '
-            ?>
+    }
+}
+?>
 
                 </div>
-
-                <div style="text-align: right"><a href="#" class="more">→more</a></div>
-            </div>
-            <div style="text-align: right"><a href="http://localhost/charitoku/blog/wordpress/" class="more">→more</a></div>
+            <div style="text-align: right"><a href="#" class="more blogMore">→more</a></div>
         </div>
 
         <div class="rssEvent">
@@ -156,18 +147,9 @@
                     <li>「サイクルトレイン阿波池田」開催のお知らせ（2018年9月19日）</li>
                 </ul>
             </div>
-            <div style="text-align: right"><a href="#" class="more">→more</a></div>
+            <div style="text-align: right"><a href="#" class="more rssMore">→more</a></div>
 
         </div>
-
-
-
-
-
-
-
-
-
 
     </div>
     <!-- おすすめコース -->
@@ -175,106 +157,106 @@
 
     <div class="recommend">
         <div class="topBox block">
-            <h2 class="topH2">おすすめ<br>コース</h2>
+            <h2 class="topH2">おすすめ<br>ルート</h2>
         </div>
     </div>
 
     <div class="topCourse">
-        <?php
+    <?php
 
-        //DB接続
-        $dsn = 'mysql:host=localhost;dbname=charitoku;charset=utf8';
-        $user = 'root';
-        $password = '';
+//DB接続
+$dsn = 'mysql:host=localhost;dbname=charitoku;charset=utf8';
+$user = 'root';
+$password = '';
 
-        try {
-            $db = new PDO($dsn, $user, $password);
-            $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-            $stmt = $db->prepare("select * from course where del_flag=0 order by popularity desc limit 4; ");
-            // $stmt->bindParam(':level', $level, PDO::PARAM_STR);
-            $stmt->execute();
-            $data = array();
-            $count = $stmt->rowCount();
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $data[] = $row;
-            }
-            // echo 'hello';
-        } catch (PDOException $e) {
-            // echo 'bad';
-            die('エラー:' . $e->getMesssage());
+try {
+    $db = new PDO($dsn, $user, $password);
+    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $stmt = $db->prepare("select * from course where del_flag=0 order by popularity desc limit 4; ");
+    // $stmt->bindParam(':level', $level, PDO::PARAM_STR);
+    $stmt->execute();
+    $data = array();
+    $count = $stmt->rowCount();
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $data[] = $row;
+    }
+    // echo 'hello';
+} catch (PDOException $e) {
+    // echo 'bad';
+    die('エラー:' . $e->getMesssage());
+}
+echo '<ul id="itemList">';
+foreach ($data as $row) {
+
+    echo '<li class="itemBox grid5Pc grid10">';
+    echo '<a href="#">';
+    echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
+    $id = intval($row['id']);
+    try {
+        $db = new PDO($dsn, $user, $password);
+        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        $stmt = $db->prepare("select * from course_route where course_id  = $id  limit 3");
+        // $stmt->bindParam(':level', $level, PDO::PARAM_STR);
+        $stmt->execute();
+        $data3 = array();
+        $count = $stmt->rowCount();
+        while ($row3 = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $data3[] = $row3;
         }
-        echo '<ul id="itemList">';
-        foreach ($data as $row) {
+        // echo 'hello';
+    } catch (PDOException $e) {
+        // echo 'bad';
+        die('エラー:' . $e->getMesssage());
+    }
+    foreach ($data3 as $row3) {
 
-            echo '<li class="itemBox grid5Pc grid10">';
-            echo '<a href="#">';
-            echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
-            $id = intval($row['id']);
-            try {
-                $db = new PDO($dsn, $user, $password);
-                $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-                $stmt = $db->prepare("select * from course_route where course_id  = $id  limit 3");
-                // $stmt->bindParam(':level', $level, PDO::PARAM_STR);
-                $stmt->execute();
-                $data3 = array();
-                $count = $stmt->rowCount();
-                while ($row3 = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    $data3[] = $row3;
-                }
-                // echo 'hello';
-            } catch (PDOException $e) {
-                // echo 'bad';
-                die('エラー:' . $e->getMesssage());
-            }
-            foreach ($data3 as $row3) {
+        echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
+    }
+    // echo '<img class="subImg">';
+    // echo '<img class="subImg">';
+    echo '<div class="left">';
+    echo '<h3 class="routeTitle">' . $row['title'] . '</h3>';
+    echo '<p class="description">' . $row['sub_description'] . '</p>';
+    echo '<dl>';
+    echo '<dt>走行距離</dt>';
+    echo '<dd>' . $row['length'] . 'km</dd>';
+    echo '<dt>走行時間</dt>';
+    echo '<dd>約' . $row['time'] . '時間</dd>';
+    echo '<dt>消費カロリー</dt>';
+    echo '<dd>' . $row['calorie'] . 'kcal</dd>';
+    echo '</dl>';
+    echo '</div>';
+    echo '<div class="right">';
+    if ($row['level'] == 'beginner') {
+        echo '<div class="level beginner">初級</div>';
+    } elseif ($row['level'] == 'standard') {
+        echo '<div class="level standard">中級</div>';
+    } elseif ($row['level'] == 'advanced') {
+        echo '<div class="level advanced">上級</div>';
+    }
+    echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+    echo '</div>';
+    echo '</a>';
+    echo '</li>';
+}
+echo '</ul>';
 
-                echo '<img class="subImg" src="./images/route/' . $row3['picture_filename'] . '" alt="">';
-            }
-            // echo '<img class="subImg">';
-            // echo '<img class="subImg">';
-            echo '<div class="left">';
-            echo '<h3 class="routeTitle">' . $row['title'] . '</h3>';
-            echo '<p class="description">' . $row['sub_description'] . '</p>';
-            echo '<dl>';
-            echo '<dt>走行距離</dt>';
-            echo '<dd>' . $row['length'] . 'km</dd>';
-            echo '<dt>走行時間</dt>';
-            echo '<dd>約' . $row['time'] . '時間</dd>';
-            echo '<dt>消費カロリー</dt>';
-            echo '<dd>' . $row['calorie'] . 'kcal</dd>';
-            echo '</dl>';
-            echo '</div>';
-            echo '<div class="right">';
-            if ($row['level'] == 'beginner') {
-                echo '<div class="level beginner">初級</div>';
-            } elseif ($row['level'] == 'standard') {
-                echo '<div class="level standard">中級</div>';
-            } elseif ($row['level'] == 'advanced') {
-                echo '<div class="level advanced">上級</div>';
-            }
-            echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
-            echo '</div>';
-            echo '</a>';
-            echo '</li>';
-        }
-        echo '</ul>';
-
-        ?>
+?>
 
 
-        <div><a href="http://localhost/charitoku/route-list.php?level=all" class="more routemore">→more</a></div>
+    <div><a href="http://localhost/charitoku/route-list.php?level=all" class="more routemore">→more</a></div>
 
-        <footer>
-            <div class="back">
-                <ul class="banner">
-                    <li><a href="">バナー</a></li>
-                    <li><a href="">バナー</a></li>
-                    <li><a href="">バナー</a></li>
-                </ul>
-            </div>
-        </footer>
+    <footer>
+        <div class="back">
+            <ul class="banner">
+                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li>
+            </ul>
+        </div>
+    </footer>
 
 
 </body>
 
-</html> 
+</html>
