@@ -126,7 +126,7 @@ function kiji($page, $num, $count)
 ?>
 
                 </div>
-            <div style="text-align: right"><a href="#" class="more blogMore">→more</a></div>
+            <div style="text-align: right"><a href="./blog/wordpress/" class="more blogMore">→more</a></div>
         </div>
 
         <div class="rssEvent">
