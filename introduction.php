@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -40,7 +40,7 @@
     </header>
     <h2><span class="kasen">自転車の心得</span></h2>
     <div class="intro plan">
-        <h3 class="title">心得1<span class="titleRight">余裕のある計画を立てましょう</span></h3>
+        <h3 class="title">&emsp;心得1<span class="titleRight">余裕のある計画を立てましょう&emsp;</span></h3>
         <div class="mask">
             <p class="center para">時速10kmで計画を立てることをおすすめします。
                 信号待ちや、休息時間、食事の時間を考慮して、
@@ -48,7 +48,7 @@
         </div>
     </div>
     <div class="intro distance">
-        <h3 class="title">心得2<span class="titleRight">距離について</span></h3>
+        <h3 class="title">&emsp;心得2<span class="titleRight">距離について&nbsp&nbsp&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">最初は15kmまでの近距離から始めましょう。
@@ -58,7 +58,7 @@
 
     </div>
     <div class="intro route">
-        <h3 class="title">心得3<span class="titleRight">走行ルートを事前に確認</span></h3>
+        <h3 class="title">&emsp;心得3<span class="titleRight">走行ルートを事前に確認&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">事前に地図をみて、迷いやすいポイントや休憩、
@@ -68,7 +68,7 @@
 
     </div>
     <div class="intro buy">
-        <h3 class="title">心得4<span class="titleRight">購入するには</span></h3>
+        <h3 class="title">&emsp;心得4<span class="titleRight">購入するには&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">購入後の相談や故障時の修理、定期的なメンテナンス
@@ -78,7 +78,7 @@
 
     </div>
     <div class="intro select">
-        <h3 class="title">心得5<span class="titleRight">体に合った自転車を選びましょう</span></h3>
+        <h3 class="title">&emsp;心得5<span class="titleRight">体に合った自転車を選びましょう&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">スポーツ自転車にはサイズがあります。
@@ -89,7 +89,7 @@
 
     </div>
     <div class="intro check">
-        <h3 class="title">心得6<span class="titleRight">自転車に不備がないかチェック</span></h3>
+        <h3 class="title">&emsp;心得6<span class="titleRight">自転車に不備がないかチェック&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">自転車に乗る前に、ブレーキの効き、タイヤの
@@ -102,7 +102,7 @@
 
     </div>
     <div class="intro deal">
-        <h3 class="title">心得7<span class="titleRight">安全対策について</span></h3>
+        <h3 class="title">&emsp;心得7<span class="titleRight">安全対策について&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">自転車は、転倒すればケガにつながります。
@@ -112,7 +112,7 @@
 
     </div>
     <div class="intro bag">
-        <h3 class="title">心得8<span class="titleRight">持ち物について</span></h3>
+        <h3 class="title">&emsp;心得8<span class="titleRight">持ち物について&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">水分、雨具、着替え、日焼け止めクリーム、タオル、
@@ -124,7 +124,7 @@
 
     </div>
     <div class="intro road">
-        <h3 class="title">心得9<span class="titleRight">車道、左側通行の原則</span></h3>
+        <h3 class="title">&emsp;心得9<span class="titleRight">車道、左側通行の原則&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">自転車は「軽車両」です。
@@ -134,7 +134,7 @@
 
     </div>
     <div class="intro light">
-        <h3 class="title">心得10<span class="titleRight">夜間はライトをつけて</span></h3>
+        <h3 class="title">&emsp;心得10<span class="titleRight">夜間はライトをつけて&emsp;</span></h3>
         <div class="mask">
 
             <p class="center para">夜間走行時は必ずライトを点灯し、後ろに反射材
