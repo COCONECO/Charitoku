@@ -23,7 +23,7 @@
     <script type="text/javascript" src="js/jquery.inview.js"></script>
 
     <script>
-    //nav fixed
+//nav fixed
 jQuery(function($) {
   
 var nav    = $('.commonHeader'),
@@ -59,6 +59,18 @@ $(function(){
         },switchDelay);
     });
 });
+
+//scroll buttun
+$(function(){
+  $('a[href^="#"]').click(function(){
+    var speed = 800;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
+});
 </script>
 </head>
 
@@ -92,7 +104,7 @@ $(function(){
         </nav>
     </header>
     <div class="scroll">
-        <a href="#">
+        <a href="#main">
             <div class="arrow1">
             </div>
             <P>scroll</P>
@@ -110,6 +122,9 @@ $(function(){
     </div>
 
     <div class="tLogo"></div><!-- topロゴ -->
+
+    <div id="main"></div><!--スクロールボタンの飛び先用-->
+
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
     <div class="infoWrap">
