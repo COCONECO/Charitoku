@@ -168,7 +168,7 @@ google.maps.event.addDomListener(window, 'load', function () {
             // Html文字列を作成
             html = "";
             html += '<style type="text/css">';
-            html +='p {font-size: 14px; font-family: sans-serif}';
+            html +='p {font-size: 12px; font-family: sans-serif}';
             html += '</style>';
             html += '<p><img src="images/route/' + picture + '" width= 100px alt=""></img>';
             html += '<br><a href="' + url + '">' + ' ' + description + '</a>';
