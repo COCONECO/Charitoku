@@ -1,216 +1,255 @@
 @charset utf8;
 
-.topIMG{
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -9999;
-    overflow: hidden;
+.topIMG {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -9999;
+}
 
+#commonHeader {
+  position: absolute;
+  top: 78%;
 }
-/**************************************************
-ロゴのcss記述です。グローバルナビ同様960pxで表示切替(top.css)
-**************************************************/
 
-/***** トップロゴ *****/
-.tLogo{
-	position: absolute;
-    left: calc(50% - 120px);
-    top: calc(50% - 120px - 75px);
-    width:240px;
-    height: 240px;   
+.scroll {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(46, 133, 252, 0.5);
+  position: absolute;
+  top: 100%;
 }
-.tLogo::after{
-	position: absolute;
-    content: "";
-    display: block;
-    left: calc(50% - 120px);
-    top: calc(50% - 120px);
-    width:240px;
-    height: 240px;    
-    background-size: cover;
-    background-position: center; 
-	background-image: url(../images/top/charitoku-logo+.png);
-}
-@media screen and (min-width : 960px){
-	.tLogo{
-		position: absolute;
-		left: calc(50% - 200px);
-		top: calc(50% - 200px - 65px);
-		width:400px;
-		height: 400px;   
-	}
-	.tLogo::after{
-		position: absolute;
-		content: "";
-		display: block;
-		left: calc(50% - 200px);
-		top: calc(50% - 200px);
-		width:400px;
-		height: 400px;    
-		background-size: cover;
-		background-position: center; 
-		background-image: url(../images/top/charitoku-logo+.png);
-	}	
-}
-/**************************************************
-ロゴ記述終了
-**************************************************/
-#commonHeader{
-    position: absolute;
-    top: 78%;
-}
-.scroll{
 
-	height:100%;
-    width:100%;
-	background-color: rgba(46,133,252,0.5 );
-	position: absolute;
-    top: 100%;
+.scroll p {
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
 }
-.scroll p{
-	color: white;
-	font-family: 'Noto Sans JP', sans-serif;
-    text-align: center;
 
-}
-.arrow1{
-	margin: 10px auto;
-	padding: 0;
+.arrow1 {
+  margin: 10px auto;
+  padding: 0;
   width: 10px;
   height: 10px;
   border: 2px solid;
-  border-color:  transparent transparent #fff #fff;
+  border-color: transparent transparent #fff #fff;
   transform: rotate(-45deg);
 }
-.infoWrap{
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	/* padding-bottom:100px;*/
-  margin:100px 50px 100px 50px;
-}
-.block{
-	padding: 10px;
-	position: absolute;
-	top: -50px;
-    left: -50px;
-	display: table;/* 縦中央揃え */
-	width: 90px;
-	height: 80px;
-	background: #fff;
-	box-shadow: 0 0 0 3px #fff inset,0 0 0 4px #000 inset, 0 0 0 1px #000 ;
-	z-index: 8;
-}
-.block h2{
-	display: table-cell; /* 縦中央揃え */
-	vertical-align: middle;/* 縦中央揃え */
-	text-align: center;/* 横中央揃え */
-	font-size: 20px;
-    font-family: 'Sawarabi Mincho', serif;
-    font-weight: normal;
+
+.infoWrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* padding-bottom:100px;*/
+  margin: 100px 50px 100px 50px;
 }
 
-.blogBorder, .rssEvent{
-    width: 40%;
-    border: 1px solid black;
-    margin: 5%;
-    position: relative;
-}
-.new{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-.new img{
-    padding: 30px;
-    padding-top: 70px;
-    width: 200px;
-    height: 200px;
-    max-width: 500px;
-    max-height: 500px;
-}
-.new .blogText h3{
-    font-family: 'Sawarabi Mincho', serif;
-
-}
-.blogText{
-    padding: 30px;
-    padding-top: 70px;
-}
-.topBox{
-    top: 50px;
-    left: 30px;
+.block {
+  padding: 10px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  display: table;
+  /* 縦中央揃え */
+  width: 90px;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 0 0 3px #fff inset, 0 0 0 4px #000 inset, 0 0 0 1px #000;
+  z-index: 8;
 }
 
+.block h2 {
+  display: table-cell;
+  /* 縦中央揃え */
+  vertical-align: middle;
+  /* 縦中央揃え */
+  text-align: center;
+  /* 横中央揃え */
+  font-size: 20px;
+  font-family: 'Sawarabi Mincho', serif;
+  font-weight: normal;
+  line-height: 1.7;
+}
 
-.rss ul{
-    margin-top: 70px;
+.blogBorder, .rssEvent {
+  border: 1px solid black;
+  margin: 5%;
+  position: relative;
 }
-.rss ul li{
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: normal;
+
+.blogBorder {
+  width: 30%;
 }
-.more{
-	padding: 10px;
-	margin-bottom: 5px;
-	text-align:center;
-	display: inline-block;
-	padding: 10px 10px 10px 15px;
-	background: #D2EF70;
-	border-radius: 10px;
-	color: #fff;
-	text-decoration: none;
-	font-size: 12px;
-	line-height: 1em;
+
+.rssEvent {
+  width: 50%;
 }
-.recommend{
-    position: relative;
+
+.new {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
-.recommend .topBox{
-    position: static;
-    margin: 30px;
+
+.new img {
+  padding: 70px 10px 30px 30px;
+  width: 150px;
+  height: 150px;
+  max-width: 500px;
+  max-height: 500px;
+  /* margin: 40px auto 0; */
 }
-@media screen and (max-width: 1200px) and (min-width: 768px){
-    .new{
-        display: block;
-        text-align: center;
-    }
-    .blogText{
-        padding: 30px;
-    }
+
+.new .blogText h3 {
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 25px;
+  margin: 10px auto;
+}
+
+.new .blogText p a {
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 25px;
+}
+
+.blogText {
+  padding: 70px 10px 30px;
+}
+
+.topBox {
+  top: 50px;
+  left: 30px;
+}
+
+.rss ul {
+  margin-top: 70px;
+  padding-bottom: 20px;
+}
+
+.rss ul li {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  margin: 0 20px;
+  padding: 8px;
+}
+
+.more {
+  margin-bottom: 5px;
+  text-align: right;
+  display: inline-block;
+  padding: 10px 10px 10px 15px;
+  background: #D2EF70;
+  border-radius: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  /* line-height: 1.7; */
+  position: absolute;
+}
+
+.blogMore {
+  bottom: 0;
+  right: -30px;
+  /* -webkit-transform: translateX(500%); */
+  -webkit-transform: translateY(50%);
+  /* transform: translateX(500%); */
+  transform: translateY(50%);
+}
+
+.rssMore {
+  bottom: 0;
+  right: -30px;
+  /* -webkit-transform: translateX(100%); */
+  -webkit-transform: translateY(50%);
+  /* transform: translateX(100%); */
+  transform: translateY(50%);
+}
+
+.recommend {
+  position: relative;
+}
+
+.recommend .topBox {
+  position: static;
+  margin: 30px;
+}
+
+@media screen and (max-width: 1260px) and (min-width: 768px) {
+  .new {
+    display: block;
+    text-align: center;
+  }
+
+  .blogText {
+    padding: 30px 30px 0 30px;
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .infoWrap{
-        display: block;
-    }
-    .new{
-        display: block;
-    }
-    .blogBorder, .rssEvent{
-        width: 90%;
-        margin: 90px auto;
-    }
-    .new img{
-        width: 100px;
-        height: 100px;
-        /* text-align: center; */
-    }
-    .new{
-        text-align: center;
-    }
-    .blogText{
-        padding: 5%;
-    }
+  .infoWrap {
+    display: block;
+  }
 
+  .new {
+    display: block;
+  }
+
+  .blogBorder, .rssEvent {
+    width: 90%;
+    margin: 90px auto;
+  }
+
+  .blogBorder {
+    border: none;
+  }
+
+  .block {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .eventInfo {
+    transform: translateY(-50%);
+  }
+
+  .blogBorder {
+    padding-bottom: 30px;
+  }
+
+  .new img {
+    width: 100px;
+    height: 100px;
+    /* text-align: center; */
+  }
+
+  .recommend .topBox {
+    margin: 0 auto;
+  }
+
+  .new {
+    text-align: center;
+  }
+
+  .blogText {
+    padding: 5%;
+  }
+
+  .rss ul {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
-@media screen and (max-width: 768px) and ( min-width : 430px){
-    .new img{
-        width: 80%;
-        height: 200px;
-    }
+@media screen and (max-width: 768px) and (min-width : 430px) {
+  .new img {
+    width: 80%;
+    height: 200px;
+  }
+
+  .more {
+    position: static;
+  }
 }
