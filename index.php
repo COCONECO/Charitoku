@@ -25,10 +25,10 @@
     <script>
 //nav fixed
 jQuery(function($) {
-  
+
 var nav    = $('.commonHeader'),
     offset = nav.offset();
-  
+
 $(window).scroll(function () {
   if($(window).scrollTop() > offset.top) {
     nav.addClass('fixed');
@@ -36,7 +36,7 @@ $(window).scroll(function () {
     nav.removeClass('fixed');
   }
 });
-  
+
 });
 
 //top slideshow
@@ -44,16 +44,16 @@ $(function(){
     var $setElm = $('.slider'),
     fadeSpeed = 1500,
     switchDelay = 5000;
- 
+
     $setElm.each(function(){
         var targetObj = $(this);
         var findUl = targetObj.find('ul');
         var findLi = targetObj.find('li');
         var findLiFirst = targetObj.find('li:first');
- 
+
         findLi.css({display:'block',opacity:'0',zIndex:'99'});
         findLiFirst.css({zIndex:'100'}).stop().animate({opacity:'1'},fadeSpeed);
- 
+
         setInterval(function(){
             findUl.find('li:first-child').animate({opacity:'0'},fadeSpeed).next('li').css({zIndex:'100'}).animate({opacity:'1'},fadeSpeed).end().appendTo(findUl).css({zIndex:'99'});
         },switchDelay);
@@ -197,18 +197,113 @@ function kiji($page, $num, $count)
                 <h2>イベント<br>情報</h2>
             </div>
             <div class="rss">
-                <ul>
-                    <li>「渡船(約5分)で行く早春の鳴門満喫観光ライド」開催のお知らせ（2019年2月14日</li>
-                    <li>日本でいちばん楽しい自転車教室がやってくる！ウィーラースクール開催のお知らせ（2019年2月1日）</li>
-                    <li>「TOKUSHIMAサイクルフェスタvol.2」開催のお知らせ（2019年1月29日)</li>
-                    <li>『TOKUSHIMAサイクルフェスタ ランニングバイクレース』開催のお知らせ（2019年1月28日）</li>
-                    <li>２月のミニガイド開催のお知らせ（2019年1月23日）</li>
-                    <li>１月のミニガイドツーリング開催のお知らせ（2018年12月14日）</li>
-                    <li>健康サイクリング部の実施について（2018年12月10日）</li>
-                    <li>１１月のミニガイドツーリング開催のお知らせ（2018年10月22日）</li>
-                    <li>１０月のミニガイドツーリング開催のお知らせ（2018年10月5日）</li>
-                    <li>「サイクルトレイン阿波池田」開催のお知らせ（2018年9月19日）</li>
-                </ul>
+<!-- RSS取得PHP -->
+<?php
+//RSSを取得するphp
+
+
+
+//表示記事数
+$hyojiNum = 10;
+//フィード登録
+$data['feedurl'][] = 'http://tokushima-cf.org/?feed=rss2';
+$data['feedurl'][] = 'http://www.cycling-tomorrow.jp/atom.xml';
+$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
+
+// ※最後に「/」は付けないでください
+//$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss'; いくらでも追加してください
+$rssList = $data['feedurl'];
+//キャッシュ準備
+require_once('Cache/Lite.php');
+$cacheDir = 'rsscache/';
+$lifeTime = 60*60;
+$automaticCleaningFactor = 100;
+$options = array('cacheDir' => $cacheDir ,'caching' => true, 'lifeTime' => $lifeTime, 'automaticSerialization' => 'true','automaticCleaningFactor' => $automaticCleaningFactor);
+$cacheData = new Cache_Lite($options);
+$outdata =  $cacheData->get('rsscache');
+if(!$outdata) {
+//同時呼び出し
+$rssdataRaw = multiRequest($rssList);
+for($n=0;$n<count($rssdataRaw);$n++){
+//URL設定
+$rssdata = simplexml_load_string($rssdataRaw[$n]);
+if($rssdata->channel->item) $rssdata = $rssdata->channel;
+if($rssdata->item){
+foreach($rssdata->item as $myEntry){
+$rssDate = $myEntry->pubDate;
+if(!$rssDate) $rssDate = $myEntry->children("http://purl.org/dc/elements/1.1/")->date;
+date_default_timezone_set('Asia/Tokyo');
+$myDateGNU = strtotime($rssDate);
+$myDate = date('Y/m/d',$myDateGNU);
+$myTitle = $myEntry->title; //タイトル取得
+$myLink = $myEntry->link; //リンクURL取得
+//出力内容（CSSOK）
+if(preg_match('/PR:/',$myTitle)) continue;
+$outdata[$myDateGNU] =  '<li><a href="' . $myLink . '" target="_blank">' . $myTitle . '　</a>';
+$outdata[$myDateGNU].=  '<span style="margin:0px">' . $myDate . '</span></li>';
+}
+}
+}
+//ソート
+krsort($outdata);
+$cacheData->save($outdata,'rsscache');
+}
+$nn = 0;
+$html = '';
+foreach($outdata as $outdata) {
+$nn++;
+$html.= $outdata;
+if($nn == $hyojiNum) break;
+}
+$html = '<html lang="ja" style="overflow-x:hidden;"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><ul>'.$html.'</ul></html>';
+echo $html;
+//同時呼び出し関数
+function multiRequest($data, $options = array()) {
+// array of curl handles
+$curly = array();
+// data to be returned
+$result = array();
+// multi handle
+$mh = curl_multi_init();
+// loop through $data and create curl handles
+// then add them to the multi-handle
+foreach ($data as $id => $d) {
+$curly[$id] = curl_init();
+$url = (is_array($d) && !empty($d['url'])) ? $d['url'] : $d;
+curl_setopt($curly[$id], CURLOPT_URL,            $url);
+curl_setopt($curly[$id], CURLOPT_HEADER,         0);
+curl_setopt($curly[$id], CURLOPT_RETURNTRANSFER, 1);
+// post?
+if (is_array($d)) {
+if (!empty($d['post'])) {
+curl_setopt($curly[$id], CURLOPT_POST,       1);
+curl_setopt($curly[$id], CURLOPT_POSTFIELDS, $d['post']);
+}
+}
+// extra options?
+if (!empty($options)) {
+curl_setopt_array($curly[$id], $options);
+}
+curl_multi_add_handle($mh, $curly[$id]);
+}
+// execute the handles
+$running = null;
+do {
+curl_multi_exec($mh, $running);
+} while($running > 0);
+// get content and remove handles
+foreach($curly as $id => $c) {
+$result[$id] = curl_multi_getcontent($c);
+curl_multi_remove_handle($mh, $c);
+}
+// all done
+curl_multi_close($mh);
+return $result;
+}
+?>
+
+<!-- RSSを取得するphp終わり -->
+
             </div>
             <div style="text-align: right"><a href="#" class="more rssMore">→more</a></div>
 
