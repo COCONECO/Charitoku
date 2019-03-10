@@ -46,6 +46,10 @@
     margin: 10% 20px 0 0;
 }
 
+.blogPage{
+    text-align: center;
+    clear: both;
+}
 @media screen and (max-width: 768px){
     main{
         width: 100%;

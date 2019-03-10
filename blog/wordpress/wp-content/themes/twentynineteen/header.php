@@ -10,8 +10,10 @@
  * @subpackage Twenty_Nineteen
  * @since 1.0.0
  */
-?><!doctype html>
-<html <?php language_attributes();?>>
+?>
+<!doctype html>
+<html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,11 +25,13 @@
 
     <!-- stylesheets -->
 
+    <!-- <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitokuwordpress/wp-content/themes/twentynineteen/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitokuwordpress/wp-content/themes/twentynineteen/css/blog-list.css" type="text/css" media="all">
+    <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitokuwordpress/wp-content/themes/twentynineteen/css/blog-details.css" type="text/css" media="all"> -->
     <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/css/style.css" type="text/css" media="all">
     <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/css/blog-list.css" type="text/css" media="all">
     <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/css/blog-details.css" type="text/css" media="all">
 
     <!-- <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/kijistyle.css" type="text/css" media="all"> -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet">
-</head>
-
+</head> 
