@@ -216,7 +216,7 @@ $rssList = $data['feedurl'];
 //キャッシュ準備
 require_once('Cache/Lite.php');
 $cacheDir = 'rsscache/';
-$lifeTime = 60*60;
+$lifeTime = 24*60*60;
 $automaticCleaningFactor = 100;
 $options = array('cacheDir' => $cacheDir ,'caching' => true, 'lifeTime' => $lifeTime, 'automaticSerialization' => 'true','automaticCleaningFactor' => $automaticCleaningFactor);
 $cacheData = new Cache_Lite($options);
@@ -255,7 +255,7 @@ $nn++;
 $html.= $outdata;
 if($nn == $hyojiNum) break;
 }
-$html = '<html lang="ja" style="overflow-x:hidden;"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><ul>'.$html.'</ul></html>';
+$html = '<ul>'.$html.'</ul>';
 echo $html;
 //同時呼び出し関数
 function multiRequest($data, $options = array()) {
