@@ -172,13 +172,13 @@ function kiji($page, $num, $count)
                         <div class="blogText">
 
 
-                        <?php echo '<h3>' . $date[$t] . '</h3>'; ?>
+                        <?php echo '<p>' . $date[$t] . '</p>'; ?>
 
-                        <p>
+                        <h3>
                             <a href="<?php echo $link[$t]; ?>" >
                                 <?php echo $title[$t]; ?><br>
                             </a>
-                        </p>
+                        </h3>
                         </div>
                     </div>
 
@@ -188,8 +188,8 @@ function kiji($page, $num, $count)
 }
 ?>
 
-                </div>
-            <div style="text-align: right"><a href="./blog/wordpress/" class="more blogMore">→more</a></div>
+        </div>
+            <a href="./blog/wordpress/" class="more blogMore">→more</a>
         </div>
 
         <div class="rssEvent slideRight">
@@ -305,7 +305,7 @@ return $result;
 <!-- RSSを取得するphp終わり -->
 
             </div>
-            <div style="text-align: right"><a href="#" class="more rssMore">→more</a></div>
+            <div style="text-align: right"></div>
 
         </div>
 
