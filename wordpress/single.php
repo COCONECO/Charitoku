@@ -34,7 +34,7 @@ get_header();
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="http://localhost/charitoku/blog/wordpress/">
+                <li><a href="../charitokuwordpress/">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -48,29 +48,29 @@ get_header();
 
     <div class="tutumi">
         <h2 class="midashi"><span>
-                <?php the_title(); ?>
+                <?php the_title();?>
             </span>
         </h2>
         <div class="shosai">
             <p class="date"><?php echo get_the_date(); ?></p>
-            <p class="category"><?php the_category(); ?></p>
+            <p class="category"><?php the_category();?></p>
         </div>
 
 
         <?php
- /* Start the Loop */
-        while (have_posts()) : the_post();
-            the_content();
-        endwhile; // End of the loop.
-        ?>
+/* Start the Loop */
+while (have_posts()): the_post();
+    the_content();
+endwhile; // End of the loop.
+?>
         <p class="back"><a href="http://localhost/charitoku/blog/wordpress/">→記事一覧に戻る</a></p>
     </div>
     </div>
     <div class="sideBar detailSideBar">
-        <?php get_sidebar(); ?>
+        <?php get_sidebar();?>
     </div>
 
-    <?php get_footer(); ?>
+    <?php get_footer();?>
 </body>
 
-</html> 
+</html>
