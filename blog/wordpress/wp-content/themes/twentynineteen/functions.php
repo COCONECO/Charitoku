@@ -332,4 +332,3 @@ function insert_thumbnail_element_to_feed(){
 	$output = '<media>'.$thumbnail[0] .'</media>';
 	echo $output;
 }
-add_action('rss2_item', 'insert_thumbnail_element_to_feed');
