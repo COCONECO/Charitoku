@@ -345,8 +345,14 @@ try {
 }
 echo '<ul id="itemList">';
 foreach ($data as $row) {
-
-    echo '<li class="itemBox grid5Pc grid10 fadein">';
+    if ($row['level'] == 'beginner') {
+        echo '<li class="itemBox grid5Pc grid10 fadein beginnerShadow">';
+    } elseif ($row['level'] == 'standard') {
+        echo '<li class="itemBox grid5Pc grid10 fadein standardShadow">';
+    } elseif ($row['level'] == 'advanced') {
+        echo '<li class="itemBox grid5Pc grid10 fadein advancedShadow">';
+    }
+    // echo '<li class="itemBox grid5Pc grid10 fadein ">';
     echo '<a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
     $id = intval($row['id']);
