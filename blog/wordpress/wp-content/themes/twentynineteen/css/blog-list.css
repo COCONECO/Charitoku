@@ -39,21 +39,40 @@
 .blogDay{
     float: left;
     margin: 10% 20px 0 0;
+    padding-left: 10%;
+    padding-bottom: 5%;
+
 }
 
 .blogCategory{
     float: right;
     margin: 10% 20px 0 0;
+    /* padding: 0 10% 0 10%; */
+    padding-bottom: 10%;
+
 }
 
 .blogPage{
     text-align: center;
     clear: both;
 }
+.screen-reader-text{
+    text-align: center;
+    float: left;
+}
+.search-field{
+    width: 60%;
+    margin: 0% 0 0 0;
+    /* padding: 10% 10% 10% 10%; */
+    float: left;
+}
 @media screen and (max-width: 768px){
     main{
         width: 100%;
     }
+}
+.search-field{
+    width: 100%;
 }
 
 .blogTitle a{
