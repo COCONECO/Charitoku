@@ -208,7 +208,7 @@ $hyojiNum = 10;
 //フィード登録
 $data['feedurl'][] = 'http://tokushima-cf.org/?feed=rss2';
 $data['feedurl'][] = 'http://www.cycling-tomorrow.jp/atom.xml';
-$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
+// $data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
 
 // ※最後に「/」は付けないでください
 //$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss'; いくらでも追加してください
@@ -407,9 +407,9 @@ echo '</ul>';
     <footer>
         <div class="back">
             <ul class="banner">
+                <!-- <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
             </ul>
         </div>
     </footer>

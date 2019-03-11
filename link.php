@@ -46,12 +46,17 @@
     <table>
         <tr>
             <td class="three">自転車王国とくしま</td>
-            <td class="seven">http://www.dmydmy.com</td>
+            <td class="seven"><a href="http://www.tokusupo.net/bicycle/"  target="_blank">http://www.tokusupo.net/bicycle/</a></td>
         </tr>
         <tr>
             <td class="three">徳島県自転車競技連盟</td>
-            <td class="seven">http://www.dmydmy.com</td>
+            <td class="seven"><a href="http://tokushima-cf.org/"  target="_blank">http://tokushima-cf.org/</a></td>
         </tr>
+        <tr>
+            <td class="three">Cycling Tomorrow Japan</td>
+            <td class="seven"><a href="http://cycling-tomorrow.jp/" target="_blank">http://cycling-tomorrow.jp/</a></td>
+        </tr>
+
     </table>
     <h3>　自転車屋</h3>
     <table>
@@ -71,13 +76,13 @@
     <footer>
         <div class="footerBack">
             <ul class="banner">
+                <!-- <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
             </ul>
             <p>©道プロジェクト</p>
         </div>
     </footer>
 </body>
 
-</html> 
+</html>

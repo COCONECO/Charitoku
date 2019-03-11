@@ -267,9 +267,9 @@
         <footer>
             <div class="back">
                 <ul class="banner">
+                    <!-- <li><a href="">バナー</a></li>
                     <li><a href="">バナー</a></li>
-                    <li><a href="">バナー</a></li>
-                    <li><a href="">バナー</a></li>
+                    <li><a href="">バナー</a></li> -->
                 </ul>
             </div>
         </footer>
@@ -277,4 +277,4 @@
 
 </body>
 
-</html> 
+</html>
