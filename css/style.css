@@ -317,6 +317,7 @@ p ,a ,li{font-size: 16px;}
 */
 
 #itemList{
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -386,9 +387,9 @@ p ,a ,li{font-size: 16px;}
 @media screen and (max-width: 768px){ /*768px以下のボックスサイズ*/
     .itemBox{
         width: 100%;
-        min-width: 320px;
+        min-width: 280px;
         height: 100%;
-        margin: 20px auto;
+        margin: 20px 0;
     }
     
     .mainImg{
@@ -402,8 +403,11 @@ p ,a ,li{font-size: 16px;}
 }
 
 @media screen and (max-width: 768px){/*768px以下で説明文、詳細を消去*/
-    .description {
+    .description ,.shousai{
         display: none;
+    }
+    .left{
+        width: 60%;
     }
 }
 
