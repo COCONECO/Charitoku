@@ -33,9 +33,9 @@
     left: calc(50% - 120px);
     top: calc(50% - 120px);
     width:240px;
-    height: 240px;    
+    height: 240px;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 	background-image: url(../images/top/charitoku-logo+.png);
 }
 @media screen and (min-width : 960px){
@@ -44,7 +44,7 @@
 		left: calc(50% - 200px);
 		top: calc(50% - 200px - 65px);
 		width:400px;
-		height: 400px;   
+		height: 400px;
 	}
 	.tLogo::after{
 		position: absolute;
@@ -53,11 +53,11 @@
 		left: calc(50% - 200px);
 		top: calc(50% - 200px);
 		width:400px;
-		height: 400px;    
+		height: 400px;
 		background-size: cover;
-		background-position: center; 
+		background-position: center;
 		background-image: url(../images/top/charitoku-logo+.png);
-	}	
+	}
 }
 /**************************************************
 ロゴ記述終了
@@ -369,16 +369,16 @@ img{
 /*top画像スライドショー*/
 .slider {
   margin: 0 auto;
-  width: 100%; 
-  height: 100vh; 
+  width: 100%;
+  height: 100vh;
   left: calc(50vw - 768px);
   text-align: left;
   overflow: hidden;
 }
 
 .slider ul {
-  width: 1536px; 
-  height: 100vh; 
+  width: 1536px;
+  height: 100vh;
   left: calc(50vw - 768px);
   text-align: left;
   overflow: hidden;
@@ -388,8 +388,8 @@ img{
 .slider ul li {
   top: 0;
   left: 0;
-  width: 1536px; 
-  height: 100vh; 
+  width: 1536px;
+  height: 100vh;
   left: calc(50vw - 768px);
   display: none;
   position: absolute;
@@ -402,3 +402,14 @@ img{
 #main{
   padding-top: 20px;
 }
+
+
+.beginnerShadow{
+    box-shadow: 20px 20px rgba(161, 250, 147, 1);
+}
+.standardShadow{
+    box-shadow: 20px 20px rgba(84, 100, 242, 1);
+}
+.advancedShadow{
+    box-shadow: 20px 20px rgba(243, 18, 85, 1);
+ }
