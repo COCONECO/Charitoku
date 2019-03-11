@@ -146,6 +146,7 @@
 }
 
 .new {
+  margin-top: 40px;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -232,7 +233,7 @@
 
 .recommend .topBox {
   position: static;
-  margin: 80px;
+  margin: 80px 0 20px 80px;
 }
 
 @media screen and (max-width: 1260px) and (min-width: 768px) {
@@ -521,3 +522,4 @@ img{
     }
   }
 }
+
