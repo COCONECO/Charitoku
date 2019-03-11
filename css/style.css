@@ -317,10 +317,12 @@ p ,a ,li{font-size: 16px;}
 */
 
 #itemList{
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin: 40px 10% 0 10%;
+    margin: 40px 7% 0 7%;
+  
 }
 
 .itemBox{
@@ -337,10 +339,12 @@ p ,a ,li{font-size: 16px;}
     padding-top: 40px;
     width: 130%;
     height: 20%;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .itemBox dl{
     padding-top: 24px;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .itemBox dt{
@@ -382,13 +386,14 @@ p ,a ,li{font-size: 16px;}
     margin-bottom: 10px;
     color: #4B6FFF;
     text-decoration: underline;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 @media screen and (max-width: 768px){ /*768px以下のボックスサイズ*/
     .itemBox{
         width: 100%;
-        min-width: 320px;
+        min-width: 280px;
         height: 100%;
-        margin: 20px auto;
+        margin: 20px 0;
     }
     
     .mainImg{
@@ -402,8 +407,11 @@ p ,a ,li{font-size: 16px;}
 }
 
 @media screen and (max-width: 768px){/*768px以下で説明文、詳細を消去*/
-    .description {
+    .description ,.shousai{
         display: none;
+    }
+    .left{
+        width: 60%;
     }
 }
 

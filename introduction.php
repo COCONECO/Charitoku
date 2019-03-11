@@ -164,9 +164,9 @@
     <footer>
         <div class="footerBack">
             <ul class="banner">
+                <!-- <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
             </ul>
             <p>©道プロジェクト</p>
         </div>
@@ -174,4 +174,4 @@
 
 </body>
 
-</html> 
+</html>

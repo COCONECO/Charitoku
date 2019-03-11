@@ -208,7 +208,7 @@ $hyojiNum = 10;
 //フィード登録
 $data['feedurl'][] = 'http://tokushima-cf.org/?feed=rss2';
 $data['feedurl'][] = 'http://www.cycling-tomorrow.jp/atom.xml';
-$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
+// $data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
 
 // ※最後に「/」は付けないでください
 //$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss'; いくらでも追加してください
@@ -216,7 +216,7 @@ $rssList = $data['feedurl'];
 //キャッシュ準備
 require_once('Cache/Lite.php');
 $cacheDir = 'rsscache/';
-$lifeTime = 60*60;
+$lifeTime = 24*60*60;
 $automaticCleaningFactor = 100;
 $options = array('cacheDir' => $cacheDir ,'caching' => true, 'lifeTime' => $lifeTime, 'automaticSerialization' => 'true','automaticCleaningFactor' => $automaticCleaningFactor);
 $cacheData = new Cache_Lite($options);
@@ -255,7 +255,7 @@ $nn++;
 $html.= $outdata;
 if($nn == $hyojiNum) break;
 }
-$html = '<html lang="ja" style="overflow-x:hidden;"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><ul>'.$html.'</ul></html>';
+$html = '<ul>'.$html.'</ul>';
 echo $html;
 //同時呼び出し関数
 function multiRequest($data, $options = array()) {
@@ -345,8 +345,14 @@ try {
 }
 echo '<ul id="itemList">';
 foreach ($data as $row) {
-
-    echo '<li class="itemBox grid5Pc grid10 fadein">';
+    if ($row['level'] == 'beginner') {
+        echo '<li class="itemBox grid5Pc grid10 fadein beginnerShadow">';
+    } elseif ($row['level'] == 'standard') {
+        echo '<li class="itemBox grid5Pc grid10 fadein standardShadow">';
+    } elseif ($row['level'] == 'advanced') {
+        echo '<li class="itemBox grid5Pc grid10 fadein advancedShadow">';
+    }
+    // echo '<li class="itemBox grid5Pc grid10 fadein ">';
     echo '<a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
     echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
     $id = intval($row['id']);
@@ -407,10 +413,12 @@ echo '</ul>';
     <footer>
         <div class="back">
             <ul class="banner">
+                <!-- <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
             </ul>
+            <p>©道プロジェクト</p>
+
         </div>
     </footer>
 

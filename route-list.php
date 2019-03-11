@@ -203,7 +203,7 @@
             } elseif ($row['level'] == 'advanced') {
                 echo '<div class="level advanced">上級</div>';
             }
-            echo '<p class="detail"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+            echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
             echo '</div>';
             echo '</a>';
             echo '</li>';
@@ -227,13 +227,13 @@
     <footer>
         <div class="back">
             <ul class="banner">
+                <!-- <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
             </ul>
             <p>©道プロジェクト</p>
         </div>
     </footer>
 </body>
 
-</html> 
+</html>
