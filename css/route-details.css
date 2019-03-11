@@ -15,34 +15,33 @@ imagesCover
 **************************************************/
 
 #imagesCover{
-	position: relative; 
+	position: relative;
 	display: block;
 	width: 100%;
-	height: calc(185px + 60px);
+	height: calc(250px + 60px);/*画像高さ + バナー高さ*/
 }
 .imagesCover{
-	position: relative; 
+	position: relative;
 	top: 60px;
-	height: 185px;
+	height: 250px;/*高さ変更可*/
 	overflow: hidden;
 }
 .imagesCover img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: auto;
+	width: 100%;
 	max-width: inherit;
 	z-index: -999;
 }
 @media screen and (min-width : 768px){
 	#imagesCover{
-		position: relative; 
+		position: relative;
 		display: block;
 		width: 100%;
-		height: calc(185px + 80px);
+		height: calc(250px + 80px);
 	}
-	.imagesCover{ 
+	.imagesCover{
 		top: 80px;
 	}
 }
@@ -50,7 +49,7 @@ imagesCover
 main
 **************************************************/
 #main{
-	position: relative; 
+	position: relative;
 	margin: 0 auto 0;
 	padding: 0 20px;
 	max-width: 960px;
@@ -70,6 +69,7 @@ main
 	position: relative;
 	padding: 0 16px;
 	line-height: 1.5;
+	letter-spacing: 0.05em;
 	word-wrap: break-word;
 }
 .courseContents .courseText::after{
@@ -303,7 +303,7 @@ main
 	.courseContents .courseText{
 		padding: 0;
 	}
-	
+
 	.courseContents .dateTable{
 		position: static;
 		/* padding: 40px 20px; */
@@ -368,6 +368,7 @@ wrap
 
 .wrap h3{
 	margin-left: 5%;
+	margin-bottom:3%;
 	font-size: 24px;
 }
 
@@ -397,6 +398,7 @@ wrap
 		padding: 0;
 	}
 	.wrap .text{
+		letter-spacing: 0.05em;
 		font-size: 18px;
 		width: 38%;
 		min-height: 165px;
@@ -428,7 +430,7 @@ tweet
 @media screen and (min-width : 768px){
 	.tweet{
 		margin: 50px;
-	
+
 	}
 	.tweet a{
 		height: 20px;

@@ -4,7 +4,7 @@
 |          reset css            |
 ---------------------------------
 */
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -18,7 +18,7 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
  caption, tbody, tfoot, thead,
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -30,7 +30,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -176,7 +176,7 @@ p ,a ,li{font-size: 16px;}
     #commonHeader ,.commonHeader{
         height: 60px;
     }
-    
+
     #gnav{
         width:70%;
     }
@@ -275,7 +275,7 @@ p ,a ,li{font-size: 16px;}
 		z-index: 100;
 		transform: translateY(0%);
 	}
-	
+
 	#gnavLogo .logoImages::before{
 		position: absolute;
 		content: "";
@@ -289,7 +289,7 @@ p ,a ,li{font-size: 16px;}
 		background: url(../images/cycleanimcolorr.png) no-repeat ;
 		background-size: cover;
 		transform: translateX(0);
-		animation: cycle-anim-header 0.4s steps(6) infinite; 
+		animation: cycle-anim-header 0.4s steps(6) infinite;
 	}
 	#gnavLogo .logoImages::after{
 		position: absolute;
@@ -322,7 +322,7 @@ p ,a ,li{font-size: 16px;}
     flex-wrap: wrap;
     align-content: flex-start;
     margin: 40px 7% 0 7%;
-  
+
 }
 
 .itemBox{
@@ -395,12 +395,12 @@ p ,a ,li{font-size: 16px;}
         height: 100%;
         margin: 20px 0;
     }
-    
+
     .mainImg{
         width: 100%;
         height: 60%;
     }
-    
+
     .subImg{
         display: none;
     }
@@ -433,7 +433,7 @@ p ,a ,li{font-size: 16px;}
     .itemBox{
         margin:40px auto 20px auto;
     }
-    
+
     .mainImg{
         width: 100%;
     }
@@ -568,9 +568,18 @@ footer div{
     margin: 40px 160px 0 160px;
 }
 
+footer{
+    position: relative;
+}
+
+
 footer p{
     color: #ffffff;
-    margin-top: 15%;
+    position: absolute;
+    top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
 }
 
 @media screen and (min-width: 768px){
@@ -593,7 +602,7 @@ footer p{
     .fadeinOn{
         opacity: 1.0;
         animation: fade-in-fwd 1s ease-in-out both;
-    } 
+    }
 }
 
 /* ----------------------------------------------
@@ -630,5 +639,3 @@ footer p{
       opacity: 1;
     }
   }
-  
-  

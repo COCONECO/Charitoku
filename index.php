@@ -172,13 +172,13 @@ function kiji($page, $num, $count)
                         <div class="blogText">
 
 
-                        <?php echo '<h3>' . $date[$t] . '</h3>'; ?>
+                        <?php echo '<p>' . $date[$t] . '</p>'; ?>
 
-                        <p>
+                        <h3>
                             <a href="<?php echo $link[$t]; ?>" >
                                 <?php echo $title[$t]; ?><br>
                             </a>
-                        </p>
+                        </h3>
                         </div>
                     </div>
 
@@ -188,8 +188,8 @@ function kiji($page, $num, $count)
 }
 ?>
 
-                </div>
-            <div style="text-align: right"><a href="./blog/wordpress/" class="more blogMore">→more</a></div>
+        </div>
+            <a href="./blog/wordpress/" class="more blogMore">→more</a>
         </div>
 
         <div class="rssEvent slideRight">
@@ -216,7 +216,7 @@ $rssList = $data['feedurl'];
 //キャッシュ準備
 require_once('Cache/Lite.php');
 $cacheDir = 'rsscache/';
-$lifeTime = 60*60;
+$lifeTime = 24*60*60;
 $automaticCleaningFactor = 100;
 $options = array('cacheDir' => $cacheDir ,'caching' => true, 'lifeTime' => $lifeTime, 'automaticSerialization' => 'true','automaticCleaningFactor' => $automaticCleaningFactor);
 $cacheData = new Cache_Lite($options);
@@ -255,7 +255,7 @@ $nn++;
 $html.= $outdata;
 if($nn == $hyojiNum) break;
 }
-$html = '<html lang="ja" style="overflow-x:hidden;"><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><ul>'.$html.'</ul></html>';
+$html = '<ul>'.$html.'</ul>';
 echo $html;
 //同時呼び出し関数
 function multiRequest($data, $options = array()) {
@@ -305,7 +305,7 @@ return $result;
 <!-- RSSを取得するphp終わり -->
 
             </div>
-            <div style="text-align: right"><a href="#" class="more rssMore">→more</a></div>
+            <div style="text-align: right"></div>
 
         </div>
 

@@ -94,6 +94,7 @@
 }
 
 .infoWrap {
+  height: 80%;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -131,25 +132,29 @@
 .blogBorder, .rssEvent {
   border: 1px solid black;
   margin: 5%;
-  position: relative;
+  /* position: relative; */
 }
 
 .blogBorder {
-  width: 30%;
+  width: 40%;
+  height: 80%;
 }
 
 .rssEvent {
   width: 50%;
+  height: 60%;
 }
 
 .new {
-  width: 100%;
+  margin-top: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
 }
 
 .new img {
-  padding: 70px 10px 30px 30px;
+  /* padding: 70px 10px 30px 10px; */
+  margin: 10px 24px;
   width: 150px;
   height: 150px;
   max-width: 500px;
@@ -157,19 +162,23 @@
   /* margin: 40px auto 0; */
 }
 
-.new .blogText h3 {
-  font-family: 'Sawarabi Mincho', serif;
-  font-size: 25px;
-  margin: 10px auto;
+.new .blogText h3{
+  margin-top: 60px;
 }
 
-.new .blogText p a {
+.new .blogText h3 a{
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 25px;
+}
+
+.new .blogText p {
   font-family: 'Sawarabi Mincho', serif;
   font-size: 25px;
 }
 
 .blogText {
-  padding: 70px 10px 30px;
+  /* padding: 70px 10px 30px; */
+  text-align: center;
 }
 
 .topBox {
@@ -191,7 +200,7 @@
 }
 
 .more {
-  margin-bottom: 5px;
+  float: right;
   text-align: right;
   display: inline-block;
   padding: 10px 10px 10px 15px;
@@ -201,16 +210,12 @@
   text-decoration: none;
   font-size: 24px;
   /* line-height: 1.7; */
-  position: absolute;
+  /* position: absolute; */
 }
 
 .blogMore {
-  bottom: 0;
-  right: -30px;
-  /* -webkit-transform: translateX(500%); */
-  -webkit-transform: translateY(50%);
-  /* transform: translateX(500%); */
-  transform: translateY(50%);
+  margin-left: 71%;
+  margin-top: 24px;
 }
 
 .rssMore {
@@ -228,7 +233,7 @@
 
 .recommend .topBox {
   position: static;
-  margin: 30px;
+  margin: 80px 0 20px 80px;
 }
 
 @media screen and (max-width: 1260px) and (min-width: 768px) {
@@ -250,11 +255,21 @@
 
   .new {
     display: block;
+    border-top: 1px solid #000;
+    padding: 40px 0;
+  }
+
+  .new:last-child{
+    border-bottom: 1px solid #000;
   }
 
   .blogBorder, .rssEvent {
     width: 90%;
     margin: 90px auto;
+  }
+
+  .rssEvent{
+    margin-top: 180px;
   }
 
   .blogBorder {
@@ -264,6 +279,10 @@
   .block {
     position: static;
     margin: 0 auto;
+  }
+
+  .blogBorder .block{
+    margin-bottom: 60px;
   }
 
   .eventInfo {
@@ -298,6 +317,11 @@
   }
 }
 
+.topCourse .more{
+  margin-right: 24px;
+  margin-top: 80px;
+}
+
 @media screen and (max-width: 768px) and (min-width : 430px) {
   .new img {
     width: 80%;
@@ -306,6 +330,7 @@
 
   .more {
     position: static;
+    margin-bottom: 40px;
   }
 }
 
@@ -399,9 +424,6 @@ img{
   max-width: 100%;
 }
 
-#main{
-  padding-top: 20px;
-}
 
 
 .beginnerShadow{
@@ -500,3 +522,4 @@ img{
     }
   }
 }
+
