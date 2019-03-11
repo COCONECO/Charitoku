@@ -411,6 +411,8 @@ echo '</ul>';
                 <li><a href="">バナー</a></li>
                 <li><a href="">バナー</a></li> -->
             </ul>
+            <p>©道プロジェクト</p>
+            
         </div>
     </footer>
 
