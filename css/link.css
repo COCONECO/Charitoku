@@ -49,3 +49,11 @@ td{
 .seven{
     width: 70%;
 }
+
+.seven a{
+    text-decoration: underline #3887ff;
+}
+
+.seven a:hover{
+    opacity: 0.6;
+}
