@@ -402,7 +402,7 @@ p ,a ,li{font-size: 16px;}
 }
 
 @media screen and (max-width: 768px){/*768px以下で説明文、詳細を消去*/
-    .description ,.detail{
+    .description {
         display: none;
     }
 }
