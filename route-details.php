@@ -86,7 +86,7 @@ try {
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="http://localhost/charitoku/blog/wordpress/">
+                <li><a href="../charitokuwordpress">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
