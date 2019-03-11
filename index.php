@@ -92,7 +92,7 @@ $(function(){
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
-                <li><a href="./blog/wordpress/">
+                <li><a href="../charitokuwordpress/">
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
@@ -147,7 +147,7 @@ $num = $page + $count;
 echo kiji($page, $num, $count);
 function kiji($page, $num, $count)
 {
-    $rss = simplexml_load_file('http://localhost/charitoku/blog/wordpress/feed/');
+    $rss = simplexml_load_file('http://localhost/charitokuwordpress/feed/');
     $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
     $i = 0;
     foreach ($rss->channel->item as $item) {
