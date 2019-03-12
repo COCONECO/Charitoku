@@ -266,7 +266,6 @@ load-anim
   opacity: 0.6;
   z-index: 99;
   transform: scale(0.5);
-  animation: cloud-world-3 1.0s ease-in 10s forwards;
 }
 .cloudChild{
   position: absolute;
@@ -325,8 +324,9 @@ load-anim
   position: absolute;
   top: calc(100% - 400px);
   left:calc(100% - 600px);
-  animation: cloud-world-4 1.0s ease-in 10s forwards;
 }
+.cloud[data-state="loadComplete"]:nth-child(1){   animation: cloud-world-3 1.0s ease-in 8.5s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(2){   animation: cloud-world-4 1.0s ease-in 8.5s forwards;}
 .cloud:nth-child(3).cloudChild,.cloud:nth-child(4).cloudChild,.cloud:nth-child(5).cloudChild,
 .cloud:nth-child(6).cloudChild,.cloud:nth-child(7).cloudChild,.cloud:nth-child(8).cloudChild{ animation: none;}
 .cloud:nth-child(3){
@@ -354,7 +354,7 @@ load-anim
   transform: translateY(80px);
 }
 .cloud[data-state="loadComplete"]:nth-child(3),.cloud[data-state="loadComplete"]:nth-child(4),
-.cloud[data-state="loadComplete"]:nth-child(5),.cloud[data-state="loadComplete"]:nth-child(6){animation: cloud-world-5 2.0s ease 8.5s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(5),.cloud[data-state="loadComplete"]:nth-child(6){animation: cloud-world-5 2.5s ease 7.8s forwards;}
 .cloud:nth-child(7){
   position: absolute;
   top: calc(100% + 400px);
@@ -369,7 +369,7 @@ load-anim
   transform: translateY(250px) scale(1.2);
   z-index: 1000;
 }
-.cloud[data-state="loadComplete"]:nth-child(7),.cloud[data-state="loadComplete"]:nth-child(8){animation: cloud-world-6 2.0s ease 9s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(7),.cloud[data-state="loadComplete"]:nth-child(8){animation: cloud-world-6 2.5s ease 8.8s forwards;}
 @keyframes cloud-world-1{
   0% {     transform: scale(1.);}
   50% {     transform: scale(1.1);}
