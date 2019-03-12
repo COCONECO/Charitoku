@@ -236,10 +236,11 @@
     <!--top画像スライド-->
     <div class="slider topIMG">
         <ul>
-            <li><img src="images/top/testtop-1.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/testtop-2.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/testtop-3.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/testtop-4.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/top-1.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/top-2.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/top-3.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/top-4.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+            <li><img src="images/top/top-5.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
         </ul>
     </div>
 
