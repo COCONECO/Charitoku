@@ -178,7 +178,7 @@ load-anim
   border-radius:  0 200px 200px 0;
   transform: rotate3d(0,0,0, 180deg);
   z-index: 50;
-  animation: full-moon-1 10.0s forwards;
+  animation: full-moon-1 5.0s forwards;
   transform-origin:0% 50%;
 }
 .progressBar:nth-child(2) {
@@ -192,7 +192,7 @@ load-anim
   border-radius:  0 200px 200px 0;
   transform: rotate3d(0,0,0, 180deg);
   z-index: 25;
-  animation: full-moon-2 10.0s forwards;
+  animation: full-moon-2 5.0s forwards;
   transform-origin:0% 50%;
 }
 .progressBar:nth-child(3) {
