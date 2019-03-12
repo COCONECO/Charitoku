@@ -50,6 +50,7 @@ span{
 .tutumi p ,.shosai a{
     padding:  20px 0 40px 0;
     clear:both;
+    line-height: 1.7;
 }
 
 .tutumi a{
@@ -79,6 +80,9 @@ span{
     margin-top: 160px;
 }
 
+.tag-tagcloud{
+    font-size: 20px;
+}
 @media screen and (max-width: 768px){
     .tutumi {
         width:80%;

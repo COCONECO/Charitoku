@@ -23,9 +23,6 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 
-      <!-- icon -->
-      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-
     <!-- stylesheets -->
 
     <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitokuwordpress/wp-content/themes/twentynineteen/css/style.css" type="text/css" media="all">
