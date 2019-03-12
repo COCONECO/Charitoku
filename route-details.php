@@ -202,15 +202,16 @@ try {
             echo '<div class="wrap">';
             echo '<h3>' . $idx . '. ' . $row['picture_title'] . '</h3>';
             echo '<div class="wrapFlex">';
+            // echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
 
-            $imageFilePath = './images/route/ . $row[picture_filename] . ';
+            // 分岐
+            $imageFilePath = './images/route/' . $row["picture_filename"]  ;
 
-           echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
-            // if (file_exists($imageFilePath) {
-            //     echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
-            // }else{
-            //     echo '<img src="./images/route/noimage.png" height="165" width="165" alt="no image">';
-            // }
+            if (file_exists($imageFilePath)) {
+                echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
+            }else{
+                echo '<img src="./images/route/noimage.png" height="165" width="165" alt="no image">';
+            }
 
 
 
