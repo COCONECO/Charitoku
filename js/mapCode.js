@@ -149,6 +149,8 @@ google.maps.event.addDomListener(window, 'load', function () {
         var url = this.url;
         var markerObj;
 
+        console.log(url);
+
         markerObj = new google.maps.Marker({
             position: latlng,
             map: mapObj,
@@ -169,9 +171,10 @@ google.maps.event.addDomListener(window, 'load', function () {
             html = "";
             html += '<style type="text/css">';
             html +='p {font-size: 12px; font-family: sans-serif}';
+            html +='a {font-size: 12px; font-family: sans-serif}';
             html += '</style>';
             html += '<p><img src="images/route/' + picture + '" width= 100px alt=""></img>';
-            html += '<br><a href="' + url + '">' + ' ' + description + '</a>';
+            html += '<br><a href="' + url + '" target="_blank">' + ' ' + description + '</a>';
             html += '<br>' + subDescription + '</p>';
 
             // info Windowを作成
