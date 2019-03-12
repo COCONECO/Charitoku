@@ -557,7 +557,7 @@ footer{
     clear: both;
     margin-top: 100px;
     width: 100%;
-    height: 320px;
+    height: 180px;
 }
 
 footer div{
@@ -567,9 +567,8 @@ footer div{
     text-align: center;
 }
 
-.banner li{
+.sns li{
     display: inline-block;
-    background-color: white;
     margin: 40px 160px 0 160px;
 }
 
@@ -581,14 +580,18 @@ footer{
 footer p{
     color: #ffffff;
     position: absolute;
-    top: 50%;
+    top: 93%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
 }
 
+i{
+    color: #fff;
+}
+
 @media screen and (min-width: 768px){
-    .banner li{
+    .sns li{
         margin: 40px 8.3% 0 8.3%;
     }
 }

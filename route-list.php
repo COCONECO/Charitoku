@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/route-list.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.inview.js"></script>
 </head>
@@ -225,14 +227,15 @@
         </ul>
     </div> -->
     <footer>
-        <div class="back">
-            <ul class="banner">
-                <!-- <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li> -->
-            </ul>
-            <p>©道プロジェクト</p>
-        </div>
+            <div class="back">
+                <ul class="sns">
+                    <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                </ul>
+                <p>©道プロジェクト</p>
+
+            </div>
     </footer>
 </body>
 

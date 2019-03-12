@@ -812,8 +812,7 @@ load-anim終わり
 }
 
 .topCourse .more{
-  margin-right: 24px;
-  margin-top: 80px;
+  margin:80px 24px 80px 0;
 }
 
 @media screen and (max-width: 768px) and (min-width : 430px) {
