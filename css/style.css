@@ -386,12 +386,12 @@ p ,a ,li{font-size: 16px;}
     margin-top:160px;
     margin-bottom: 10px;
     color: #4B6FFF;
-    text-decoration: underline;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
 .detail a{
     color: #4B6FFF;
+    text-decoration: underline;
 }
 @media screen and (max-width: 768px){ /*768px以下のボックスサイズ*/
     .itemBox{
