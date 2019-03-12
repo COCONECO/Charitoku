@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/blog-details.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+  <!-- icon -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 </head>
@@ -59,16 +61,17 @@
         <a href="#">山(1)</a>
         <a href="#">眉山(1)</a>
     </div>
-  <footer>
-        <div class="footerBack">
-            <ul class="banner">
-                <!-- <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li> -->
-            </ul>
-            <p>©道プロジェクト</p>
-        </div>
-    </footer>
+    <footer>
+            <div class="back">
+                <ul class="sns">
+                    <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                </ul>
+                <p>©道プロジェクト</p>
+
+            </div>
+        </footer>
 
 </body>
 
