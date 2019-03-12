@@ -21,6 +21,7 @@
     <!--javascript-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.inview.js"></script>
+     <script type="text/javascript" src="js/load-anim.js"></script>
 
     <script>
         //nav fixed
