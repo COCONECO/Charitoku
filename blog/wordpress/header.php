@@ -20,8 +20,7 @@
     <title>記事一覧</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
 
     <!-- stylesheets -->
 
@@ -33,5 +32,5 @@
     <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/css/blog-details.css" type="text/css" media="all"> -->
 
     <!-- <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/kijistyle.css" type="text/css" media="all"> -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Sawarabi+Mincho&amp;subset=japanese" rel="stylesheet">
+
 </head>

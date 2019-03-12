@@ -64,18 +64,18 @@ load-anim
   position: absolute;
   display: block;
   content: "";
-  top: calc(100%  - 140px - 72px);
-  left:calc(100% - 128px);
-  width: 128px;
-  height: 72px; 
+  top: calc(100% - 139px - 42px);/* - バナー部分(61px + 78px) - 自身の高さ*/
+  left:calc(100% - 76px);
+  width: 76px;
+  height: 42px; 
   border-radius: 20%;
   background-color: #3887ff;
-  border: dashed 4px #fff;
+  border: dashed 2px #fff;
   box-sizing: border-box;
   font-family: 'Noto Sans JP',sans-serif;
-  font-size: 36px;
+  font-size: 21px;
   font-weight: normal;
-  line-height: 62px;
+  line-height: 30px;
   text-align: center;
   color: #fff;
   text-shadow: 0px 0px 4px #fff;
@@ -98,9 +98,48 @@ load-anim
 @keyframes skipOut{
   0% {transform: translateX(0px)}
   100% {transform:translateX(800px);}
-
 }
-
+@media screen and (min-width : 960px){
+  #skipButton{
+    position: absolute;
+    display: block;
+    content: "";
+    top: calc(100% - 159px - 72px);
+    left:calc(100% - 128px);
+    width: 128px;
+    height: 72px; 
+    border-radius: 20%;
+    background-color: #3887ff;
+    border: dashed 4px #fff;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP',sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 62px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 4px #fff;
+    box-shadow: none;
+    transform:translateX(800px);
+    z-index: 1000;
+    overflow: hidden;
+  }
+  #skipButton:active,#skipButton:visited,#skipButton:hover{
+    box-shadow: none;
+    outline: 0;
+  }
+  #skipButton[data-state="loadComplete"],#skipButton[data-state="true"]{    animation: skipDemo 1s ease 2.0s forwards;}
+  #skipButton[data-state="false"]{    animation: skipOut 1s ease 0.0s forwards;}
+  
+  @keyframes skipDemo{
+    0% {transform:translateX(800px);}
+    100% {transform: translateX(0px)}
+  }
+  @keyframes skipOut{
+    0% {transform: translateX(0px)}
+    100% {transform:translateX(800px);}
+  }
+}
 /******************************
 スキップボタンデザイン終わり
 ******************************/
@@ -111,10 +150,10 @@ load-anim
 .moon {
   position: absolute;
   display: block;
-  top: calc(50% - 100px - 65px);
-  left: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
+  top: calc(50% - 60px - 75px);
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 120px;
   background-color: #f7f8bf ;
   border-radius: 100%;
   transform: rotate(155deg);
@@ -126,14 +165,14 @@ load-anim
   position: absolute;
   content: "";
   display: block;
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
-  width: 100px;
-  height: 100px;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
   z-index: 120;
   background-image: url(../images/top/cycleanimblackr.png);
   background-size: cover;
-  transform: rotate(-155deg) translateX(-200px);
+  transform: rotate(-155deg) translateX(-120px);
 } 
 .moon[data-state="loadComplete"]::after {
   animation:    
@@ -161,19 +200,19 @@ load-anim
   100% {     transform: scale(1.8); opacity: 0;}
 }
 @keyframes ride-on-out{
-  0% { transform: rotate(-155deg) translateX(-200px);}
-  100% { transform: rotate(-155deg) translateX(200px);}
+  0% { transform: rotate(-155deg) translateX(-120px);}
+  100% { transform: rotate(-155deg) translateX(120px);}
 }
 @keyframes cycle-anim-br{
-  100% { background-position: -600px 0;}
+  100% { background-position: -360px 0;}
 }
 .progressBar:nth-child(1) {
   position: absolute;
   display: block;
-  top: 0;
-  left: calc(50% + 0px);
-  width: 100px;
-  height: 200px;
+  top: -1px;
+  left: calc(50% - 2px);
+  width: 60px;
+  height: 120px;
   background-color: #3887ff ;
   border-radius:  0 200px 200px 0;
   transform: rotate3d(0,0,0, 180deg);
@@ -186,8 +225,8 @@ load-anim
   display: block;
   top: 1px;
   left: calc(50% + 1px);
-  width: 98px;
-  height: 198px;
+  width: 59px;
+  height: 119px;
   background-color: #f7f8bf ;
   border-radius:  0 200px 200px 0;
   transform: rotate3d(0,0,0, 180deg);
@@ -198,10 +237,10 @@ load-anim
 .progressBar:nth-child(3) {
   position: absolute;
   display: block;
-  top: calc(50% - 100px);
+  top: calc(50% - 60px);
   left: calc(50% - 0px);
-  width: 100px;
-  height: 200px;
+  width: 60px;
+  height: 120px;
   background-color: #3887ff ;
   border-radius:  0 200px 200px 0;
   transform: rotate3d(0,1,0, 180deg);
@@ -212,10 +251,10 @@ load-anim
   filter: blur(5px);
   position: absolute;
   display: block;
-  top: calc(50% - 111px);
-  left: calc(50% - 111px);
-  width: 222px;
-  height: 222px;
+  top: calc(50% - 66px);
+  left: calc(50% - 66px);
+  width: 132px;
+  height: 132px;
   background-color: #f7f8bf ;
   border-radius:  100%;
   opacity: 1;
@@ -223,32 +262,148 @@ load-anim
 }
 
 @keyframes full-moon-1{
-  0% {     transform: rotate3d(0,0,0, 180deg); z-index: 50;  top: -1px;  left: calc(50% - 2px);  width: 102px;  height: 202px;}
-  100% {   transform: rotate3d(0,1,0, 180deg); z-index: 25;  top: 1px;  left: calc(50% + 1px);  width: 98px;  height: 198px;}
+  0% {     transform: rotate3d(0,0,0, 180deg); z-index: 50;  top: -1px;  left: calc(50% - 2px);  width: 61px;  height: 121px;}
+  100% {   transform: rotate3d(0,1,0, 180deg); z-index: 25;  top: 1px;  left: calc(50% + 1px);  width: 59px;  height: 119px;}
 }
 @keyframes full-moon-2{
-  0% {     transform: rotate3d(0,0,0, 180deg); z-index: 25;  top: 1px;  left: calc(50% + 1px);  width: 98px;  height: 198px;}
-  100% {   transform: rotate3d(0,1,0, 180deg); z-index: 50;  top: -1px;  left: calc(50% + 2px);  width: 102px;  height: 202px;}
+  0% {     transform: rotate3d(0,0,0, 180deg); z-index: 25;  top: 1px;  left: calc(50% + 1px);  width: 59px;  height: 119px;}
+  100% {   transform: rotate3d(0,1,0, 180deg); z-index: 50;  top: -1px;  left: calc(50% + 2px);  width: 61px;  height: 121px;}
 }
 
 .counter {
   position: absolute;
-  top: calc(50% + 50px - 65px);
+  top: calc(50% + 30px - 75px);
   left: 50%;
-  font-size:68px;
+  font-size:40px;
   font-family: "游ゴシック Medium",Yu Gothic Medium,"游ゴシック体",YuGothic,Hiragino Kaku Gothic ProN,Hiragino Kaku Gothic Pro,"ＭＳ ゴシック",sans-serif,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro,Osaka,"ＭＳ Ｐゴシック",MS PGothic,sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 420;
   color: #f7f8bf;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.2px;
   display: block;
-  height: 100px;
+  height: 60px;
   text-align: center;
   transform: translateX(-50%) translateY(50%);
   z-index: 100;
   text-shadow: 2px 2px 0px #fff,2px 2px 10px #3887ff;
 }
 .counter[data-state="loadComplete"] {animation: fade-out 1s ease 3.0s forwards;}
+
+@media screen and (min-width : 960px){
+  .moon {
+    position: absolute;
+    display: block;
+    top: calc(50% - 100px - 65px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    background-color: #f7f8bf ;
+    border-radius: 100%;
+    transform: rotate(155deg);
+    overflow: hidden;
+    z-index: 10;
+  }
+  .moon::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    z-index: 120;
+    background-image: url(../images/top/cycleanimblackr.png);
+    background-size: cover;
+    transform: rotate(-155deg) translateX(-200px);
+  } 
+  @keyframes ride-on-out{
+    0% { transform: rotate(-155deg) translateX(-200px);}
+    100% { transform: rotate(-155deg) translateX(200px);}
+  }
+  @keyframes cycle-anim-br{
+    100% { background-position: -600px 0;}
+  }
+  .progressBar:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: calc(50% - 2px);
+    width: 100px;
+    height: 200px;
+    background-color: #3887ff ;
+    border-radius:  0 200px 200px 0;
+    transform: rotate3d(0,0,0, 180deg);
+    z-index: 50;
+    animation: full-moon-1 5.0s forwards;
+    transform-origin:0% 50%;
+  }
+  .progressBar:nth-child(2) {
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: calc(50% + 1px);
+    width: 98px;
+    height: 198px;
+    background-color: #f7f8bf ;
+    border-radius:  0 200px 200px 0;
+    transform: rotate3d(0,0,0, 180deg);
+    z-index: 25;
+    animation: full-moon-2 5.0s forwards;
+    transform-origin:0% 50%;
+  }
+  .progressBar:nth-child(3) {
+    position: absolute;
+    display: block;
+    top: calc(50% - 100px);
+    left: calc(50% - 0px);
+    width: 100px;
+    height: 200px;
+    background-color: #3887ff ;
+    border-radius:  0 200px 200px 0;
+    transform: rotate3d(0,1,0, 180deg);
+    z-index: 20;
+    transform-origin:0% 50%;
+  }
+  .progressBar:nth-child(4) {
+    filter: blur(5px);
+    position: absolute;
+    display: block;
+    top: calc(50% - 111px);
+    left: calc(50% - 111px);
+    width: 222px;
+    height: 222px;
+    background-color: #f7f8bf ;
+    border-radius:  100%;
+    opacity: 1;
+    z-index: -10000;
+  }
+  
+  @keyframes full-moon-1{
+    0% {     transform: rotate3d(0,0,0, 180deg); z-index: 50;  top: -1px;  left: calc(50% - 2px);  width: 102px;  height: 202px;}
+    100% {   transform: rotate3d(0,1,0, 180deg); z-index: 25;  top: 1px;  left: calc(50% + 1px);  width: 98px;  height: 198px;}
+  }
+  @keyframes full-moon-2{
+    0% {     transform: rotate3d(0,0,0, 180deg); z-index: 25;  top: 1px;  left: calc(50% + 1px);  width: 98px;  height: 198px;}
+    100% {   transform: rotate3d(0,1,0, 180deg); z-index: 50;  top: -1px;  left: calc(50% + 2px);  width: 102px;  height: 202px;}
+  }
+  .counter {
+    position: absolute;
+    top: calc(50% + 50px - 65px);
+    left: 50%;
+    font-size:68px;
+    font-family: "游ゴシック Medium",Yu Gothic Medium,"游ゴシック体",YuGothic,Hiragino Kaku Gothic ProN,Hiragino Kaku Gothic Pro,"ＭＳ ゴシック",sans-serif,"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro,Osaka,"ＭＳ Ｐゴシック",MS PGothic,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #f7f8bf;
+    letter-spacing: 1.6px;
+    display: block;
+    height: 100px;
+    text-align: center;
+    transform: translateX(-50%) translateY(50%);
+    z-index: 100;
+    text-shadow: 2px 2px 0px #fff,2px 2px 10px #3887ff;
+  }
+}
 /******************************
 月アニメーション記述終わり
 ******************************/
@@ -257,11 +412,11 @@ load-anim
 ******************************/
 .cloud{
   position: absolute;
-  top: calc(0% - 250px);
-  left:calc(0% - 300px);
+  top: calc(0% - 350px);
+  left:calc(0% - 400px);
   width: 1200px;
   height: 600px;
-  filter: blur(40px);
+  filter: blur(50px);
   border-radius: 0;
   opacity: 0.6;
   z-index: 99;
@@ -323,7 +478,7 @@ load-anim
 .cloud:nth-child(2){
   position: absolute;
   top: calc(100% - 400px);
-  left:calc(100% - 600px);
+  left:calc(100% - 400px);
 }
 .cloud[data-state="loadComplete"]:nth-child(1){   animation: cloud-world-3 1.0s ease-in 8.5s forwards;}
 .cloud[data-state="loadComplete"]:nth-child(2){   animation: cloud-world-4 1.0s ease-in 8.5s forwards;}
@@ -358,14 +513,14 @@ load-anim
 .cloud:nth-child(7){
   position: absolute;
   top: calc(100% + 400px);
-  left:calc(0% - 50px);
+  left:calc(0% - 250px);
   transform: translateY(200px) scale(1.2);
   z-index: 1000;
 }
 .cloud:nth-child(8){
   position: absolute;
   top: calc(100% + 400px);
-  left:calc(100% - 800px);
+  left:calc(100% - 1000px);
   transform: translateY(250px) scale(1.2);
   z-index: 1000;
 }
@@ -381,7 +536,7 @@ load-anim
   100% {     transform: scale(1.0);}
 }
 @keyframes cloud-world-3{
-  0% {     top: calc(0% - 250px);}
+  0% {     top: calc(0% - 350px);}
   100% {    top: calc(0% - 600px);}
 }
 @keyframes cloud-world-4{
@@ -396,6 +551,39 @@ load-anim
   0% {     top: calc(100% + 800px);}
   100% {    top:calc(0% - 1200px);}
 }
+@media screen and (min-width : 960px){
+  .cloud{
+    position: absolute;
+    top: calc(0% - 350px);
+    left:calc(0% - 300px);
+    width: 1200px;
+    height: 600px;
+    filter: blur(45px);
+    border-radius: 0;
+    opacity: 0.6;
+    z-index: 99;
+    transform: scale(0.5);
+  }
+  .cloud:nth-child(2){
+    position: absolute;
+    top: calc(100% - 400px);
+    left:calc(100% - 600px);
+  }
+  .cloud:nth-child(7){
+    position: absolute;
+    top: calc(100% + 400px);
+    left:calc(0% - 50px);
+    transform: translateY(200px) scale(1.2);
+    z-index: 1000;
+  }
+  .cloud:nth-child(8){
+    position: absolute;
+    top: calc(100% + 400px);
+    left:calc(100% - 800px);
+    transform: translateY(250px) scale(1.2);
+    z-index: 1000;
+  }
+}
 /******************************
 雲アニメーション記述終わり
 ******************************/
@@ -405,9 +593,9 @@ logoアニメーション記述
 
 .images {
 position: absolute;
-top: calc(50% - 65px - 200px); left:calc(50% - 200px); 
-width: 400px;
-height: 400px;
+top: calc(50% - 75px - 120px); left:calc(50% - 120px); 
+width: 240px;
+height: 240px;
 z-index: 100;
 opacity: 0;
 }
@@ -415,8 +603,8 @@ opacity: 0;
 
 .images .image{
 position: absolute;
-width: 400px;
-height: 400px;
+width: 240px;
+height: 240px;
 opacity: 1;
 }
 .images .image:nth-child(1){
@@ -429,10 +617,10 @@ opacity: 1;
   background:  url(../images/top/anim-toku.png) no-repeat ;
   background-size: cover;}
 .images .image:nth-child(3){
-top: calc(0% + 152px);
+top: calc(0% + 91px);
 left: calc(100vw - 0px);
-width: 240px;
-height: 240px;
+width: 144px;
+height: 144px;
 background:  url(../images/top/cycleanimblackl.png) no-repeat ;
 background-size: cover;
 transform: translateX(0px);
@@ -451,8 +639,8 @@ fade-out 1s ease 6.5s forwards;
   content: "";
   display: block;
   top: 0;left: 0;
-  width: 400px;
-  height: 400px;
+  width: 240px;
+  height: 240px;
   background:  url(../images/top/anim-star.png) no-repeat ;
   background-size: cover;
   background-position: center;
@@ -464,8 +652,8 @@ fade-out 1s ease 6.5s forwards;
   content: "";
   display: block;
   top: 0;left: 0;
-  width: 400px;
-  height: 400px;
+  width: 240px;
+  height: 240px;
   background:  url(../images/top/anim-rood.png) no-repeat ;
   background-size: cover;
   background-position: center;
@@ -480,14 +668,14 @@ fade-out 1s ease 6.5s forwards;
 100% { transform: rotate(0deg) scale(1.0);}
 }
 @keyframes cycle-anim{
-100% { background-position: -1440px 0;}
+100% { background-position: -866px 0;}
 }
 @keyframes cycle-anim-bl{
-100% { background-position: -1440px 0;}
+100% { background-position: -866px 0;}
 }
 @keyframes ride-on-in{
 0% {   left: calc(100vw - 0px);}
-100% {  left: calc(0vw - 15px);}
+100% {  left: calc(0vw - 9px);}
 }
 @keyframes fade-out{
 100% { opacity: 0;}
@@ -496,6 +684,83 @@ fade-out 1s ease 6.5s forwards;
 100% { opacity: 1;}
 }
 
+@media screen and (min-width : 960px){
+  .images {
+    position: absolute;
+    top: calc(50% - 65px - 200px); left:calc(50% - 200px); 
+    width: 400px;
+    height: 400px;
+    z-index: 100;
+    opacity: 0;
+  }
+  .images .image{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+    }
+  .images .image:nth-child(3){
+    top: calc(0% + 152px);
+    left: calc(100vw - 0px);
+    width: 240px;
+    height: 240px;
+    background:  url(../images/top/cycleanimblackl.png) no-repeat ;
+    background-size: cover;
+    transform: translateX(0px);
+  }
+  .images[data-state="loadComplete"] .image:nth-child(3){
+    animation: 
+    ride-on-in 2s linear 4.5s forwards,
+    cycle-anim-bl 0.4s steps(6) 4.5s 5,
+    fade-out 1s ease 6.5s forwards;
+  }
+  .images .image:nth-child(4){  background:  url(../images/top/anim-girl.png) no-repeat ;    background-size: cover; opacity: 0;}
+  .images[data-state="loadComplete"] .image:nth-child(4){ animation: fade-in 1s ease 6.5s forwards; }
+  .images .image:nth-child(5){  left: calc(100% - 0px);width: 0px; height: 100%; overflow: hidden;transform: translateX(-100%)}
+  .images .image:nth-child(5)::after{ 
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;left: 0;
+    width: 400px;
+    height: 400px;
+    background:  url(../images/top/anim-star.png) no-repeat ;
+    background-size: cover;
+    background-position: center;
+  }
+  .images[data-state="loadComplete"] .image:nth-child(5){ animation: screen-anim 0.5s linear 6.0s forwards;}
+  .images .image:nth-child(6){width: 0px; height: 100%; overflow: hidden;}
+  .images .image:nth-child(6)::after{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;left: 0;
+    width: 400px;
+    height: 400px;
+    background:  url(../images/top/anim-rood.png) no-repeat ;
+    background-size: cover;
+    background-position: center;
+  }
+  .images[data-state="loadComplete"] .image:nth-child(6){ animation: screen-anim 1s ease 7.5s forwards;}
+  
+  @keyframes screen-anim{
+  0% { width: 0%;}
+  100% { width: 100%;}
+  }
+  @keyframes cycle-roll{
+  100% { transform: rotate(0deg) scale(1.0);}
+  }
+  @keyframes cycle-anim{
+  100% { background-position: -1440px 0;}
+  }
+  @keyframes cycle-anim-bl{
+  100% { background-position: -1440px 0;}
+  }
+  @keyframes ride-on-in{
+  0% {   left: calc(100vw - 0px);}
+  100% {  left: calc(0vw - 15px);}
+  }
+}
 /******************************
 logoアニメーション記述終わり
 ******************************/
@@ -558,15 +823,22 @@ load-anim終わり
 **************************************************/
 .commonHeader {
   position: absolute;
-  top: 78%;
+  top:calc(100% - 61px - 78px);
+  /* top: 78%; */
 }
-
+@media screen and (min-width : 960px){
+  .commonHeader {
+    position: absolute;
+    top:calc(100% - 81px - 78px);
+  }
+}
 .scroll {
   height: 78px;
   width: 100%;
   background-color: rgba(46, 133, 252, 0.5);
   position: absolute;
-  top: 89%;
+  /* top: 89%; */
+  top:calc(100% - 78px);
   z-index: 999;
 }
 
