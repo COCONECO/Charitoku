@@ -105,7 +105,7 @@ try {
 
             <?php
             foreach ($data2 as $row) {
-                echo '<img class="headerImages" src="./images/route/' . $row['picture_filename'] . '" alt="' . $row['picture_title'] . '">';
+                echo '<img class="headerImages" src="./images/route/details-' . $row['picture_filename'] . '" alt="' . $row['picture_title'] . '">';
             }
             ?>
         </section>
@@ -215,7 +215,7 @@ try {
 
 
 
-            echo '<p class="text">' . $row['detaildescription'] . '</p>';
+            echo '<p class="text">' . $row['detaildescription'] . '<br><br>' . $row['bsub_description'] . '</p>';
             echo '</div></div>';
             $idx++;
         }
