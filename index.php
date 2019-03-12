@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>知っとく走っとく徳島サイクリングロード</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="”知っとく走っとく徳島サイクリングロード”では徳島県のおすすめサイクリングコースを
+レベル毎に（初級、中級、上級）注意点、周辺の施設、食事処、観光スポットと併せて紹介しています。">
+    <meta name="keywords" content="徳島,自転車,サイクリング,ロードバイク,自転車コース,自転車イベント,
+サイクリングコース">
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
