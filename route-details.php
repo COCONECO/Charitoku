@@ -64,6 +64,8 @@ try {
     <link rel="stylesheet" href="./css/route-details.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
 </head>
 
@@ -237,16 +239,16 @@ try {
         </div><!-- /.tweet -->
     </section><!-- /#main -->
     <footer>
-        <div class="footerBack">
-            <ul class="banner">
-                <!-- <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li> -->
-            </ul>
-            <p>©道プロジェクト</p>
-        </div>
-    </footer>
+            <div class="back">
+                <ul class="sns">
+                    <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                </ul>
+                <p>©道プロジェクト</p>
 
+            </div>
+    </footer>
     <script>
         // 経由地点を設定
         var latlang = [
