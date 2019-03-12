@@ -64,6 +64,8 @@ try {
     <link rel="stylesheet" href="./css/route-details.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
 </head>
 
@@ -130,7 +132,7 @@ try {
                     山を自転車で登るのが初めての方にお勧めです。<br>
                     眉山公園から一望できる徳島全体を見渡せる景色は眉山を登り切ったという達成感を味わえます。<br>
                     春や秋になると途中にある西部公園やコース沿いに桜や紅葉といった景色を楽しみながら走ることができます。<br>
-                </p><!-- /.courseText -->
+                </p> /.courseText -->
                 <table class="dateTable">
                     <tr>
                         <th>走行距離</th>
@@ -200,7 +202,18 @@ try {
             echo '<div class="wrap">';
             echo '<h3>' . $idx . '. ' . $row['picture_title'] . '</h3>';
             echo '<div class="wrapFlex">';
-            echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
+
+            $imageFilePath = './images/route/ . $row[picture_filename] . ';
+
+           echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
+            // if (file_exists($imageFilePath) {
+            //     echo '<img src="./images/route/' . $row['picture_filename'] . '" height="165" width="165" alt="' . $row['picture_title'] . '">';
+            // }else{
+            //     echo '<img src="./images/route/noimage.png" height="165" width="165" alt="no image">';
+            // }
+
+
+
             echo '<p class="text">' . $row['detaildescription'] . '</p>';
             echo '</div></div>';
             $idx++;
@@ -220,22 +233,22 @@ try {
 
         <div class="tweet">
             <a href="./route-list.php?level=all">ルート一覧に戻る</a>
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="このコースを走りました！">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="<?php echo $row['title'] ?>をサイクリングしました！">
                 Tweet</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div><!-- /.tweet -->
     </section><!-- /#main -->
     <footer>
-        <div class="footerBack">
-            <ul class="banner">
-                <!-- <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li> -->
-            </ul>
-            <p>©道プロジェクト</p>
-        </div>
-    </footer>
+            <div class="back">
+                <ul class="sns">
+                    <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                </ul>
+                <p>©道プロジェクト</p>
 
+            </div>
+    </footer>
     <script>
         // 経由地点を設定
         var latlang = [
