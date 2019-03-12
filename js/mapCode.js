@@ -60,7 +60,7 @@ new google.maps.DirectionsService().route({
             if (status == google.maps.ElevationStatus.OK) {
                 for (var i in results) {
                     if (results[i].elevation) {
-                        var elevation = results[i].elevation;
+                        var elevation = Math.round(results[i].elevation);
 
                         // console.log(results[i].location.lat());
                         // console.log(results[i].location.lng());
