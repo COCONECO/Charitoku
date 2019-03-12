@@ -333,12 +333,13 @@ p ,a ,li{font-size: 16px;}
 
 .routeTitle{
     margin-top: 16px;
+    height: 56px;
 }
 
 .description{
     padding-top: 40px;
     width: 130%;
-    height: 20%;
+    height: 56px;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -387,6 +388,10 @@ p ,a ,li{font-size: 16px;}
     color: #4B6FFF;
     text-decoration: underline;
     font-family: 'Noto Sans JP', sans-serif;
+}
+
+.detail a{
+    color: #4B6FFF;
 }
 @media screen and (max-width: 768px){ /*768px以下のボックスサイズ*/
     .itemBox{
