@@ -405,11 +405,11 @@
             echo '<p class="description">' . $row['sub_description'] . '</p>';
             echo '<dl>';
             echo '<dt>走行距離</dt>';
-            echo '<dd>' . $row['length'] . 'km</dd>';
+            echo '<dd>' . $row['length'] . ' km</dd>';
             echo '<dt>走行時間</dt>';
-            echo '<dd>約' . $row['time'] . '分</dd>';
+            echo '<dd>約' . $row['time'] . ' 分</dd>';
             echo '<dt>消費カロリー</dt>';
-            echo '<dd>' . $row['calorie'] . 'kcal</dd>';
+            echo '<dd>' . $row['calorie'] . ' kcal</dd>';
             echo '</dl>';
             echo '</div>';
             echo '<div class="right">';
@@ -447,4 +447,4 @@
 
 </body>
 
-</html> 
+</html>
