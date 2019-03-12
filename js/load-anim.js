@@ -1,7 +1,7 @@
 //loding animation
 
 /*********************************************
-プログレスバー（月とパーセント表記)
+プログレスバー
 スキップボタン
 コンテンツ表示非表示
 *********************************************/
@@ -24,15 +24,11 @@ var countup = function(){
   }else{
   console.log(count++);
   var id = setTimeout(countup, 30);
-  $('.progressBar:nth-child(1)').css('animation',  "full-moon-1 " +  (15 - (count * 0.1) ) + 's forwards');//jquery
-  $('.progressBar:nth-child(2)').css('animation',  "full-moon-2 " +  (15 - (count * 0.1) ) + 's forwards');//jquery
   $('.counter').text(count + '%');//jquery
 
   $(window).load(function(){//ロードが先に終わった場合実行
     clearTimeout(id);　
     var id = setTimeout(countup, 15);
-      $('.progressBar:nth-child(1)').css('animation',  "full-moon-1 " + 2 + 's forwards');
-      $('.progressBar:nth-child(2)').css('animation',  "full-moon-2 " + 2 + 's forwards');
       $('.counter').text(count + '%');//jquery
       if(trigger < 2 ){
         $(function(){

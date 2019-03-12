@@ -109,7 +109,7 @@
                         <div class="progressBar"></div>
                     </div>
                     <div class="cloudWorld">
-                        <div class="cloud">
+                        <div class="cloud loadStandby">
                             <div class="cloudChild"></div>
                             <div class="cloudChild"></div>
                             <div class="cloudChild"></div>
@@ -118,7 +118,7 @@
                             <div class="cloudChild"></div>
                             <div class="cloudChild"></div>
                         </div>
-                        <div class="cloud">
+                        <div class="cloud loadStandby">
                             <div class="cloudChild"></div>
                             <div class="cloudChild"></div>
                             <div class="cloudChild"></div>
