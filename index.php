@@ -99,7 +99,6 @@
     <div id="page">
         <div id="loaderBg">
             <section id="app" class="app">
-                <!-- <label><div id="skipButton" class="loadStandby">Skip<input type="checkbox"></div></label> -->
                 <button id="skipButton" class="loadStandby">Skip</button>
                 <div id="progBar" class="progress">
                     <div class="moon loadStandby">
@@ -235,12 +234,12 @@
 
     <!--top画像スライド-->
     <div class="slider topIMG">
-        <ul>
-            <li><img src="images/top/top-1.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-2.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-3.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-4.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-5.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+        <ul><!--liには見せたい箇所に応じたtop,center,bottom,いずれかのclassを付けてください-->
+            <li><img src="images/top/top-1.jpg" class="topImg imgChange center" ></li>
+            <li><img src="images/top/top-2.jpg" class="topImg imgChange top"></li>
+            <li><img src="images/top/top-33.jpg" class="topImg imgChange bottom"></li>
+            <li><img src="images/top/top-4.jpg" class="topImg imgChange bottom"></li>
+            <li><img src="images/top/top-5.jpg" class="topImg imgChange bottom"></li>
         </ul>
     </div>
 

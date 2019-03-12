@@ -1167,7 +1167,6 @@ img{
   margin: 0 auto;
   width: 100%;
   height: 100vh;
-  left: calc(50vw - 768px);
   text-align: left;
   overflow: hidden;
 }
@@ -1175,7 +1174,6 @@ img{
 .slider ul {
   width: 1536px;
   height: 100vh;
-  left: calc(50vw - 768px);
   text-align: left;
   overflow: hidden;
   position: relative;
@@ -1186,17 +1184,55 @@ img{
   left: 0;
   width: 1536px;
   height: 100vh;
-  left: calc(50vw - 768px);
   display: none;
   position: absolute;
+  overflow: hidden;
 }
 
 img{
   max-width: 100%;
 }
 
-
-
+#wrap .slider .topImg{
+  max-width: auto;
+  width: auto; 
+  height: 100vh; 
+  left: calc(50vw);
+  position: absolute;
+}
+/***********************************
+トップのスライドショーで見せたい部分を
+htmlのclassで指定できます。
+top     画像の上端が必ず見えます
+center  中央付近
+buttom  画像の上端が必ず見えます
+***********************************/
+#wrap .slider .top{
+  position: absolute;
+  top:0%;
+  transform: translateX(-50%) translateY(-0%);
+}
+#wrap .slider .center{
+  position: absolute;
+  top:50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+#wrap .slider .bottom{
+  position: absolute;
+  top:100%;
+  transform: translateX(-50%) translateY(-100%);
+}
+@media screen and (min-width: 960px){
+  #wrap .slider .topImg{
+    min-width: 100vw; 
+    min-height: 100%;  
+    width: auto; 
+    height: auto;
+    max-width: 133.3vh;  
+    left: calc(50vw);
+    position: absolute;
+  }
+}
 .beginnerShadow{
     box-shadow: 20px 20px rgba(161, 250, 147, 1);
 }
