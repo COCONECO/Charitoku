@@ -93,7 +93,106 @@
 </head>
 
 <body>
-
+    <div id="page">
+        <div id="loaderBg">
+            <section id="app" class="app">
+                <!-- <label><div id="skipButton" class="loadStandby">Skip<input type="checkbox"></div></label> -->
+                <button id="skipButton" class="loadStandby">Skip</button>
+                <div id="progBar" class="progress">
+                    <div class="moon loadStandby">
+                        <div class="progressBar"></div>
+                        <div class="progressBar"></div>
+                        <div class="progressBar"></div>
+                        <div class="progressBar"></div>
+                    </div>
+                    <div class="cloudWorld">
+                        <div class="cloud">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud loadStandby">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud loadStandby">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud loadStandby">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud loadStandby">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud loadStandby">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                        <div class="cloud loadStandby">
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                            <div class="cloudChild"></div>
+                        </div>
+                    </div>
+                    <div class="counter loadStandby"></div>
+                    <div class="images loadStandby">
+                        <div class="image"></div>
+                        <div class="image"></div>
+                        <div class="image"></div>
+                        <div class="image"></div>
+                        <div class="image"></div>
+                        <div class="image"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="wrap">
     <header class="commonHeader">
         <div id="gnavLogo">
             <a href="index.php">
@@ -443,7 +542,7 @@
 
             </div>
         </footer>
-
+    </div><!-- #wrap -->
 
 </body>
 
