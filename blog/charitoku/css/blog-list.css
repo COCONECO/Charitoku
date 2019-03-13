@@ -106,7 +106,9 @@ p ,a ,li{font-size: 16px;}
 .blogBox img{
     width: 80%;
     height: 60%;
-    padding: 20px 10%;
+    padding: 20px 10% ;
+    margin:  auto;
+
 }
 
 .blogBox li{
@@ -118,7 +120,19 @@ p ,a ,li{font-size: 16px;}
 .tagcloud a {
     font-size: 16px !important;
 }
-
+/* .widget_categories {
+    font-size: 30px !important;
+}
+#side #side-in ul {
+    font-size:
+   40px;
+    line-height: 25px;
+    margin-bottom: 10px;
+   } */
+.sattachment-post-thumbnail .size-post-thumbnail .wp-post-image{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 @media screen and (max-width: 768px){
 .main{
