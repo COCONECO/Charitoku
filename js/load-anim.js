@@ -24,16 +24,18 @@ var countup = function(){
   }else{
   console.log(count++);
   var id = setTimeout(countup, 30);
+  $('.counter').css("opacity" , '1');//jquery
   $('.counter').text(count + '%');//jquery
 
   $(window).load(function(){//ロードが先に終わった場合実行
     clearTimeout(id);　
     var id = setTimeout(countup, 15);
+      $('.counter').css("opacity" + '1');//jquery
       $('.counter').text(count + '%');//jquery
       if(trigger < 2 ){
         $(function(){
         setTimeout('animstart()',1000);
-        setTimeout('showSkipButton()',1000);
+        setTimeout('showSkipButton()',0);
 
         });
       }console.log(trigger++);
@@ -107,6 +109,7 @@ $(window).load(function () { //全ての読み込みが完了したら実行
 $(function(){
   setTimeout('stopload()',3000);
   setTimeout('animstart()',4000);
+  setTimeout('showSkipButton()',3000);
 });
  
 function stopload(){
