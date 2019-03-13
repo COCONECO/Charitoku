@@ -936,15 +936,6 @@ load-anim終わり
   /* margin: 40px auto 0; */
 }
 
-.new .blogText h3{
-  margin-top: 60px;
-}
-
-.new .blogText h3 a{
-  font-family: 'Sawarabi Mincho', serif;
-  font-size: 25px;
-}
-
 .new .blogText p {
   font-family: 'Sawarabi Mincho', serif;
   font-size: 25px;
@@ -953,6 +944,10 @@ load-anim終わり
 .blogText {
   /* padding: 70px 10px 30px; */
   text-align: center;
+}
+
+.blogTextTitle{
+  margin-top: 40px;
 }
 
 .topBox {

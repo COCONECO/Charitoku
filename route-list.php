@@ -5,8 +5,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/route-list.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
-    <!-- icon -->
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.inview.js"></script>
 </head>
@@ -88,7 +86,7 @@
         foreach ($data as $row) {
 
             echo '<li class="itemBox grid5Pc grid10 fadein">';
-            echo '<a href="#">';
+            echo '<a href="route-details.php?course_id=' . $row['id'] . '">';
             echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
             $id = intval($row['id']);
             try {
@@ -134,8 +132,7 @@
             } elseif ($row['level'] == 'advanced') {
                 echo '<div class="level advanced">上級</div>';
             }
-            // echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
-            echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '"">詳細へ</a></p>';
+            echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
             echo '</div>';
             echo '</a>';
             echo '</li>';
@@ -161,8 +158,7 @@
         echo '<ul id="itemList">';
         foreach ($data as $row) {
             echo '<li class="itemBox grid5Pc grid10 fadein">';
-            // echo '<a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
-            echo '<a  class="detail" href="route-details.php?course_id=' . $row['id'] . '"">';
+            echo '<a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
             echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
             $id = intval($row['id']);
             try {
@@ -207,8 +203,7 @@
             } elseif ($row['level'] == 'advanced') {
                 echo '<div class="level advanced">上級</div>';
             }
-            // echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
-            echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '"">詳細へ</a></p>';
+            echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
             echo '</div>';
             echo '</a>';
             echo '</li>';
@@ -230,15 +225,14 @@
         </ul>
     </div> -->
     <footer>
-            <div class="back">
-                <ul class="sns">
-                    <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
-                </ul>
-                <p>©道プロジェクト</p>
-
-            </div>
+        <div class="back">
+            <ul class="banner">
+                <!-- <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
+            </ul>
+            <p>©道プロジェクト</p>
+        </div>
     </footer>
 </body>
 
