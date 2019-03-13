@@ -44,7 +44,7 @@
 
         });
 
-        //top slideshow
+        //top slide show
         $(function() {
             var $setElm = $('.slider'),
                 fadeSpeed = 1500,
@@ -299,11 +299,11 @@
 
                         <?php echo '<p>' . $date[$t] . '</p>'; ?>
 
-                        <h3>
+                        <p class="blogTextTitle">
                             <a href="<?php echo $link[$t]; ?>">
                                 <?php echo $title[$t]; ?><br>
                             </a>
-                        </h3>
+                        </p>
                     </div>
                 </div>
 
