@@ -252,190 +252,192 @@
 
     <!-- インフォメーション -->
     <!-- 新着blog記事 -->
-    <div class="infoWrap">
-        <div class="blogBorder slideLeft">
-            <div class="block blog">
-                <h2 class="">新着<br>記事</h2>
-            </div>
-            <div class="blogInfo">
-                <?php
- //何ページから表示
-                if (isset($_GET['page']) && $_GET['page'] > 0) {
-                    $page = intval($_GET['page']) - 1;
-                } else {
-                    $page = 0;
-                }
-                // echo $page;
-                //何ページまで表示
-                $count = 2;
-                $num = $page + $count;
-                echo kiji($page, $num, $count);
-                function kiji($page, $num, $count)
-                {
-                    $rss = simplexml_load_file('http://localhost/charitokuwordpress/feed/');
-                    $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
-                    $i = 0;
-                    foreach ($rss->channel->item as $item) {
-                        $title[$i] = $item->title;
-                        $date[$i] = date("Y年 n月 j日", strtotime($item->pubDate));
-                        $link[$i] = $item->link;
-                        $description[$i] = mb_strimwidth(strip_tags($item->description), 0, 110, "…Read More", "utf-8");
-                        $media[$i] = $item->media;
-                        $i++;
-                    }
-                    $maxpage = $i;
-                    $cnt = $count;
-                    // echo $maxpage;
-                    if ($i > $num) {
-                        $i = $num;
-                    }
-                    $t = $page;
-                    for ($t; $t < $i; $t++) {
-                        ?>
-                <div class="new">
-                    <?php echo '<img src="' . $media[$t] . '"  >'; ?>
-                    <div class="blogText">
-
-
-                        <?php echo '<p>' . $date[$t] . '</p>'; ?>
-
-                        <p class="blogTextTitle">
-                            <a href="<?php echo $link[$t]; ?>">
-                                <?php echo $title[$t]; ?><br>
-                            </a>
-                        </p>
-                    </div>
+    <div class="infoOverflow">
+        <div class="infoWrap">
+            <div class="blogBorder slideLeft">
+                <div class="block blog">
+                    <h2 class="">新着<br>記事</h2>
                 </div>
+                <div class="blogInfo">
+                    <?php
+    //何ページから表示
+                    if (isset($_GET['page']) && $_GET['page'] > 0) {
+                        $page = intval($_GET['page']) - 1;
+                    } else {
+                        $page = 0;
+                    }
+                    // echo $page;
+                    //何ページまで表示
+                    $count = 2;
+                    $num = $page + $count;
+                    echo kiji($page, $num, $count);
+                    function kiji($page, $num, $count)
+                    {
+                        $rss = simplexml_load_file('http://localhost/charitokuwordpress/feed/');
+                        $rss->registerXPathNamespace('', 'http://api.rakuten.co.jp/rws/rest/BooksTotalSearch/2009-04-15');
+                        $i = 0;
+                        foreach ($rss->channel->item as $item) {
+                            $title[$i] = $item->title;
+                            $date[$i] = date("Y年 n月 j日", strtotime($item->pubDate));
+                            $link[$i] = $item->link;
+                            $description[$i] = mb_strimwidth(strip_tags($item->description), 0, 110, "…Read More", "utf-8");
+                            $media[$i] = $item->media;
+                            $i++;
+                        }
+                        $maxpage = $i;
+                        $cnt = $count;
+                        // echo $maxpage;
+                        if ($i > $num) {
+                            $i = $num;
+                        }
+                        $t = $page;
+                        for ($t; $t < $i; $t++) {
+                            ?>
+                    <div class="new">
+                        <?php echo '<img src="' . $media[$t] . '"  >'; ?>
+                        <div class="blogText">
 
-                <?php
 
+                            <?php echo '<p>' . $date[$t] . '</p>'; ?>
+
+                            <p class="blogTextTitle">
+                                <a href="<?php echo $link[$t]; ?>">
+                                    <?php echo $title[$t]; ?><br>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <?php
+
+                }
             }
-        }
-        ?>
+            ?>
 
+                </div>
+                <a href="../charitokuwordpress/" class="more blogMore">→more</a>
             </div>
-            <a href="../charitokuwordpress/" class="more blogMore">→more</a>
-        </div>
 
-        <div class="rssEvent slideRight">
-            <div class="block eventInfo ">
-                <h2>イベント<br>情報</h2>
-            </div>
-            <div class="rss">
-                <!-- RSS取得PHP -->
-                <?php
- //RSSを取得するphp
+            <div class="rssEvent slideRight">
+                <div class="block eventInfo ">
+                    <h2>イベント<br>情報</h2>
+                </div>
+                <div class="rss">
+                    <!-- RSS取得PHP -->
+                    <?php
+    //RSSを取得するphp
 
 
 
-                //表示記事数
-                $hyojiNum = 10;
-                //フィード登録
-                $data['feedurl'][] = 'http://tokushima-cf.org/?feed=rss2';
-                $data['feedurl'][] = 'http://www.cycling-tomorrow.jp/atom.xml';
-                // $data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
+                    //表示記事数
+                    $hyojiNum = 10;
+                    //フィード登録
+                    $data['feedurl'][] = 'http://tokushima-cf.org/?feed=rss2';
+                    $data['feedurl'][] = 'http://www.cycling-tomorrow.jp/atom.xml';
+                    // $data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss';
 
-                // ※最後に「/」は付けないでください
-                //$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss'; いくらでも追加してください
-                $rssList = $data['feedurl'];
-                //キャッシュ準備
-                require_once('Cache/Lite.php');
-                $cacheDir = 'rsscache/';
-                $lifeTime = 24 * 60 * 60;
-                $automaticCleaningFactor = 100;
-                $options = array('cacheDir' => $cacheDir, 'caching' => true, 'lifeTime' => $lifeTime, 'automaticSerialization' => 'true', 'automaticCleaningFactor' => $automaticCleaningFactor);
-                $cacheData = new Cache_Lite($options);
-                $outdata =  $cacheData->get('rsscache');
-                if (!$outdata) {
-                    //同時呼び出し
-                    $rssdataRaw = multiRequest($rssList);
-                    for ($n = 0; $n < count($rssdataRaw); $n++) {
-                        //URL設定
-                        $rssdata = simplexml_load_string($rssdataRaw[$n]);
-                        if ($rssdata->channel->item) $rssdata = $rssdata->channel;
-                        if ($rssdata->item) {
-                            foreach ($rssdata->item as $myEntry) {
-                                $rssDate = $myEntry->pubDate;
-                                if (!$rssDate) $rssDate = $myEntry->children("http://purl.org/dc/elements/1.1/")->date;
-                                date_default_timezone_set('Asia/Tokyo');
-                                $myDateGNU = strtotime($rssDate);
-                                $myDate = date('Y/m/d', $myDateGNU);
-                                $myTitle = $myEntry->title; //タイトル取得
-                                $myLink = $myEntry->link; //リンクURL取得
-                                //出力内容（CSSOK）
-                                if (preg_match('/PR:/', $myTitle)) continue;
-                                $outdata[$myDateGNU] =  '<li><a href="' . $myLink . '" target="_blank">' . $myTitle . '　</a>';
-                                $outdata[$myDateGNU] .=  '<span style="margin:0px">' . $myDate . '</span></li>';
+                    // ※最後に「/」は付けないでください
+                    //$data['feedurl'][] = 'http://www.tokusupo.net/bicycle/shinchaku/index.rss'; いくらでも追加してください
+                    $rssList = $data['feedurl'];
+                    //キャッシュ準備
+                    require_once('Cache/Lite.php');
+                    $cacheDir = 'rsscache/';
+                    $lifeTime = 24 * 60 * 60;
+                    $automaticCleaningFactor = 100;
+                    $options = array('cacheDir' => $cacheDir, 'caching' => true, 'lifeTime' => $lifeTime, 'automaticSerialization' => 'true', 'automaticCleaningFactor' => $automaticCleaningFactor);
+                    $cacheData = new Cache_Lite($options);
+                    $outdata =  $cacheData->get('rsscache');
+                    if (!$outdata) {
+                        //同時呼び出し
+                        $rssdataRaw = multiRequest($rssList);
+                        for ($n = 0; $n < count($rssdataRaw); $n++) {
+                            //URL設定
+                            $rssdata = simplexml_load_string($rssdataRaw[$n]);
+                            if ($rssdata->channel->item) $rssdata = $rssdata->channel;
+                            if ($rssdata->item) {
+                                foreach ($rssdata->item as $myEntry) {
+                                    $rssDate = $myEntry->pubDate;
+                                    if (!$rssDate) $rssDate = $myEntry->children("http://purl.org/dc/elements/1.1/")->date;
+                                    date_default_timezone_set('Asia/Tokyo');
+                                    $myDateGNU = strtotime($rssDate);
+                                    $myDate = date('Y/m/d', $myDateGNU);
+                                    $myTitle = $myEntry->title; //タイトル取得
+                                    $myLink = $myEntry->link; //リンクURL取得
+                                    //出力内容（CSSOK）
+                                    if (preg_match('/PR:/', $myTitle)) continue;
+                                    $outdata[$myDateGNU] =  '<li><a href="' . $myLink . '" target="_blank">' . $myTitle . '　</a>';
+                                    $outdata[$myDateGNU] .=  '<span style="margin:0px">' . $myDate . '</span></li>';
+                                }
                             }
                         }
+                        //ソート
+                        krsort($outdata);
+                        $cacheData->save($outdata, 'rsscache');
                     }
-                    //ソート
-                    krsort($outdata);
-                    $cacheData->save($outdata, 'rsscache');
-                }
-                $nn = 0;
-                $html = '';
-                foreach ($outdata as $outdata) {
-                    $nn++;
-                    $html .= $outdata;
-                    if ($nn == $hyojiNum) break;
-                }
-                $html = '<ul>' . $html . '</ul>';
-                echo $html;
-                //同時呼び出し関数
-                function multiRequest($data, $options = array())
-                {
-                    // array of curl handles
-                    $curly = array();
-                    // data to be returned
-                    $result = array();
-                    // multi handle
-                    $mh = curl_multi_init();
-                    // loop through $data and create curl handles
-                    // then add them to the multi-handle
-                    foreach ($data as $id => $d) {
-                        $curly[$id] = curl_init();
-                        $url = (is_array($d) && !empty($d['url'])) ? $d['url'] : $d;
-                        curl_setopt($curly[$id], CURLOPT_URL,            $url);
-                        curl_setopt($curly[$id], CURLOPT_HEADER,         0);
-                        curl_setopt($curly[$id], CURLOPT_RETURNTRANSFER, 1);
-                        // post?
-                        if (is_array($d)) {
-                            if (!empty($d['post'])) {
-                                curl_setopt($curly[$id], CURLOPT_POST,       1);
-                                curl_setopt($curly[$id], CURLOPT_POSTFIELDS, $d['post']);
+                    $nn = 0;
+                    $html = '';
+                    foreach ($outdata as $outdata) {
+                        $nn++;
+                        $html .= $outdata;
+                        if ($nn == $hyojiNum) break;
+                    }
+                    $html = '<ul>' . $html . '</ul>';
+                    echo $html;
+                    //同時呼び出し関数
+                    function multiRequest($data, $options = array())
+                    {
+                        // array of curl handles
+                        $curly = array();
+                        // data to be returned
+                        $result = array();
+                        // multi handle
+                        $mh = curl_multi_init();
+                        // loop through $data and create curl handles
+                        // then add them to the multi-handle
+                        foreach ($data as $id => $d) {
+                            $curly[$id] = curl_init();
+                            $url = (is_array($d) && !empty($d['url'])) ? $d['url'] : $d;
+                            curl_setopt($curly[$id], CURLOPT_URL,            $url);
+                            curl_setopt($curly[$id], CURLOPT_HEADER,         0);
+                            curl_setopt($curly[$id], CURLOPT_RETURNTRANSFER, 1);
+                            // post?
+                            if (is_array($d)) {
+                                if (!empty($d['post'])) {
+                                    curl_setopt($curly[$id], CURLOPT_POST,       1);
+                                    curl_setopt($curly[$id], CURLOPT_POSTFIELDS, $d['post']);
+                                }
                             }
+                            // extra options?
+                            if (!empty($options)) {
+                                curl_setopt_array($curly[$id], $options);
+                            }
+                            curl_multi_add_handle($mh, $curly[$id]);
                         }
-                        // extra options?
-                        if (!empty($options)) {
-                            curl_setopt_array($curly[$id], $options);
+                        // execute the handles
+                        $running = null;
+                        do {
+                            curl_multi_exec($mh, $running);
+                        } while ($running > 0);
+                        // get content and remove handles
+                        foreach ($curly as $id => $c) {
+                            $result[$id] = curl_multi_getcontent($c);
+                            curl_multi_remove_handle($mh, $c);
                         }
-                        curl_multi_add_handle($mh, $curly[$id]);
+                        // all done
+                        curl_multi_close($mh);
+                        return $result;
                     }
-                    // execute the handles
-                    $running = null;
-                    do {
-                        curl_multi_exec($mh, $running);
-                    } while ($running > 0);
-                    // get content and remove handles
-                    foreach ($curly as $id => $c) {
-                        $result[$id] = curl_multi_getcontent($c);
-                        curl_multi_remove_handle($mh, $c);
-                    }
-                    // all done
-                    curl_multi_close($mh);
-                    return $result;
-                }
-                ?>
+                    ?>
 
-                <!-- RSSを取得するphp終わり -->
+                    <!-- RSSを取得するphp終わり -->
+
+                </div>
+                <div style="text-align: right"></div>
 
             </div>
-            <div style="text-align: right"></div>
 
         </div>
-
-    </div>
+    </div><!-- .infoOverflow -->
     <!-- おすすめコース -->
 
 
