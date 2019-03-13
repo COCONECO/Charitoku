@@ -383,7 +383,7 @@ p ,a ,li{font-size: 16px;}
 }
 
 .detail{
-    margin-top:160px;
+    margin-top:197px;
     margin-bottom: 10px;
     color: #4B6FFF;
     font-family: 'Noto Sans JP', sans-serif;
@@ -554,42 +554,53 @@ main{
 */
 
 footer{
+    position: relative;
     clear: both;
     margin-top: 100px;
     width: 100%;
-    height: 320px;
+    height: 180px;
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
 }
 
 footer div{
     height: 100%;
-    width: 100%;
     background-color: #0005A2;
     opacity: 0.3;
     text-align: center;
 }
 
-.banner li{
-    display: inline-block;
-    background-color: white;
-    margin: 40px 160px 0 160px;
+.sns{
+    position: relative;
+    top: -100%;
+    text-align: center;
 }
 
-footer{
+.sns li{
     position: relative;
+    display: inline-block;
+    margin: 40px 24px 0 24px;
+    opacity: 1;
+    z-index: 999;
 }
 
 
 footer p{
     color: #ffffff;
     position: absolute;
-    top: 50%;
+    opacity: 1;
+    top: 93%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
+  z-index: 999;
+}
+
+i{
+    color: #fff;
 }
 
 @media screen and (min-width: 768px){
-    .banner li{
+    .sns li{
         margin: 40px 8.3% 0 8.3%;
     }
 }

@@ -12,44 +12,74 @@
 get_header();
 ?>
 
+<h1 class="blogListTitle"><?php the_archive_title('<div class="page-title">', '</div>'); ?></h1>
+<div class="main">
+    <?php
+    $paged = (int)get_query_var('page');
+    $args = array(
+        'posts_per_page' => 8,
+        'paged' => $paged,
+        'orderby' => 'post_date',
+        'order' => 'DESC',
+        'post_type' => 'post',
+        'post_status' => 'publish',
+    );
+    ?>
+    <ul id="blogList">
+        <?php if (have_posts()) : ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
 
-		<?php if (have_posts()): ?>
+        <?php
+ // Start the Loop.
+        while (have_posts()) :
+            the_post();
+            ?>
+        <a href="<?php the_permalink(); ?>">
+            <li class="blogBox grid5Pc grid10">
+                <!-- <?php the_content(); ?> -->
+                <div class="blogImg"><?php the_post_thumbnail(); ?></div>
+                <h3 class="blogTitle"><?php the_title(); ?></h3>
+                <p class="blogDay"><?php echo get_the_date(); ?></p>
+                <p class="blogCategory"><?php the_category(); ?></p>
+                <!-- <?php the_excerpt(); ?> -->
+            </li>
+        </a>
 
-			<header class="page-header">
-				<?php
-the_archive_title('<h1 class="page-title">', '</h1>');
-?>
-			</header><!-- .page-header -->
 
-			<?php
-// Start the Loop.
-while (have_posts()):
-    the_post();
+        <?php
+        wp_reset_postdata();
+        ?>
 
-    /*
-     * Include the Post-Format-specific template for the content.
-     * If you want to override this in a child theme, then include a file
-     * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-     */
-    get_template_part('template-parts/content/content', 'excerpt');
+        <?php endwhile; ?>
 
-    // End the loop.
-endwhile;
+        <?php
+    else :
+        get_template_part('template-parts/content/content', 'none');
 
-// Previous/next page navigation.
-twentynineteen_the_posts_navigation();
+    endif;
+    ?>
 
-// If no content, include the "No posts found" template.
-else:
-    get_template_part('template-parts/content/content', 'none');
+</div>
+</main>
+<div class="sideBar">
+    <?php get_sidebar(); ?>
+</div>
+<div class="blogPage">
+    <?php
+    if ($the_query->max_num_pages > 1) {
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => 'page/%#%/',
+            'current' => max(1, $paged),
+            'total' => $the_query->max_num_pages,
+        ));
+    }
+    ?>
+</div>
+</div>
 
-endif;
-?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
 
-<?php
-get_footer();
+</body>
+<?php get_footer(); ?>
+
+</html> 

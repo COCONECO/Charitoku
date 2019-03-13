@@ -5,51 +5,80 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package WordPress
- * @subpackage Twenty_Nineteen
+ * @subpackage charitoku
  * @since 1.0.0
  */
 
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<h1 class="blogListTitle"><?php _e('検索結果:', 'charitoku'); ?><?php echo get_search_query(); ?></h1>
+<div class="main">
+    <?php
+	$paged = (int)get_query_var('page');
+	$args = array(
+		'posts_per_page' => 8,
+		'paged' => $paged,
+		'orderby' => 'post_date',
+		'order' => 'DESC',
+		'post_type' => 'post',
+		'post_status' => 'publish',
+	);
+	?>
+    <ul id="blogList">
 
-		<?php if ( have_posts() ) : ?>
+        <?php if (have_posts()) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php _e( 'Search results for:', 'twentynineteen' ); ?>
-				</h1>
-				<div class="page-description"><?php echo get_search_query(); ?></div>
-			</header><!-- .page-header -->
 
-			<?php
+        <?php
 			// Start the Loop.
-			while ( have_posts() ) :
-				the_post();
+		while (have_posts()) :
+			the_post();
+			?>
+        <a href="<?php the_permalink(); ?>">
+            <li class="blogBox grid5Pc grid10">
+                <!-- <?php the_content(); ?> -->
+                <div class="blogImg"><?php the_post_thumbnail(); ?></div>
+                <h3 class="blogTitle"><?php the_title(); ?></h3>
+                <p class="blogDay"><?php echo get_the_date(); ?></p>
+                <p class="blogCategory"><?php the_category(); ?></p>
+                <!-- <?php the_excerpt(); ?> -->
+            </li>
+        </a>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content/content', 'excerpt' );
 
-				// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			twentynineteen_the_posts_navigation();
-
-			// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		endif;
+        <?php
+		wp_reset_postdata();
 		?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
+        <?php endwhile; ?>
+
+        <?php
+	else :
+		get_template_part('template-parts/content/content', 'none');
+
+	endif;
+	?>
+</div>
+</main>
+<div class="sideBar">
+    <?php get_sidebar(); ?>
+</div>
+<div class="blogPage">
+    <?php
+	if ($the_query->max_num_pages > 1) {
+		echo paginate_links(array(
+			'base' => get_pagenum_link(1) . '%_%',
+			'format' => 'page/%#%/',
+			'current' => max(1, $paged),
+			'total' => $the_query->max_num_pages,
+		));
+	}
+	?>
+</div>
+</div>
+
+
+</body>
 
 <?php
 get_footer();

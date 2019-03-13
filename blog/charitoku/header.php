@@ -12,7 +12,7 @@
  */
 ?>
 <!doctype html>
-<html <?php language_attributes();?>>
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="utf-8">
@@ -21,6 +21,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Sawarabi+Mincho" rel="stylesheet">
+    <!-- icon -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     <!-- stylesheets -->
     <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitokuwordpress/wp-content/themes/charitoku/style.css" type="text/css" media="all">
@@ -35,8 +37,9 @@
     <!-- <link rel="stylesheet" id="dashicons-css" href="http://localhost/charitoku/blog/wordpress/wp-content/themes/twentynineteen/kijistyle.css" type="text/css" media="all"> -->
 
 </head>
+
 <body>
-<header id="commonHeader">
+    <header id="commonHeader">
         <div id="gnavLogo">
             <a href="http://localhost/charitoku/index.php">
                 <h1>知っとく走っとく徳島サイクリングロード<div class="logoImages">
@@ -64,4 +67,4 @@
                     </a></li>
             </ul>
         </nav>
-    </header>
+    </header> 

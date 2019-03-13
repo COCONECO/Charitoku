@@ -12,25 +12,14 @@
  */
 
 ?>
-        <footer>
-            <div class="back">
-                <ul class="banner">
-                    <!-- <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li> -->
-                </ul>
-                <p>©道プロジェクト</p>
+<footer>
+    <div class="back"></div>
+    <ul class="sns">
+        <li><a href="https://twitter.com/CyclingRoadT?lang=ja"><i class="fab fa-twitter fa-3x"></i></a></li>
+        <li><a href="https://www.facebook.com/ProjectRoad/?modal=admin_todo_tour"><i class="fab fa-facebook fa-3x"></i></a></li>
+        <li><a href="https://www.instagram.com/projectroad03/"><i class="fab fa-instagram fa-3x"></i></a></li>
+    </ul>
+    <p>©道プロジェクト</p>
 
-            </div>
-        </footer>
 
-<!-- <footer>
-        <div class="footerBack">
-            <ul class="banner">
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-                <li><a href="">バナー</a></li>
-            </ul>
-            <p>©道プロジェクト</p>
-        </div>
-    </footer> -->
+</footer> 

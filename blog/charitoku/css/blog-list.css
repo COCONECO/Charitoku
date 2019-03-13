@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*
 -------------------------
 |      基本フォント      |
@@ -134,6 +135,10 @@ p ,a ,li{font-size: 16px;}
     margin-right: auto;
 }
 
+
+page-header{
+    text-align: center;
+}
 @media screen and (max-width: 768px){
 .main{
         width: 100%;
