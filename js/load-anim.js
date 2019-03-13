@@ -87,8 +87,10 @@ function stopanim(){
   $('#page').css('z-index', '-1');
   $('#wrap').css('z-index', '1');
   for(var i = 0; i < element.length; i++){
-      element[i].classList.remove('loadStandby');
       element[i].setAttribute('data-state', 'false');
+  }
+  for(var i = 0; i < element.length; i++){
+      element[i].classList.remove('loadStandby');
   }
 }
 /*********************************************
