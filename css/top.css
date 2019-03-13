@@ -80,6 +80,7 @@ load-anim
   color: #fff;
   text-shadow: 0px 0px 4px #fff;
   box-shadow: none;
+  outline: 0;
   transform:translateX(800px);
   z-index: 1000;
   overflow: hidden;
@@ -87,8 +88,9 @@ load-anim
 #skipButton:active,#skipButton:visited,#skipButton:hover{
   box-shadow: none;
   outline: 0;
+  opacity: 0.5;
 }
-#skipButton[data-state="loadComplete"],#skipButton[data-state="true"]{    animation: skipDemo 1s ease 2.0s forwards;}
+#skipButton[data-state="true"]{    animation: skipDemo 1s ease 0.0s forwards;}
 #skipButton[data-state="false"]{    animation: skipOut 1s ease 0.0s forwards;}
 
 @keyframes skipDemo{
@@ -120,6 +122,7 @@ load-anim
     color: #fff;
     text-shadow: 0px 0px 4px #fff;
     box-shadow: none;
+    outline: 0;
     transform:translateX(800px);
     z-index: 1000;
     overflow: hidden;
@@ -127,8 +130,9 @@ load-anim
   #skipButton:active,#skipButton:visited,#skipButton:hover{
     box-shadow: none;
     outline: 0;
+    opacity: 0.5;
   }
-  #skipButton[data-state="loadComplete"],#skipButton[data-state="true"]{    animation: skipDemo 1s ease 2.0s forwards;}
+  #skipButton[data-state="true"]{    animation: skipDemo 1s ease 0.0s forwards;}
   #skipButton[data-state="false"]{    animation: skipOut 1s ease 0.0s forwards;}
   
   @keyframes skipDemo{
@@ -176,9 +180,9 @@ load-anim
 } 
 .moon[data-state="loadComplete"]::after {
   animation:    
-  ride-on-out 3.0s linear 0.0s forwards,
-  fade-out 0.1s linear 3.0s forwards,
-  cycle-anim-br 0.8s steps(6) infinite;
+  ride-on-out 3.0s linear 0.5s forwards,
+  fade-out 0.1s linear 3.5s forwards,
+  cycle-anim-br 0.8s steps(6) 0.5s 4;
 } 
 .moon::before {
   position: absolute;
@@ -282,11 +286,14 @@ load-anim
   letter-spacing: 1.2px;
   display: block;
   height: 60px;
+  width: 540px;
   text-align: center;
   transform: translateX(-50%) translateY(50%);
   z-index: 100;
   text-shadow: 2px 2px 0px #fff,2px 2px 10px #3887ff;
+  opacity: 0;
 }
+.counter[data-state="false"] {animation: fade-in 1s ease 2.0s forwards;}
 .counter[data-state="loadComplete"] {animation: fade-out 1s ease 3.0s forwards;}
 
 @media screen and (min-width : 960px){
@@ -398,6 +405,7 @@ load-anim
     letter-spacing: 1.6px;
     display: block;
     height: 100px;
+    width: 900px;
     text-align: center;
     transform: translateX(-50%) translateY(50%);
     z-index: 100;
