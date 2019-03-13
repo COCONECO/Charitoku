@@ -14,15 +14,16 @@
 ?>
         <footer>
             <div class="back">
-                <ul class="sns">
-                    <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+                <ul class="banner">
+                    <!-- <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li>
+                <li><a href="">バナー</a></li> -->
                 </ul>
                 <p>©道プロジェクト</p>
 
             </div>
         </footer>
+
 <!-- <footer>
         <div class="footerBack">
             <ul class="banner">
