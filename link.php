@@ -76,7 +76,7 @@
         </tr>
     </table>
     <footer>
-            <div class="back">
+            <div class="back"></div>
                 <ul class="sns">
                     <li><a href="#"><i class="fab fa-twitter fa-3x"></i></a></li>
                     <li><a href="#"><i class="fab fa-facebook fa-3x"></i></a></li>
@@ -84,8 +84,8 @@
                 </ul>
                 <p>©道プロジェクト</p>
 
-            </div>
-        </footer>
+            
+    </footer>
 </body>
 
 </html>

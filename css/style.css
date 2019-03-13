@@ -554,10 +554,13 @@ main{
 */
 
 footer{
+    position: relative;
     clear: both;
     margin-top: 100px;
     width: 100%;
     height: 180px;
+    background-image: url(../images/top/footer.jpg);
+    background-size: cover;
 }
 
 footer div{
@@ -567,23 +570,29 @@ footer div{
     text-align: center;
 }
 
-.sns li{
-    display: inline-block;
-    margin: 40px 24px 0 24px;
+.sns{
+    position: relative;
+    top: -100%;
+    text-align: center;
 }
 
-footer{
+.sns li{
     position: relative;
+    display: inline-block;
+    margin: 40px 24px 0 24px;
+    opacity: 1;
+    z-index: 999;
 }
 
 
 footer p{
     color: #ffffff;
     position: absolute;
+    opacity: 1;
     top: 93%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  -webkit- transform: translateY(-50%) translateX(-50%);
+  z-index: 999;
 }
 
 i{
