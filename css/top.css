@@ -920,10 +920,13 @@ load-anim終わり
 }
 
 .new {
-  margin-top: 40px;
   padding: 20px;
   display: flex;
   flex-direction: row;
+}
+
+.new:first-child{
+  margin-top: 40px;
 }
 
 .new img {
@@ -1209,6 +1212,8 @@ htmlのclassで指定できます。
 top     画像の上端が必ず見えます
 center  中央付近
 buttom  画像の上端が必ず見えます
+top1    top-1.jpg用
+top3    top-3.jpg用
 ***********************************/
 #wrap .slider .top{
   position: absolute;
@@ -1224,6 +1229,16 @@ buttom  画像の上端が必ず見えます
   position: absolute;
   top:100%;
   transform: translateX(-50%) translateY(-100%);
+}
+#wrap .slider .top1{
+  position: absolute;
+  top:30%;
+  transform: translateX(-50%) translateY(-30%);
+}
+#wrap .slider .top3{
+  position: absolute;
+  top:40%;
+  transform: translateX(-50%) translateY(-40%);
 }
 @media screen and (min-width: 960px){
   #wrap .slider .topImg{

@@ -40,7 +40,7 @@
             </ul>
         </nav>
     </header>
-    <img src="images/bizan.jpg" width="100%" height="170px">
+    <img src="images/route/details-bizan.jpg" width=100% height=360px>
 
 
     <h2>リンク</h2>

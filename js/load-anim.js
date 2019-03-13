@@ -17,29 +17,26 @@ $(function() {
 プログレスバーはじめ
 *********************************************/
 var count = 0;
-var trigger = 1;
+var trigger = 0;
 var countup = function(){
   if(count > 99 ){　
     clearTimeout(id);　//idをclearTimeoutで指定している
   }else{
   console.log(count++);
-  var id = setTimeout(countup, 30);
+  var id = setTimeout(countup, 40);
   $('.counter').css("opacity" , '1');//jquery
   $('.counter').text(count + '%');//jquery
 
+  if(trigger < 1 ){
   $(window).load(function(){//ロードが先に終わった場合実行
+    console.log(trigger = 1);
     clearTimeout(id);　
     var id = setTimeout(countup, 15);
       $('.counter').css("opacity" + '1');//jquery
       $('.counter').text(count + '%');//jquery
-      if(trigger < 2 ){
-        $(function(){
         setTimeout('animstart()',1000);
         setTimeout('showSkipButton()',0);
-
-        });
-      }console.log(trigger++);
-    });
+    });}
   }
 }
 countup();
@@ -87,6 +84,8 @@ var skipAnimation = skipAnimation = function skipAnimation() {
 
 function stopanim(){
   var element = document.getElementsByClassName('loadStandby');
+  $('#page').css('z-index', '-1');
+  $('#wrap').css('z-index', '1');
   for(var i = 0; i < element.length; i++){
       element[i].classList.remove('loadStandby');
       element[i].setAttribute('data-state', 'false');
