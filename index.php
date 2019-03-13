@@ -44,7 +44,7 @@
 
         });
 
-        //top slideshow
+        //top slide show
         $(function() {
             var $setElm = $('.slider'),
                 fadeSpeed = 1500,
@@ -101,7 +101,7 @@
     <div id="page">
         <div id="loaderBg">
             <section id="app" class="app">
-                <button id="skipButton" class="loadStandby">Skip</button>
+                <button id="skipButton">Skip</button>
                 <div id="progBar" class="progress">
                     <div class="moon loadStandby">
                         <div class="progressBar"></div>
@@ -183,7 +183,7 @@
                             <div class="cloudChild"></div>
                         </div>
                     </div>
-                    <div class="counter loadStandby"></div>
+                    <div class="counter loadStandby" data-state="false">再生できない場合<br>リロードをお願いします</div>
                     <div class="images loadStandby">
                         <div class="image"></div>
                         <div class="image"></div>
@@ -299,11 +299,11 @@
 
                         <?php echo '<p>' . $date[$t] . '</p>'; ?>
 
-                        <h3>
+                        <p class="blogTextTitle">
                             <a href="<?php echo $link[$t]; ?>">
                                 <?php echo $title[$t]; ?><br>
                             </a>
-                        </h3>
+                        </p>
                     </div>
                 </div>
 
