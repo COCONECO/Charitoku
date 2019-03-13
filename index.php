@@ -237,9 +237,9 @@
     <!--top画像スライド-->
     <div class="slider topIMG">
         <ul><!--liには見せたい箇所に応じたtop,center,bottom,いずれかのclassを付けてください-->
-            <li><img src="images/top/top-1.jpg" class="topImg imgChange center" ></li>
+            <li><img src="images/top/top-1.jpg" class="topImg imgChange top1" ></li>
             <li><img src="images/top/top-2.jpg" class="topImg imgChange top"></li>
-            <li><img src="images/top/top-3.jpg" class="topImg imgChange bottom"></li>
+            <li><img src="images/top/top-3.jpg" class="topImg imgChange top3"></li>
             <li><img src="images/top/top-4.jpg" class="topImg imgChange bottom"></li>
             <li><img src="images/top/top-5.jpg" class="topImg imgChange bottom"></li>
         </ul>
