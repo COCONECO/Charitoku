@@ -80,6 +80,7 @@ load-anim
   color: #fff;
   text-shadow: 0px 0px 4px #fff;
   box-shadow: none;
+  outline: 0;
   transform:translateX(800px);
   z-index: 1000;
   overflow: hidden;
@@ -87,8 +88,9 @@ load-anim
 #skipButton:active,#skipButton:visited,#skipButton:hover{
   box-shadow: none;
   outline: 0;
+  opacity: 0.5;
 }
-#skipButton[data-state="loadComplete"],#skipButton[data-state="true"]{    animation: skipDemo 1s ease 2.0s forwards;}
+#skipButton[data-state="true"]{    animation: skipDemo 1s ease 0.0s forwards;}
 #skipButton[data-state="false"]{    animation: skipOut 1s ease 0.0s forwards;}
 
 @keyframes skipDemo{
@@ -120,6 +122,7 @@ load-anim
     color: #fff;
     text-shadow: 0px 0px 4px #fff;
     box-shadow: none;
+    outline: 0;
     transform:translateX(800px);
     z-index: 1000;
     overflow: hidden;
@@ -127,8 +130,9 @@ load-anim
   #skipButton:active,#skipButton:visited,#skipButton:hover{
     box-shadow: none;
     outline: 0;
+    opacity: 0.5;
   }
-  #skipButton[data-state="loadComplete"],#skipButton[data-state="true"]{    animation: skipDemo 1s ease 2.0s forwards;}
+  #skipButton[data-state="true"]{    animation: skipDemo 1s ease 0.0s forwards;}
   #skipButton[data-state="false"]{    animation: skipOut 1s ease 0.0s forwards;}
   
   @keyframes skipDemo{
@@ -176,9 +180,9 @@ load-anim
 } 
 .moon[data-state="loadComplete"]::after {
   animation:    
-  ride-on-out 3.0s linear 0.0s forwards,
-  fade-out 0.1s linear 3.0s forwards,
-  cycle-anim-br 0.8s steps(6) infinite;
+  ride-on-out 3.0s linear 0.5s forwards,
+  fade-out 0.1s linear 3.5s forwards,
+  cycle-anim-br 0.8s steps(6) 0.5s 4;
 } 
 .moon::before {
   position: absolute;
@@ -282,11 +286,14 @@ load-anim
   letter-spacing: 1.2px;
   display: block;
   height: 60px;
+  width: 540px;
   text-align: center;
   transform: translateX(-50%) translateY(50%);
   z-index: 100;
   text-shadow: 2px 2px 0px #fff,2px 2px 10px #3887ff;
+  opacity: 0;
 }
+.counter[data-state="false"] {animation: fade-in 1s ease 2.0s forwards;}
 .counter[data-state="loadComplete"] {animation: fade-out 1s ease 3.0s forwards;}
 
 @media screen and (min-width : 960px){
@@ -398,6 +405,7 @@ load-anim
     letter-spacing: 1.6px;
     display: block;
     height: 100px;
+    width: 900px;
     text-align: center;
     transform: translateX(-50%) translateY(50%);
     z-index: 100;
@@ -859,12 +867,20 @@ load-anim終わり
   transform: rotate(-45deg);
 }
 
+.infoOverflow {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
 .infoWrap {
   height: 80%;
   position: relative;
   display: flex;
   flex-direction: row;
-  /* padding-bottom:100px;*/
   margin: 80px 50px 80px 50px;
 }
 
@@ -904,18 +920,27 @@ load-anim終わり
 .blogBorder {
   width: 40%;
   height: 80%;
+  -webkit-transform: translateX(-90%);
+  transform: translateX(-90%);
+  opacity: 0;
 }
 
 .rssEvent {
   width: 50%;
   height: 60%;
+  -webkit-transform: translateX(90%);
+  transform: translateX(90%);
+  opacity: 0;
 }
 
 .new {
-  margin-top: 40px;
   padding: 20px;
   display: flex;
   flex-direction: row;
+}
+
+.new:first-child{
+  margin-top: 40px;
 }
 
 .new img {
@@ -928,15 +953,6 @@ load-anim終わり
   /* margin: 40px auto 0; */
 }
 
-.new .blogText h3{
-  margin-top: 60px;
-}
-
-.new .blogText h3 a{
-  font-family: 'Sawarabi Mincho', serif;
-  font-size: 25px;
-}
-
 .new .blogText p {
   font-family: 'Sawarabi Mincho', serif;
   font-size: 25px;
@@ -945,6 +961,10 @@ load-anim終わり
 .blogText {
   /* padding: 70px 10px 30px; */
   text-align: center;
+}
+
+.blogTextTitle{
+  margin-top: 40px;
 }
 
 .topBox {
@@ -1036,10 +1056,14 @@ load-anim終わり
 
   .rssEvent{
     margin-top: 180px;
+    opacity: 1;
+    transform: none;
   }
 
   .blogBorder {
     border: none;
+    opacity: 1;
+    transform: none;
   }
 
   .block {
@@ -1206,6 +1230,8 @@ htmlのclassで指定できます。
 top     画像の上端が必ず見えます
 center  中央付近
 buttom  画像の上端が必ず見えます
+top1    top-1.jpg用
+top3    top-3.jpg用
 ***********************************/
 #wrap .slider .top{
   position: absolute;
@@ -1221,6 +1247,16 @@ buttom  画像の上端が必ず見えます
   position: absolute;
   top:100%;
   transform: translateX(-50%) translateY(-100%);
+}
+#wrap .slider .top1{
+  position: absolute;
+  top:30%;
+  transform: translateX(-50%) translateY(-30%);
+}
+#wrap .slider .top3{
+  position: absolute;
+  top:40%;
+  transform: translateX(-50%) translateY(-40%);
 }
 @media screen and (min-width: 960px){
   #wrap .slider .topImg{

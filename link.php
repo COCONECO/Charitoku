@@ -40,7 +40,7 @@
             </ul>
         </nav>
     </header>
-    <img src="images/bizan.jpg" width="100%" height="170px">
+    <img src="images/route/details-bizan.jpg" width=100% height=360px>
 
 
     <h2>リンク</h2>
@@ -76,7 +76,7 @@
         </tr>
     </table>
     <footer>
-            <div class="back">
+            <div class="back"></div>
                 <ul class="sns">
                     <li><a href="https://twitter.com/CyclingRoadT?lang=ja"><i class="fab fa-twitter fa-3x"></i></a></li>
                     <li><a href="https://www.facebook.com/ProjectRoad/?modal=admin_todo_tour"><i class="fab fa-facebook fa-3x"></i></a></li>
@@ -84,8 +84,8 @@
                 </ul>
                 <p>©道プロジェクト</p>
 
-            </div>
-        </footer>
+            
+    </footer>
 </body>
 
 </html>

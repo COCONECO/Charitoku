@@ -1,0 +1,107 @@
+/*
+-------------------------
+|      基本フォント      |
+-------------------------
+*/
+body{font-family: 'Noto Sans JP', sans-serif;}
+p ,dl{font-family: 'Sawarabi Mincho', serif;}
+h1, h2, h3{font-weight: bold;}
+h1, h2{font-size: 24px;}
+h3{font-size: 16px;}
+p ,a ,li{font-size: 16px;}
+@media screen and (min-width: 768px){
+    h1, h2{font-size: 28px;}
+    h3{font-size: 24px;}
+    p, a{font-size: 18px;}
+    li{font-size: 24px;}
+}
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+h2{
+    margin-bottom: 0;
+    font-size: 28px;
+    margin-top: 160px;
+}
+span{
+    border-bottom: 1px solid blue;
+
+}
+
+.tutumi{
+    width: 60%;
+    height: auto;
+    margin-left:15%;
+    float: left;
+}
+.midashi{
+    padding: 200 0 10 0;
+}
+.shosai{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.tutumi img{
+    width: 80%;
+    clear: left;
+    margin: 20 0 20 0;
+}
+.blogKiji{
+    line-height: 1.7;
+    padding: 10px;
+}
+@media screen and (max-width: 768px) {
+    img{
+        width: 100%;
+        height: 50%;
+    }
+}
+.back{
+    float: right;
+    /* margin-right: 24px; */
+}
+
+.tutumi p ,.shosai a{
+    padding:  20px 0 40px 0;
+    clear:both;
+    line-height: 1.7;
+}
+
+.tutumi a{
+    color: #4B6FFF;
+}
+
+.date, .category ,.shosai li{
+    margin-top: 0;
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.shosai li{
+    margin-top: 18px;
+}
+
+.date{
+    margin-right: 8%;
+}
+
+.category {
+    margin-left: 8%;
+}
+
+
+.detailSideBar{
+    margin-top: 160px;
+}
+
+.tag-tagcloud{
+    font-size: 20px;
+}
+@media screen and (max-width: 768px){
+    .tutumi {
+        width:80%;
+    }
+
+}
