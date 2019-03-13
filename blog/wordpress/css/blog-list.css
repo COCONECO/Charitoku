@@ -90,6 +90,10 @@
     margin: 10% 20px 0 0;
 }
 
+/* タグクラウドのフォントサイズを統一 */
+.tagcloud a {
+    font-size: 18px !important;
+}
 
 
 @media screen and (max-width: 768px){

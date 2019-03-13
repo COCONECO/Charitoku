@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>知っとく走っとく徳島サイクリングロード</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="”知っとく走っとく徳島サイクリングロード”では徳島県のおすすめサイクリングコースを
+レベル毎に（初級、中級、上級）注意点、周辺の施設、食事処、観光スポットと併せて紹介しています。">
+    <meta name="keywords" content="徳島,自転車,サイクリング,ロードバイク,自転車コース,自転車イベント,
+サイクリングコース">
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
@@ -99,7 +101,6 @@
     <div id="page">
         <div id="loaderBg">
             <section id="app" class="app">
-                <!-- <label><div id="skipButton" class="loadStandby">Skip<input type="checkbox"></div></label> -->
                 <button id="skipButton" class="loadStandby">Skip</button>
                 <div id="progBar" class="progress">
                     <div class="moon loadStandby">
@@ -235,12 +236,12 @@
 
     <!--top画像スライド-->
     <div class="slider topIMG">
-        <ul>
-            <li><img src="images/top/top-1.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-2.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-3.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-4.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
-            <li><img src="images/top/top-5.jpg" class="topImg imgChange" style="width: 1536px; height: auto; left: calc(50vw - 768px);"></li>
+        <ul><!--liには見せたい箇所に応じたtop,center,bottom,いずれかのclassを付けてください-->
+            <li><img src="images/top/top-1.jpg" class="topImg imgChange center" ></li>
+            <li><img src="images/top/top-2.jpg" class="topImg imgChange top"></li>
+            <li><img src="images/top/top-3.jpg" class="topImg imgChange bottom"></li>
+            <li><img src="images/top/top-4.jpg" class="topImg imgChange bottom"></li>
+            <li><img src="images/top/top-5.jpg" class="topImg imgChange bottom"></li>
         </ul>
     </div>
 

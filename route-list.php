@@ -134,7 +134,8 @@
             } elseif ($row['level'] == 'advanced') {
                 echo '<div class="level advanced">上級</div>';
             }
-            echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+            // echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+            echo '<p class="detail"><a href="route-details.php?course_id=' . $row['id'] . '"">詳細へ</a></p>';
             echo '</div>';
             echo '</a>';
             echo '</li>';
@@ -160,7 +161,8 @@
         echo '<ul id="itemList">';
         foreach ($data as $row) {
             echo '<li class="itemBox grid5Pc grid10 fadein">';
-            echo '<a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
+            // echo '<a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">';
+            echo '<a  class="detail" href="route-details.php?course_id=' . $row['id'] . '"">';
             echo '<img class="mainImg" src="./images/route/' . $row['picture_filename'] . '" alt="">';
             $id = intval($row['id']);
             try {
@@ -205,7 +207,8 @@
             } elseif ($row['level'] == 'advanced') {
                 echo '<div class="level advanced">上級</div>';
             }
-            echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+            // echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '" target="_blank">詳細へ</a></p>';
+            echo '<p class="detail shousai"><a  class="detail" href="route-details.php?course_id=' . $row['id'] . '"">詳細へ</a></p>';
             echo '</div>';
             echo '</a>';
             echo '</li>';

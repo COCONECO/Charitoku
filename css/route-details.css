@@ -18,12 +18,13 @@ imagesCover
 	position: relative;
 	display: block;
 	width: 100%;
-	height: calc(250px + 60px);/*画像高さ + バナー高さ*/
+	height: auto;/*画像高さ + バナー高さ*/
+	padding-bottom: 40px;
 }
 .imagesCover{
 	position: relative;
 	top: 60px;
-	height: 250px;/*高さ変更可*/
+	height: 80px;/*高さ変更可*/
 	overflow: hidden;
 }
 .imagesCover img {
@@ -39,10 +40,11 @@ imagesCover
 		position: relative;
 		display: block;
 		width: 100%;
-		height: calc(250px + 80px);
+		height: auto;
 	}
 	.imagesCover{
-		top: 80px;
+		top: 60px;
+		height:160px;/*高さ変更可*/
 	}
 }
 /**************************************************
@@ -289,7 +291,7 @@ main
 	}
 
 	#main{
-		margin: 100px auto 0;
+		margin: 60px auto 0;
 		padding: 0 20px 100px;
 	}
 
