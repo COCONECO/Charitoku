@@ -934,10 +934,13 @@ load-anim終わり
 }
 
 .new {
-  margin-top: 40px;
   padding: 20px;
   display: flex;
   flex-direction: row;
+}
+
+.new:first-child{
+  margin-top: 40px;
 }
 
 .new img {
