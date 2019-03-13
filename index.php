@@ -101,7 +101,7 @@
     <div id="page">
         <div id="loaderBg">
             <section id="app" class="app">
-                <button id="skipButton" class="loadStandby">Skip</button>
+                <button id="skipButton">Skip</button>
                 <div id="progBar" class="progress">
                     <div class="moon loadStandby">
                         <div class="progressBar"></div>
@@ -183,7 +183,7 @@
                             <div class="cloudChild"></div>
                         </div>
                     </div>
-                    <div class="counter loadStandby"></div>
+                    <div class="counter loadStandby" data-state="false">再生できない場合<br>リロードをお願いします</div>
                     <div class="images loadStandby">
                         <div class="image"></div>
                         <div class="image"></div>
@@ -237,9 +237,9 @@
     <!--top画像スライド-->
     <div class="slider topIMG">
         <ul><!--liには見せたい箇所に応じたtop,center,bottom,いずれかのclassを付けてください-->
-            <li><img src="images/top/top-1.jpg" class="topImg imgChange center" ></li>
+            <li><img src="images/top/top-1.jpg" class="topImg imgChange top1" ></li>
             <li><img src="images/top/top-2.jpg" class="topImg imgChange top"></li>
-            <li><img src="images/top/top-3.jpg" class="topImg imgChange bottom"></li>
+            <li><img src="images/top/top-3.jpg" class="topImg imgChange top3"></li>
             <li><img src="images/top/top-4.jpg" class="topImg imgChange bottom"></li>
             <li><img src="images/top/top-5.jpg" class="topImg imgChange bottom"></li>
         </ul>
