@@ -187,7 +187,8 @@ p ,a ,li{font-size: 16px;}
     }
 
     .navTitle{
-        font-size: 22px;
+        font-size: 18px;
+        margin-top: -3px;
     }
 
     .navSubTitle{
@@ -611,11 +612,13 @@ i{
 --------------------------
 */
 
-.fadein{
-    opacity: 0;
-}
+
 
 @media screen and (min-width: 768px){
+    .fadein{
+        opacity: 0;
+    }
+
     .fadeinOn{
         -webkit-animation: fade-in-fwd 1s ease-in-out both;
         animation: fade-in-fwd 1s ease-in-out both;
