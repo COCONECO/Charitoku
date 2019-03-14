@@ -44,7 +44,7 @@
 
         });
 
-        //top slide show
+        //top cross fade
         $(function() {
             var $setElm = $('.slider'),
                 fadeSpeed = 1500,
