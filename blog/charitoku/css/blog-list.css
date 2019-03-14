@@ -106,7 +106,9 @@ p ,a ,li{font-size: 16px;}
 .sideBar h2{
     padding: 8px;
     border-top: 1px dashed #ccc;
+    margin: 10px;
 }
+
 
 .blogTitle{
     font-size: 20px;
