@@ -187,7 +187,8 @@ p ,a ,li ,div{font-size: 16px;}
     }
 
     .navTitle{
-        font-size: 22px;
+        font-size: 18px;
+        margin-top: -3px;
     }
 
     .navSubTitle{
