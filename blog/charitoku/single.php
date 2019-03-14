@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-<body>
+<!-- <body>
     <header id="commonHeader">
         <div id="gnavLogo">
             <a href="http://localhost/charitoku/index.php">
@@ -44,7 +44,7 @@ get_header();
                     </a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
     <div class="tutumi">
         <h2 class="midashi"><span>
@@ -63,7 +63,7 @@ while (have_posts()): the_post();
     the_content();
 endwhile; // End of the loop.
 ?>
-        <p class="back"><a href="../../../../../../../charitokuwordpress/">→記事一覧に戻る</a></p>
+        <p class="back"><a href="../../../../../../charitokuwordpress/">→記事一覧に戻る</a></p>
     </div>
     </div>
     <div class="sideBar detailSideBar">

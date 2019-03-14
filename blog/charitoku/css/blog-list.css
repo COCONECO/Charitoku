@@ -16,6 +16,10 @@ p ,a ,li{font-size: 16px;}
     p, a{font-size: 18px;}
     li{font-size: 24px;}
 }
+.page-description,.page-title{
+    font-weight: bold;
+    font-size: 24px;   
+}
 
 /*
 --------------------

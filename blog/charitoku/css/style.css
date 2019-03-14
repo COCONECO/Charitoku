@@ -572,6 +572,7 @@ footer div{
 }
 
 .sns{
+    height: 0;
     position: relative;
     top: -100%;
     text-align: center;
