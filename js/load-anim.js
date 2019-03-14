@@ -14,7 +14,7 @@ $(function() {
 });
 
 /*********************************************
-プログレスバーはじめ
+カウンターはじめ
 *********************************************/
 var count = 0;
 var trigger = 0;
@@ -42,7 +42,7 @@ var countup = function(){
 countup();
 
 /*********************************************
-プログレスバーおわり
+カウンターおわり
 *********************************************/
 /*********************************************
 スキップボタン
@@ -71,7 +71,7 @@ var showSkipButton = showSkipButton = function showSkipButton() {
  */
 
 var skipAnimation = skipAnimation = function skipAnimation() {
-  var app = document.getElementById('app');
+  var app = document.getElementById('page');
   app.setAttribute('data-state', 'false');
 
   var wrap = document.getElementById('wrap');
@@ -84,8 +84,6 @@ var skipAnimation = skipAnimation = function skipAnimation() {
 
 function stopanim(){
   var element = document.getElementsByClassName('loadStandby');
-  $('#page').css('z-index', '-1');
-  $('#wrap').css('z-index', '1');
   for(var i = 0; i < element.length; i++){
       element[i].setAttribute('data-state', 'false');
   }
@@ -122,7 +120,6 @@ function stopload(){
 function animstart(){
   var element = document.getElementsByClassName('loadStandby');
   for(var i = 0; i < element.length; i++){
-      // element[i].classList.add('loadComplete');
       element[i].setAttribute('data-state', 'loadComplete');
   }
 }

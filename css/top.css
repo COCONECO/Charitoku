@@ -29,6 +29,7 @@ load-anim
   z-index: 10001;
   overflow: hidden;
 }
+#page[data-state="false"]{    animation: fade-out-skip 1s ease 0.0s forwards;}
 #loadeBg{
   position: fixed;
   height: 100%;
@@ -40,7 +41,6 @@ load-anim
   height: 100%;
   width: 100%;
 }
-.app[data-state="false"]{    animation: fade-out 1s ease 0.0s forwards;}
 .progress {
   position: fixed;
   top: calc(0% - 0px);
@@ -51,8 +51,14 @@ load-anim
   background: linear-gradient( #1352b1 0%, #3887ff 20%, #3887ff 65%,#c3e0e9 100%) fixed;
   overflow: hidden;
 }
-.wrap[data-state="true"]{    animation: fade-in 1s ease 0.0s forwards;}
+.wrap[data-state="true"]{    animation: fade-in-skip 1s ease 0.0s forwards;}
 
+@keyframes fade-out-skip{
+  100% { opacity: 0; z-index: -1;}
+}
+  @keyframes fade-in-skip{
+  100% { opacity: 1; z-index: 1;}
+}
 /******************************
 アニメーションページ記述おわり
 ******************************/
