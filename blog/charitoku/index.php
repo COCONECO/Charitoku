@@ -26,21 +26,21 @@ $args = array(
 $the_query = new WP_Query($args);
 if ($the_query->have_posts()): while ($the_query->have_posts()): $the_query->the_post();
         ?>
-														            <a href="<?php the_permalink();?>">
-														            <li class="blogBox grid5Pc grid10">
-														                            <!-- <?php the_content();?> -->
-														                <div class="blogImg"><?php the_post_thumbnail();?></div>
-														                <h3 class="blogTitle"><?php the_title();?></h3>
-														                <p class="blogDay"><?php echo get_the_date(); ?></p>
-														                <p class="blogCategory"><?php the_category();?></p>
-														                <!-- <?php the_excerpt();?> -->
-														            </li>
-														            </a>
+																		            <a href="<?php the_permalink();?>">
+																		            <li class="blogBox grid5Pc grid10">
+																		                            <!-- <?php the_content();?> -->
+																		                <div class="blogImg"><?php the_post_thumbnail();?></div>
+																		                <h3 class="blogTitle"><?php the_title();?></h3>
+																		                <p class="blogDay"><?php echo get_the_date(); ?></p>
+																		                <p class="blogCategory"><?php the_category();?></p>
+																		                <!-- <?php the_excerpt();?> -->
+																		            </li>
+																		            </a>
 
-														        <?php
+																		        <?php
         wp_reset_postdata();
         ?>
-														            <?php endwhile;
+																		            <?php endwhile;
 endif;?>
         </ul>
 

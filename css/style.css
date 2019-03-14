@@ -611,13 +611,13 @@ i{
 --------------------------
 */
 
-@media screen and (min-width: 768px){
-    .fadein{
-        opacity: 0;
-    }
+.fadein{
+    opacity: 0;
+}
 
+@media screen and (min-width: 768px){
     .fadeinOn{
-        opacity: 1.0;
+        -webkit-animation: fade-in-fwd 1s ease-in-out both;
         animation: fade-in-fwd 1s ease-in-out both;
     }
 }
