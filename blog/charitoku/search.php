@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<h1 class="blogListTitle"><?php _e('検索結果:', 'charitoku'); ?><?php echo get_search_query(); ?></h1>
+<h2 class="blogListTitle"><?php _e('検索結果:', 'charitoku'); ?><?php echo get_search_query(); ?></h2>
 <div class="main">
     <?php
 	$paged = (int)get_query_var('page');
