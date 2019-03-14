@@ -95,6 +95,7 @@ p ,a ,li{font-size: 16px;}
     float: left;
 }
 .sideBar{
+    margin-top: 40px;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
