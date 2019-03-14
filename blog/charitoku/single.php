@@ -34,6 +34,8 @@ while (have_posts()): the_post();
     the_content();
 endwhile; // End of the loop.
 ?>
+<p><?php the_tags();?></p>
+
         <p class="back"><a href="../../../../../../charitokuwordpress/">→記事一覧に戻る</a></p>
     </div>
     </div>

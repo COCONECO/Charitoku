@@ -103,6 +103,11 @@ p ,a ,li{font-size: 16px;}
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+.sideBar h2{
+    padding: 8px;
+    border-top: 1px dashed #ccc;
+}
+
 .blogTitle{
     font-size: 20px;
 }
