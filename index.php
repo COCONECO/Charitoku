@@ -107,7 +107,6 @@
                         <div class="progressBar"></div>
                         <div class="progressBar"></div>
                         <div class="progressBar"></div>
-                        <div class="progressBar"></div>
                     </div>
                     <div class="cloudWorld">
                         <div class="cloud loadStandby">
