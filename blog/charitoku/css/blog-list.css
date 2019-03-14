@@ -45,7 +45,7 @@ p ,a ,li{font-size: 16px;}
 .blogBox{
     /* height: 360px;     */
     height: auto;
-    margin: 40px auto 20px auto;
+    margin: 40px 24px;
     border: 1px #000000 solid;
 }
 
@@ -95,20 +95,26 @@ p ,a ,li{font-size: 16px;}
     float: left;
 }
 .sideBar{
+    margin-top: 40px;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+.blogTitle{
+    font-size: 20px;
+}
+.cat-item{
+    font-size: 16px;
+}
 
 .blogTitle a{
-    font-size: 24px;
     text-decoration: underline;
 }
 
 .blogBox img{
-    width: 80%;
-    height: 60%;
+    /* width: 80%;
+    height: 60%; */
     padding: 20px 10% ;
-    margin:  auto;
+    /* margin:  auto; */
 
 }
 
@@ -136,6 +142,10 @@ p ,a ,li{font-size: 16px;}
 }
 
 
+.widget-title{
+    font-size: 20px;
+}
+
 page-header{
     text-align: center;
 }
@@ -145,6 +155,10 @@ page-header{
 }
 #blogList{
     width: 100%;
+}
+
+.blogBox{
+    margin: 40px auto;
 }
 .search-field{
     width: 100%;

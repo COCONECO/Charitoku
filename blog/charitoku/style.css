@@ -1693,7 +1693,7 @@ input:lang(ja)[type="submit"], .comment-navigation .nav-previous:lang(ja),
 .entry .entry-content .wp-block-image figcaption:lang(ja),
 .entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption:lang(ja),
 .entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption:lang(ja), .entry .entry-content .wp-block-file:lang(ja), .entry .entry-content .wp-block-file .wp-block-file__button:lang(ja), .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta:lang(ja), .wp-caption-text:lang(ja), .gallery-caption:lang(ja) {
-  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif; */
 }
 
 body:lang(ko-KR), button:lang(ko-KR),
@@ -2286,7 +2286,7 @@ h6 {
 }
 
 .page-title {
-  font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  /* font-family: "NonBreakingSpaceOverride", "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif; */
 }
 
 .site-branding,
@@ -5096,8 +5096,8 @@ body.page .main-navigation {
 .widget_recent_entries ul li,
 .widget_rss ul li {
   color: #767676;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: calc(22px * 1.125);
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: calc(22px * 1.125); */
   font-weight: 700;
   line-height: 1.2;
   margin-top: 0.5rem;
