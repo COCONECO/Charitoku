@@ -233,7 +233,7 @@ p ,a ,li{font-size: 16px;}
 	content: "";
     display: block;
     top: calc(0% - 0px);
-    left: calc(100% - 0px);
+    left: calc(100% + 5px);
 	max-height: 60px;
 	height: 10vw;
 	max-width: 60px;
@@ -281,7 +281,7 @@ p ,a ,li{font-size: 16px;}
 		content: "";
 		display: block;
 		top: calc(0% - 0px);
-		left: calc(0% + 160px);
+		left: calc(0% + 166px);
 		max-width: 100%;
 		width: 80px;
 		max-height: 100%;
@@ -611,13 +611,13 @@ i{
 --------------------------
 */
 
-@media screen and (min-width: 768px){
-    .fadein{
-        opacity: 0;
-    }
+.fadein{
+    opacity: 0;
+}
 
+@media screen and (min-width: 768px){
     .fadeinOn{
-        opacity: 1.0;
+        -webkit-animation: fade-in-fwd 1s ease-in-out both;
         animation: fade-in-fwd 1s ease-in-out both;
     }
 }
