@@ -535,7 +535,7 @@
         ?>
 
 
-        <div><a href="http://localhost/charitoku/route-list.php?level=all" class="more routemore">→more</a></div>
+        <div><a href="route-list.php?level=all" class="more routemore">→more</a></div>
 
         <footer>
             <div class="back"></div>
