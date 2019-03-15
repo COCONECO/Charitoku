@@ -322,13 +322,13 @@ p ,a ,li{font-size: 16px;}
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin: 40px 7% 0 7%;
+    margin: 40px auto;
 
 }
 
 .itemBox{
     height: 100%;
-    margin: 40px;
+    margin: 40px auto;
     border: 1px #000000 solid;
 }
 
@@ -395,6 +395,7 @@ p ,a ,li{font-size: 16px;}
     text-decoration: underline;
 }
 @media screen and (max-width: 768px){ /*768px以下のボックスサイズ*/
+
     .itemBox{
         width: 100%;
         min-width: 280px;

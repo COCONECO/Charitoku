@@ -12,7 +12,7 @@
  */
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes();?>>
 
 <head>
     <meta charset="utf-8">
@@ -49,11 +49,11 @@
         </div>
         <nav id="gnav">
             <ul>
-                <li><a href="http://localhost/charitoku/route-list.php?level=all">
+                <li><a href="../../../../../../charitoku/route-list.php?level=all">
                         <p class="navTitle">Route</p>
                         <p class="navSubTitle">ルート一覧</p>
                     </a></li>
-                <li><a href="http://localhost/charitoku/introduction.php">
+                <li><a href="../../../../../../charitoku/introduction.php">
                         <p class="navTitle">Info</p>
                         <p class="navSubTitle">自転車の心得</p>
                     </a></li>
@@ -61,10 +61,10 @@
                         <p class="navTitle">Blog</p>
                         <p class="navSubTitle">ブログ</p>
                     </a></li>
-                <li><a href="http://localhost/charitoku/link.php">
+                <li><a href="../../../../../../charitoku/link.php">
                         <p class="navTitle">Link</p>
                         <p class="navSubTitle">リンク</p>
                     </a></li>
             </ul>
         </nav>
-    </header> 
+    </header>
