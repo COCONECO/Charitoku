@@ -226,7 +226,8 @@ function elevationChart() {
     var chartObj = new Chart(ctx, {
         type: "line", data: config,
         options: {
-            responsive: true,
+            // responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 yAxes: [{
                     ticks: {

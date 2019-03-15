@@ -169,7 +169,9 @@ try {
                 </div><!-- /.map -->
 
                 <div class="slope">
+                <div class="chart-container" style="position: relative; width:100%; height:40vh">
                     <canvas id="chart" height="70%"></canvas>
+                    </div>
                     <!-- <iframe></iframe> -->
 
                     <table class="dateTable">
@@ -287,6 +289,7 @@ try {
     </script>
 
     <script src="js/mapCode.js"></script>
+
 
 </body>
 
