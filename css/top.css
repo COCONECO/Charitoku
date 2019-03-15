@@ -74,17 +74,15 @@ load-anim
   left:calc(100% - 76px);
   width: 76px;
   height: 42px; 
-  border-radius: 20%;
-  background-color: #3887ff;
-  border: dashed 2px #fff;
+  background-color: #fff;
+  border: double 4px #000;
   box-sizing: border-box;
   font-family: 'Noto Sans JP',sans-serif;
   font-size: 21px;
   font-weight: normal;
-  line-height: 30px;
+  line-height: 27px;
   text-align: center;
-  color: #fff;
-  text-shadow: 0px 0px 4px #fff;
+  color: #000;
   box-shadow: none;
   outline: 0;
   transform:translateX(800px);
@@ -116,17 +114,15 @@ load-anim
     left:calc(100% - 128px);
     width: 128px;
     height: 72px; 
-    border-radius: 20%;
-    background-color: #3887ff;
-    border: dashed 4px #fff;
+    background-color: #fff;
+    border: double 8px #000;
     box-sizing: border-box;
     font-family: 'Noto Sans JP',sans-serif;
     font-size: 36px;
     font-weight: normal;
-    line-height: 62px;
+    line-height: 57px;
     text-align: center;
-    color: #fff;
-    text-shadow: 0px 0px 4px #fff;
+    color: #000;
     box-shadow: none;
     outline: 0;
     transform:translateX(800px);
@@ -152,6 +148,171 @@ load-anim
 }
 /******************************
 スキップボタンデザイン終わり
+******************************/
+/******************************
+サイドスクリーン
+******************************/
+
+.sideScreen{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+} 
+.sideScreen div{
+  position: absolute;
+  left: 0;
+  width: 100%;
+} 
+.sideScreen .whiteSc{
+  position: absolute;
+  top: calc(100% - 139px + 30.5px);
+  height: 61px;
+  background-color: #fff;
+  transform: translateY(-50%);
+  animation: side-screen-out-1 0.2s linear 0s forwards;
+} 
+.sideScreen .whiteSc:nth-child(2){
+  top: 40.5px;
+} 
+.sideScreen .blueSc{
+  position: absolute;
+  top: calc(100% - 78px + 39px);
+  height: 78px;
+  background-color: #3887ff;
+  opacity: 0.5;
+  transform: translateY(-50%);
+  animation: side-screen-out-2 0.2s linear 0.1s forwards;
+} 
+.sideScreen .blueSc:nth-child(6){
+  top: calc(61px + 39px)
+} 
+.sideScreen .blackSc,.sideScreen .whiteSc:nth-child(3),.sideScreen .whiteSc:nth-child(4),.sideScreen .blueSc:nth-child(7),.sideScreen .blueSc:nth-child(8){
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 38px;
+  background-color: #000;
+  opacity: 1;
+  transform: translateX(-100%);
+} 
+.sideScreen .whiteSc:nth-child(3),.sideScreen .whiteSc:nth-child(4){
+  background-color: #fff;
+  opacity: 0.5;
+} 
+.sideScreen .blueSc:nth-child(7),.sideScreen .blueSc:nth-child(8){
+  background-color: #3887ff;
+  opacity: 0.5;
+} 
+.sideScreen .whiteSc:nth-child(4),.sideScreen .blueSc:nth-child(8),.sideScreen .blackSc:nth-child(10){
+  left: calc(100% - 38px);
+  transform: translateX(100%);
+} 
+#skipButton[data-state="true"] + .sideScreen .blackSc,
+#skipButton[data-state="true"] + .sideScreen .blueSc:nth-child(7),
+#skipButton[data-state="true"] + .sideScreen .blueSc:nth-child(8),
+#skipButton[data-state="true"] + .sideScreen .whiteSc:nth-child(3),
+#skipButton[data-state="true"] + .sideScreen .whiteSc:nth-child(4){
+  animation: side-screen-in 1.0s ease 0.5s forwards;
+} 
+#skipButton[data-state="false"] + .sideScreen .blackSc{
+  animation: side-screen-out-3 0.25s linear 0.0s forwards;
+} 
+#skipButton[data-state="false"] + .sideScreen .blueSc:nth-child(7),
+#skipButton[data-state="false"] + .sideScreen .blueSc:nth-child(8){
+  animation: side-screen-out-4 0.5s linear 0.0s forwards;
+} 
+#skipButton[data-state="false"] + .sideScreen .whiteSc:nth-child(3),
+#skipButton[data-state="false"] + .sideScreen .whiteSc:nth-child(4){
+  animation: side-screen-out-5 1.0s linear 0.0s forwards;
+} 
+
+@keyframes side-screen-in{
+  100% {  transform: translateX(0%);}
+  }
+@keyframes side-screen-out-1{
+  0% { height: 81px;opacity: 1;}
+  100% { height: 0px;opacity: 0;}
+  }
+@keyframes side-screen-out-2{
+  0% { height: 78px; opacity: 1;}
+  100% { height: 0px;opacity: 0;}
+  }
+@keyframes side-screen-out-3{
+  0% { top: 0;  transform: translateX(0%);}
+  100% { top: -100%;  transform: translateX(0%);}
+  }
+@keyframes side-screen-out-4{
+  0% { top: 0;  transform: translateX(0%);}
+  50% { top: 0;  transform: translateX(0%);}
+  100% { top: -100%;  transform: translateX(0%);}
+  }
+@keyframes side-screen-out-5{
+  0% { top: 0;  transform: translateX(0%);}
+  75% { top: 0;  transform: translateX(0%);}
+  100% { top: -100%;  transform: translateX(0%);}
+  }
+
+@media screen and (min-width : 960px){
+  .sideScreen .whiteSc{
+    position: absolute;
+    top: calc(100% - 159px + 40.5px);
+    height: 81px;
+    background-color: #fff;
+    transform: translateY(-50%);
+    animation: side-screen-out-1 0.2s linear 0s forwards;
+  } 
+  .sideScreen .whiteSc:nth-child(2){
+    top: 40.5px;
+  } 
+  .sideScreen .blueSc{
+    position: absolute;
+    top: calc(100% - 78px + 39px);
+    height: 78px;
+    background-color: #3887ff;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    animation: side-screen-out-2 0.2s linear 0.1s forwards;
+  } 
+  .sideScreen .blueSc:nth-child(6){
+    top: calc(81px + 39px)
+  } 
+  .sideScreen .blackSc,.sideScreen .whiteSc:nth-child(3),.sideScreen .whiteSc:nth-child(4),.sideScreen .blueSc:nth-child(7),.sideScreen .blueSc:nth-child(8){
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(50% - 450px);
+    background-color: #000;
+    opacity: 1;
+    transform: translateX(-100%);
+  } 
+  .sideScreen .whiteSc:nth-child(3),.sideScreen .whiteSc:nth-child(4){
+    background-color: #fff;
+    opacity: 0.5;
+  } 
+  .sideScreen .blueSc:nth-child(7),.sideScreen .blueSc:nth-child(8){
+    background-color: #3887ff;
+    opacity: 0.5;
+  } 
+  .sideScreen .whiteSc:nth-child(4),.sideScreen .blueSc:nth-child(8),.sideScreen .blackSc:nth-child(10){
+    left: calc(50% + 450px);
+    transform: translateX(100%);
+  } 
+  @keyframes side-screen-out-1{
+    0% { height: 81px;opacity: 1;}
+    100% { height: 0px;opacity: 0;}
+    }
+  @keyframes side-screen-out-2{
+    0% { height: 78px; opacity: 1;}
+    100% { height: 0px;opacity: 0;}
+    }
+}
+/******************************
+サイドスクリーン終わり
 ******************************/
 
 /******************************
@@ -615,7 +776,7 @@ transform: translateX(0px);
 }
 .images[data-state="loadComplete"] .image:nth-child(3){
 animation: 
-ride-on-in 2s linear 4.5s forwards,
+ride-on-in 1s linear 5.5s forwards,
 cycle-anim-bl 0.4s steps(6) 4.5s 5,
 fade-out 1s ease 6.5s forwards;
 }
@@ -689,7 +850,7 @@ fade-out 1s ease 6.5s forwards;
     }
   .images .image:nth-child(3){
     top: calc(0% + 152px);
-    left: calc(100vw - 0px);
+    left: calc(25vw + 325px);
     width: 240px;
     height: 240px;
     background:  url(../images/top/cycleanimblackl.png) no-repeat ;
@@ -698,7 +859,7 @@ fade-out 1s ease 6.5s forwards;
   }
   .images[data-state="loadComplete"] .image:nth-child(3){
     animation: 
-    ride-on-in 2s linear 4.5s forwards,
+    ride-on-in 1s linear 5.5s forwards,
     cycle-anim-bl 0.4s steps(6) 4.5s 5,
     fade-out 1s ease 6.5s forwards;
   }
@@ -745,7 +906,7 @@ fade-out 1s ease 6.5s forwards;
   100% { background-position: -1440px 0;}
   }
   @keyframes ride-on-in{
-  0% {   left: calc(100vw - 0px);}
+  0% {   left: calc(25vw + 325px);}
   100% {  left: calc(0vw - 15px);}
   }
 }
