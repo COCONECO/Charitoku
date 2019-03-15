@@ -27,6 +27,7 @@ load-anim
   background-color:transparent;
   color: transparent;
   z-index: 10001;
+  opacity: 1;
   overflow: hidden;
 }
 #page[data-state="false"]{    animation: fade-out-skip 1s ease 0.0s forwards;}
@@ -35,11 +36,13 @@ load-anim
   height: 100%;
   background-color: #fff ;/*3887ff*/
   z-index: 10000;
+  opacity: 1;
 }
 .app {
   position: fixed;
   height: 100%;
   width: 100%;
+  opacity: 1;
 }
 .progress {
   position: fixed;
@@ -49,6 +52,7 @@ load-anim
   height: 100%;
   background-color: #3887ff ;
   background: linear-gradient( #1352b1 0%, #3887ff 20%, #3887ff 65%,#c3e0e9 100%) fixed;
+  opacity: 1;
   overflow: hidden;
 }
 .wrap[data-state="true"]{    animation: fade-in-skip 1s ease 0.0s forwards;}
@@ -629,8 +633,8 @@ load-anim
   top: calc(100% - 400px);
   left:calc(100% - 400px);
 }
-.cloud[data-state="loadComplete"]:nth-child(1){   animation: cloud-world-3 1.0s ease-in 8.5s forwards;}
-.cloud[data-state="loadComplete"]:nth-child(2){   animation: cloud-world-4 1.0s ease-in 8.5s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(1){   animation: cloud-world-3 1.0s ease-in 7.5s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(2){   animation: cloud-world-4 1.0s ease-in 7.5s forwards;}
 .cloud:nth-child(3).cloudChild,.cloud:nth-child(4).cloudChild,.cloud:nth-child(5).cloudChild,
 .cloud:nth-child(6).cloudChild,.cloud:nth-child(7).cloudChild,.cloud:nth-child(8).cloudChild{ animation: none;}
 .cloud:nth-child(3){
@@ -658,7 +662,7 @@ load-anim
   transform: translateY(80px);
 }
 .cloud[data-state="loadComplete"]:nth-child(3),.cloud[data-state="loadComplete"]:nth-child(4),
-.cloud[data-state="loadComplete"]:nth-child(5),.cloud[data-state="loadComplete"]:nth-child(6){animation: cloud-world-5 2.5s ease 7.8s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(5),.cloud[data-state="loadComplete"]:nth-child(6){animation: cloud-world-5 2.5s ease 6.8s forwards;}
 .cloud:nth-child(7){
   position: absolute;
   top: calc(100% + 400px);
@@ -673,7 +677,7 @@ load-anim
   transform: translateY(250px) scale(1.2);
   z-index: 1000;
 }
-.cloud[data-state="loadComplete"]:nth-child(7),.cloud[data-state="loadComplete"]:nth-child(8){animation: cloud-world-6 2.5s ease 8.8s forwards;}
+.cloud[data-state="loadComplete"]:nth-child(7),.cloud[data-state="loadComplete"]:nth-child(8){animation: cloud-world-6 2.5s ease 7.8s forwards;}
 @keyframes cloud-world-1{
   0% {     transform: scale(1.);}
   50% {     transform: scale(1.1);}
@@ -776,12 +780,12 @@ transform: translateX(0px);
 }
 .images[data-state="loadComplete"] .image:nth-child(3){
 animation: 
-ride-on-in 1s linear 5.5s forwards,
-cycle-anim-bl 0.4s steps(6) 4.5s 5,
-fade-out 1s ease 6.5s forwards;
+ride-on-in 1s linear 4.5s forwards,
+cycle-anim-bl 0.4s steps(6) 3.5s 5,
+fade-out 1s ease 5.5s forwards;
 }
 .images .image:nth-child(4){  background:  url(../images/top/anim-girl.png) no-repeat ;    background-size: cover; opacity: 0;}
-.images[data-state="loadComplete"] .image:nth-child(4){ animation: fade-in 1s ease 6.5s forwards; }
+.images[data-state="loadComplete"] .image:nth-child(4){ animation: fade-in 1s ease 5.5s forwards; }
 .images .image:nth-child(5){  left: calc(100% - 0px);width: 0px; height: 100%; overflow: hidden;transform: translateX(-100%)}
 .images .image:nth-child(5)::after{ 
   position: absolute;
@@ -794,7 +798,7 @@ fade-out 1s ease 6.5s forwards;
   background-size: cover;
   background-position: center;
 }
-.images[data-state="loadComplete"] .image:nth-child(5){ animation: screen-anim 0.5s linear 6.0s forwards;}
+.images[data-state="loadComplete"] .image:nth-child(5){ animation: screen-anim 0.5s linear 5.0s forwards;}
 .images .image:nth-child(6){width: 0px; height: 100%; overflow: hidden;}
 .images .image:nth-child(6)::after{
   position: absolute;
@@ -807,7 +811,7 @@ fade-out 1s ease 6.5s forwards;
   background-size: cover;
   background-position: center;
 }
-.images[data-state="loadComplete"] .image:nth-child(6){ animation: screen-anim 1s ease 7.5s forwards;}
+.images[data-state="loadComplete"] .image:nth-child(6){ animation: screen-anim 1s ease 6.5s forwards;}
 
 @keyframes screen-anim{
 0% { width: 0%;}
@@ -859,12 +863,12 @@ fade-out 1s ease 6.5s forwards;
   }
   .images[data-state="loadComplete"] .image:nth-child(3){
     animation: 
-    ride-on-in 1s linear 5.5s forwards,
-    cycle-anim-bl 0.4s steps(6) 4.5s 5,
-    fade-out 1s ease 6.5s forwards;
+    ride-on-in 1s linear 4.5s forwards,
+    cycle-anim-bl 0.4s steps(6) 3.5s 5,
+    fade-out 1s ease 5.5s forwards;
   }
   .images .image:nth-child(4){  background:  url(../images/top/anim-girl.png) no-repeat ;    background-size: cover; opacity: 0;}
-  .images[data-state="loadComplete"] .image:nth-child(4){ animation: fade-in 1s ease 6.5s forwards; }
+  .images[data-state="loadComplete"] .image:nth-child(4){ animation: fade-in 1s ease 5.5s forwards; }
   .images .image:nth-child(5){  left: calc(100% - 0px);width: 0px; height: 100%; overflow: hidden;transform: translateX(-100%)}
   .images .image:nth-child(5)::after{ 
     position: absolute;
@@ -877,7 +881,7 @@ fade-out 1s ease 6.5s forwards;
     background-size: cover;
     background-position: center;
   }
-  .images[data-state="loadComplete"] .image:nth-child(5){ animation: screen-anim 0.5s linear 6.0s forwards;}
+  .images[data-state="loadComplete"] .image:nth-child(5){ animation: screen-anim 0.5s linear 5.0s forwards;}
   .images .image:nth-child(6){width: 0px; height: 100%; overflow: hidden;}
   .images .image:nth-child(6)::after{
     position: absolute;
@@ -890,7 +894,7 @@ fade-out 1s ease 6.5s forwards;
     background-size: cover;
     background-position: center;
   }
-  .images[data-state="loadComplete"] .image:nth-child(6){ animation: screen-anim 1s ease 7.5s forwards;}
+  .images[data-state="loadComplete"] .image:nth-child(6){ animation: screen-anim 1s ease 6.5s forwards;}
   
   @keyframes screen-anim{
   0% { width: 0%;}
