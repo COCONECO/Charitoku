@@ -507,6 +507,11 @@ main{
     .sideBar h4{
         margin: 20px 0 10px 0;
     }
+    .widget_categories ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
 }
 
 /*
