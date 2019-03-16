@@ -13,7 +13,7 @@ get_header();
         <?php
 $paged = (int) get_query_var('page');
 $args = array(
-    'posts_per_page' => 10,
+    'posts_per_page' => 4,
     'paged' => $paged,
     'orderby' => 'post_date',
     'order' => 'DESC',
@@ -26,20 +26,20 @@ $args = array(
 $the_query = new WP_Query($args);
 if ($the_query->have_posts()): while ($the_query->have_posts()): $the_query->the_post();
         ?>
-																				        <a href="<?php the_permalink();?>">
-																				        <li class="blogBox grid5Pc grid10">
-																				                        <!-- <?php the_content();?> -->
-																				            <div class="blogImg"><?php the_post_thumbnail();?></div>
-																				            <h3 class="blogTitle"><?php the_title();?></h3>
-																				            <p class="blogDay"><?php echo get_the_date(); ?></p>
-																				            <p class="blogCategory"><?php the_category();?></p>
-																				            <!-- <?php the_excerpt();?> -->
-																				        </li>
-																				        </a>
-																				    <?php
+        <a href="<?php the_permalink();?>">
+        <li class="blogBox grid5Pc grid10">
+                        <!-- <?php the_content();?> -->
+            <div class="blogImg"><?php the_post_thumbnail();?></div>
+            <h3 class="blogTitle"><?php the_title();?></h3>
+            <p class="blogDay"><?php echo get_the_date(); ?></p>
+            <p class="blogCategory"><?php the_category();?></p>
+            <!-- <?php the_excerpt();?> -->
+        </li>
+        </a>
+<?php
         wp_reset_postdata();
         ?>
-																		      <?php endwhile;
+ <?php endwhile;
 endif;?>
         </ul>
     </div>
@@ -59,7 +59,7 @@ if ($the_query->max_num_pages > 1) {
 }
 
 ?>
-    </div>
+   </div>
     </div>
 </body>
 <?php get_footer();?>
