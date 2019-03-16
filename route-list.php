@@ -41,7 +41,9 @@
             </ul>
         </nav>
     </header>
-    <img src="images/top/route-list-top.jpg" width=100% height=360px>
+    <div class="coverImg">
+        <img src="images/top/route-list-top.jpg" width=100% height=360px>
+    </div>
     <h2 id="route">ルート一覧</h2>
     <ul id="routeSort">
         <li id="all"><a href='route-list.php?level=all#route'>全て</a></li>

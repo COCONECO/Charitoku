@@ -102,6 +102,18 @@
         <div id="loaderBg">
             <section id="app" class="app">
                 <button id="skipButton">Skip</button>
+                <div class="sideScreen loadStandby">
+                        <div class="whiteSc"></div>
+                        <div class="whiteSc"></div>
+                        <div class="whiteSc"></div>
+                        <div class="whiteSc"></div>
+                        <div class="blueSc"></div>
+                        <div class="blueSc"></div>
+                        <div class="blueSc"></div>
+                        <div class="blueSc"></div>
+                        <div class="blackSc"></div>
+                        <div class="blackSc"></div>
+                    </div>
                 <div id="progBar" class="progress">
                     <div class="moon loadStandby">
                         <div class="progressBar"></div>
@@ -535,7 +547,7 @@
         ?>
 
 
-        <div><a href="http://localhost/charitoku/route-list.php?level=all" class="more routemore">→more</a></div>
+        <div><a href="route-list.php?level=all" class="more routemore">→more</a></div>
 
         <footer>
             <div class="back"></div>

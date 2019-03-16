@@ -63,7 +63,7 @@ var showSkipButton = showSkipButton = function showSkipButton() {
 
   setTimeout(function () {
     skip_button.setAttribute('data-state', 'false');
-  }, 9000);
+  }, 8000);
 };
 
 /**
@@ -99,8 +99,8 @@ function stopanim(){
 *********************************************/
 
 $(window).load(function () { //全ての読み込みが完了したら実行
-    $('#page').delay(11000).fadeOut(800);
-    $('.app').delay(10800).fadeOut(300);
+    $('#page').delay(10000).fadeOut(800);
+    $('.app').delay(9800).fadeOut(300);
     $('#wrap').css('opacity', '1');
 });
  
@@ -112,8 +112,8 @@ $(function(){
 });
  
 function stopload(){
-  $('#page').delay(11000).fadeOut(800);
-  $('.app').delay(10800).fadeOut(300);
+  $('#page').delay(10000).fadeOut(800);
+  $('.app').delay(9800).fadeOut(300);
   $('#wrap').css('opacity','1');
 }
 

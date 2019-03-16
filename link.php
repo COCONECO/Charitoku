@@ -41,8 +41,9 @@
             </ul>
         </nav>
     </header>
-    <img src="images/route/details-bizan.jpg" width=100% height=360px>
-
+    <div class="coverImg">
+        <img src="images/route/details-bizan.jpg" width=100% height=360px>
+    </div>
 
     <h2>リンク</h2>
     <h3>　協会・団体</h3>
