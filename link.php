@@ -62,7 +62,7 @@
         </tr>
 
     </table>
-    <h3>　自転車屋</h3>
+    <h3>　自転車店</h3>
     <table>
         <tr>
             <td class="three">ナカニシサイクル</td>
