@@ -106,9 +106,9 @@ $(window).load(function () { //全ての読み込みが完了したら実行
  
 //強制的にロード画面を非表示
 $(function(){
-  setTimeout('stopload()',3000);
-  setTimeout('animstart()',4000);
-  setTimeout('showSkipButton()',3000);
+  setTimeout('stopload()',1000);
+  setTimeout('animstart()',2000);
+  setTimeout('showSkipButton()',1000);
 });
  
 function stopload(){

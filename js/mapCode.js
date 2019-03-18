@@ -260,13 +260,13 @@ moveMarker.prototype.draw = function () {
         this.div_ = document.createElement("div");
         this.div_.style.position = "absolute";
         this.div_.style.color = "#ff0000";
-        this.div_.innerHTML = '<img src="images/maker-michino.png" width= 60px</img>';
+        this.div_.innerHTML = '<img src="images/maker-michino.png" width= 100px</img>';
         var panes = this.getPanes();
         panes.overlayLayer.appendChild(this.div_);
     }
     var point = this.getProjection().fromLatLngToDivPixel(new google.maps.LatLng(this.lat_, this.lng_));
-    this.div_.style.left = point.x - 30 + 'px';
-    this.div_.style.top = point.y - 30 + 'px';
+    this.div_.style.left = point.x - 50 + 'px';
+    this.div_.style.top = point.y - 96 + 'px';
 }
 moveMarker.prototype.remove = function () {
     if (this.div_) {
@@ -278,8 +278,8 @@ moveMarker.prototype.setPosition = function (lat, lng) {
     this.lat_ = lat;
     this.lng_ = lng;
     var point = this.getProjection().fromLatLngToDivPixel(new google.maps.LatLng(this.lat_, this.lng_));
-    this.div_.style.left = point.x - 30 + 'px';
-    this.div_.style.top = point.y - 30 + 'px';
+    this.div_.style.left = point.x - 50 + 'px';
+    this.div_.style.top = point.y - 96 + 'px';
 }
 moveMarker.prototype.getPosition = function () {
     return new google.maps.LatLng(this.lat_, this.lng_);
@@ -288,8 +288,8 @@ moveMarker.prototype.setPoint = function (x, y) {
     var latlng = this.getProjection().fromDivPixelToLatLng(new google.maps.Point(x, y));
     this.lat_ = latlng.lat();
     this.lng_ = latlng.lng();
-    this.div_.style.left = x - 30 + 'px';
-    this.div_.style.top = y - 30 + 'px';
+    this.div_.style.left = x - 50 + 'px';
+    this.div_.style.top = y - 96 + 'px';
 }
 moveMarker.prototype.getPoint = function () {
     return this.getProjection().fromLatLngToDivPixel(new google.maps.LatLng(this.lat_, this.lng_));
